@@ -1,12 +1,20 @@
+import { Theme } from "@radix-ui/themes";
+import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import logoDark from "../public/images/logo-flat-dark.svg";
 import logoLight from "../public/images/logo-flat-light.svg";
 import { ChangeColorProvider } from "./Components/ChangeColorProvider";
+import ContainerApp from "./Components/ContainerApp";
 import NavBar from "./Components/NavBar";
 import "./globals.css";
+import "./theme-config.css";
 
-const poppins = Poppins({ weight: ["400", "500", "600", "700"], subsets: ["latin"] });
+const poppins = Poppins({
+    weight: ["400", "500", "600", "700"],
+    subsets: ["latin"],
+    variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
     title: "Devsitter",
@@ -33,12 +41,16 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" className={poppins.variable}>
             <body className={poppins.className}>
-                <ChangeColorProvider>
-                    <NavBar></NavBar>
-                    <main>{children}</main>
-                </ChangeColorProvider>
+                <Theme>
+                    <ChangeColorProvider>
+                        <ContainerApp>
+                            <NavBar></NavBar>
+                            <main>{children}</main>
+                        </ContainerApp>
+                    </ChangeColorProvider>
+                </Theme>
             </body>
         </html>
     );
