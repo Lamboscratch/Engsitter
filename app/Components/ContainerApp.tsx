@@ -3,10 +3,15 @@ import { ReactNode } from "react";
 
 interface Props {
     children: ReactNode;
+    style?: string;
 }
 
-const ContainerApp = ({ children }: Props) => {
-    return <Container size="4">{children}</Container>;
+const ContainerApp = ({ children, style }: Props) => {
+    return (
+        <Container className={style} size="4">
+            {children}
+        </Container>
+    );
 };
 
 export default ContainerApp;

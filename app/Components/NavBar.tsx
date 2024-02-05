@@ -18,13 +18,13 @@ const NavBar = () => {
     const links: Links[] = [
         { name: "Home", path: "/" },
         { name: "Posts", path: "/posts" },
-        { name: "Projects", path: "/projects" },
+        { name: "Snippets", path: "/snippets" },
     ];
 
     return (
         <nav>
             <ContainerApp>
-                <Flex className="py-7" justify="between">
+                <Flex className="py-7 border-solid border-gray-200 border-b dark:border-zinc-800" justify="between">
                     <Link className="flex items-center" href="/">
                         <ImageTheme />
                         <p className="font-semibold text-2xl px-5">Devsitter</p>

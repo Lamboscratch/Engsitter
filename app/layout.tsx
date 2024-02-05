@@ -6,7 +6,6 @@ import logoDark from "../public/images/logo-flat-dark.svg";
 import logoLight from "../public/images/logo-flat-light.svg";
 import { ChangeColorProvider } from "./Components/ChangeColorProvider";
 import ContainerApp from "./Components/ContainerApp";
-import NavBar from "./Components/NavBar";
 import "./globals.css";
 import "./theme-config.css";
 
@@ -45,10 +44,7 @@ export default function RootLayout({
             <body className={poppins.className}>
                 <Theme>
                     <ChangeColorProvider>
-                        <ContainerApp>
-                            <NavBar></NavBar>
-                            <main>{children}</main>
-                        </ContainerApp>
+                        <ContainerApp>{children}</ContainerApp>
                     </ChangeColorProvider>
                 </Theme>
             </body>
