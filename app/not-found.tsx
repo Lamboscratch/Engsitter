@@ -14,7 +14,7 @@ const NotFoundPage = () => {
                             <Heading as="h1" size="9">
                                 404
                             </Heading>
-                            <Heading className="pt-24" as="h2">
+                            <Heading className="pt-16" as="h2">
                                 Page not found
                             </Heading>
                             <Text className="pt-6 max-w-prose text-center" size="4" as="p">
@@ -23,7 +23,7 @@ const NotFoundPage = () => {
                         </Flex>
                     </ContainerApp>
                 </main>
-                <Footer style="py-7 border-solid border-gray-200 border-t dark:border-zinc-800"></Footer>
+                <Footer></Footer>
             </Flex>
         </ContainerApp>
     );

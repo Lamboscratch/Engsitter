@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import ContainerApp from "./Components/ContainerApp";
 import Footer from "./Components/Footer";
 import NavBar from "./Components/NavBar";
 
@@ -8,10 +9,10 @@ interface Props {
 
 export default function Home({ children }: Props) {
     return (
-        <>
+        <ContainerApp>
             <NavBar></NavBar>
             <main>{children}</main>
-            <Footer style="py-7 border-solid border-gray-200 border-t dark:border-zinc-800"></Footer>
-        </>
+            <Footer></Footer>
+        </ContainerApp>
     );
 }

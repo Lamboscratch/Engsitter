@@ -8,7 +8,7 @@ interface Props {
 
 const ContainerApp = ({ children, style }: Props) => {
     return (
-        <Container className={style} size="4">
+        <Container className={style + " mx-4"} size="4">
             {children}
         </Container>
     );

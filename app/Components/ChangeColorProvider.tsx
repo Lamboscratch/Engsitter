@@ -1,9 +1,9 @@
 "use client";
 
 import { ThemeProvider } from "next-themes";
-import React from "react";
+import { ReactNode } from "react";
 
-export function ChangeColorProvider({ children }: { children: React.ReactNode }) {
+export function ChangeColorProvider({ children }: { children: ReactNode }) {
     return (
         <ThemeProvider attribute="class" enableSystem defaultTheme="system">
             {children}

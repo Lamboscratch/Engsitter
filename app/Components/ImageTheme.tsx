@@ -3,7 +3,7 @@ import logoDark from "../../public/images/logo-flat-dark.svg";
 import logoLight from "../../public/images/logo-flat-light.svg";
 
 const ImageTheme = () => {
-    const imageSize = 29;
+    const imageSize = 27;
 
     return (
         <>

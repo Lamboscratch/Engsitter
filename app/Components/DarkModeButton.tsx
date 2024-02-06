@@ -16,11 +16,7 @@ const DarkModeButton = () => {
         return null;
     }
 
-    return (
-        <button className="right-4 bottom-4" onClick={() => (theme === "dark" ? setTheme("light") : setTheme("dark"))}>
-            {theme === "dark" ? <TbMoonFilled className="size-6" /> : <TbSunFilled className="size-6" />}
-        </button>
-    );
+    return <button onClick={() => (theme === "dark" ? setTheme("light") : setTheme("dark"))}>{theme === "dark" ? <TbMoonFilled size={24} /> : <TbSunFilled size={24} />}</button>;
 };
 
 export default DarkModeButton;

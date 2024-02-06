@@ -5,7 +5,6 @@ import { Poppins } from "next/font/google";
 import logoDark from "../public/images/logo-flat-dark.svg";
 import logoLight from "../public/images/logo-flat-light.svg";
 import { ChangeColorProvider } from "./Components/ChangeColorProvider";
-import ContainerApp from "./Components/ContainerApp";
 import "./globals.css";
 import "./theme-config.css";
 
@@ -43,9 +42,7 @@ export default function RootLayout({
         <html lang="en" className={poppins.variable}>
             <body className={poppins.className}>
                 <Theme>
-                    <ChangeColorProvider>
-                        <ContainerApp>{children}</ContainerApp>
-                    </ChangeColorProvider>
+                    <ChangeColorProvider>{children}</ChangeColorProvider>
                 </Theme>
             </body>
         </html>
