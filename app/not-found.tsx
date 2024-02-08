@@ -6,7 +6,7 @@ import NavBar from "./Components/NavBar";
 const NotFoundPage = () => {
     return (
         <ContainerApp>
-            <Flex className="flex flex-col h-screen">
+            <Flex className="flex flex-col h-dvh">
                 <NavBar></NavBar>
                 <main className="mt-auto mb-auto">
                     <ContainerApp>
