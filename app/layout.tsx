@@ -5,6 +5,8 @@ import { Poppins } from "next/font/google";
 import logoDark from "../public/images/logo-flat-dark.svg";
 import logoLight from "../public/images/logo-flat-light.svg";
 import { ChangeColorProvider } from "./Components/ChangeColorProvider";
+import Footer from "./Components/Footer";
+import NavBar from "./Components/NavBar";
 import "./globals.css";
 import "./theme-config.css";
 
@@ -40,9 +42,13 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" className={poppins.variable}>
-            <body className={poppins.className}>
+            <body className={"flex flex-col min-h-dvh relative" + poppins.className}>
                 <Theme>
-                    <ChangeColorProvider>{children}</ChangeColorProvider>
+                    <ChangeColorProvider>
+                        <NavBar></NavBar>
+                        <main>{children}</main>
+                        <Footer></Footer>
+                    </ChangeColorProvider>
                 </Theme>
             </body>
         </html>

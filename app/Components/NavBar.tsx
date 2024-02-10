@@ -24,7 +24,7 @@ const NavBar = () => {
     ];
 
     return (
-        <nav>
+        <nav className="mb-auto">
             <ContainerApp>
                 <Flex className="py-7 border-solid border-gray-200 border-b dark:border-zinc-800" justify="between">
                     <Link className="flex items-center rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite" href="/">
@@ -41,8 +41,7 @@ const NavBar = () => {
                                 </li>
                             ))}
                         </ul>
-                        {/* <IoIosArrowDropdown className="xs:blox md:hidden" size={29}></IoIosArrowDropdown> */}
-                        <DropDownMenu className="leading-extraSmall xs:block md:hidden"></DropDownMenu>
+                        <DropDownMenu></DropDownMenu>
                         <RxDividerVertical className="xs:block md:hidden" color="rgb(229, 231, 235)" size={29}></RxDividerVertical>
                         <DarkModeButton />
                     </Flex>

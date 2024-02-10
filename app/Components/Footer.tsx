@@ -6,7 +6,7 @@ import ContainerApp from "./ContainerApp";
 const Footer = () => {
     const currentYear = new Date().getFullYear();
     return (
-        <footer>
+        <footer className="mt-auto">
             <ContainerApp>
                 <Flex className="py-7 border-solid border-gray-200 border-t dark:border-zinc-800" justify="between">
                     <Text className="flex items-center" as="p">

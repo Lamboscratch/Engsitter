@@ -1,18 +1,10 @@
-import { ReactNode } from "react";
 import ContainerApp from "./Components/ContainerApp";
-import Footer from "./Components/Footer";
-import NavBar from "./Components/NavBar";
+import Intro from "./Components/Intro";
 
-interface Props {
-    children: ReactNode;
-}
-
-export default function Home({ children }: Props) {
+export default function Home() {
     return (
         <ContainerApp>
-            <NavBar></NavBar>
-            <main>{children}</main>
-            <Footer></Footer>
+            <Intro></Intro>
         </ContainerApp>
     );
 }
