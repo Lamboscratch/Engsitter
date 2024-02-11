@@ -17,7 +17,7 @@ const DarkModeButton = () => {
     }
 
     return (
-        <button className="rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite" onClick={() => (theme === "dark" ? setTheme("light") : setTheme("dark"))}>
+        <button className="rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite" onClick={() => (theme === "dark" ? setTheme("light") : setTheme("dark"))} aria-label="Change color button">
             {theme === "dark" ? <TbMoonFilled size={24} /> : <TbSunFilled size={24} />}
         </button>
     );

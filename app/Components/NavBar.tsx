@@ -1,9 +1,9 @@
 "use client";
 
+import * as Separator from "@radix-ui/react-separator";
 import { Flex } from "@radix-ui/themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { RxDividerVertical } from "react-icons/rx";
 import ContainerApp from "./ContainerApp";
 import DarkModeButton from "./DarkModeButton";
 import DropDownMenu from "./DropDownMenu";
@@ -31,7 +31,7 @@ const NavBar = () => {
                         <ImageTheme />
                         <p className="font-semibold text-2xl ml-4 initial:ml-3.5">Devsitter</p>
                     </Link>
-                    <Flex className="flex space-x-6 items-center justify-between initial:space-x-0.5 sm:space-x-6">
+                    <Flex className="flex space-x-6 items-center justify-between initial:space-x-3.5 sm:space-x-6">
                         <ul className="flex space-x-7 text-xl initial:hidden sm:flex">
                             {links.map((item) => (
                                 <li key={item.path}>
@@ -42,7 +42,8 @@ const NavBar = () => {
                             ))}
                         </ul>
                         <DropDownMenu></DropDownMenu>
-                        <RxDividerVertical className="initial:block sm:hidden" color="rgb(229, 231, 235)" size={29}></RxDividerVertical>
+                        {/* <RxDividerVertical className="initial:block sm:hidden" color="rgb(229, 231, 235)" size={29}></RxDividerVertical> */}
+                        <Separator.Root className="initial:block sm:hidden bg-gray-200 dark:bg-zinc-800 h-full data-[orientation=vertical]:w-px mx-[45px]" decorative orientation="vertical" />
                         <DarkModeButton />
                     </Flex>
                 </Flex>
