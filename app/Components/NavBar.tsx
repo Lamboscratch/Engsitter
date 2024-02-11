@@ -29,10 +29,10 @@ const NavBar = () => {
                 <Flex className="py-7 border-solid border-gray-200 border-b dark:border-zinc-800" justify="between">
                     <Link className="flex items-center rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite" href="/">
                         <ImageTheme />
-                        <p className="font-semibold text-2xl ml-4 xs:ml-3.5">Devsitter</p>
+                        <p className="font-semibold text-2xl ml-4 initial:ml-3.5">Devsitter</p>
                     </Link>
-                    <Flex className="flex space-x-6 items-center justify-between xs:space-x-0.5 md:space-x-6">
-                        <ul className="flex space-x-7 text-xl xs:hidden md:flex">
+                    <Flex className="flex space-x-6 items-center justify-between initial:space-x-0.5 sm:space-x-6">
+                        <ul className="flex space-x-7 text-xl initial:hidden sm:flex">
                             {links.map((item) => (
                                 <li key={item.path}>
                                     <Link className={`${currentPath === item.path ? "font-semibold" : ""} hover:text-gray-600 transition-colors rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite dark:hover:text-gray-300`} href={item.path}>
@@ -42,7 +42,7 @@ const NavBar = () => {
                             ))}
                         </ul>
                         <DropDownMenu></DropDownMenu>
-                        <RxDividerVertical className="xs:block md:hidden" color="rgb(229, 231, 235)" size={29}></RxDividerVertical>
+                        <RxDividerVertical className="initial:block sm:hidden" color="rgb(229, 231, 235)" size={29}></RxDividerVertical>
                         <DarkModeButton />
                     </Flex>
                 </Flex>

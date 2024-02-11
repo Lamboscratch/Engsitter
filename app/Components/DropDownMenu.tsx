@@ -8,7 +8,7 @@ const DropDownMenu = () => {
     const currentPath = usePathname();
 
     return (
-        <div className="leading-extraSmall text-inherit md:hidden">
+        <div className="leading-extraSmall text-inherit sm:hidden">
             <DropdownMenu.Root>
                 <DropdownMenu.Trigger asChild>
                     <button className="w-[31px] h-[31px] inline-flex items-center justify-center shadow-black rounded-full outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite" aria-label="Customise options">
