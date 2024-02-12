@@ -20,7 +20,7 @@ const NavBar = () => {
     const links: Links[] = [
         { name: "Home", path: "/" },
         { name: "Posts", path: "/posts" },
-        { name: "Snippets", path: "/snippets" },
+        { name: "Tips", path: "/tips" },
     ];
 
     return (

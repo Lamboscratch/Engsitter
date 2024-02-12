@@ -41,9 +41,9 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className={poppins.variable}>
-            <body className="flex flex-col min-h-dvh relative">
-                <Theme>
+        <html lang="en">
+            <body className={poppins.variable}>
+                <Theme className="flex flex-col min-h-dvh relative">
                     <ChangeColorProvider>
                         <NavBar></NavBar>
                         <main>{children}</main>

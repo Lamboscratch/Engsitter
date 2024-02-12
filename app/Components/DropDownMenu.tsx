@@ -36,9 +36,9 @@ const DropDownMenu = () => {
                                 </div>
                             </DropdownMenu.Item>
                         </Link>
-                        <Link className={`${currentPath === "/snippets" ? "font-semibold" : ""} hover:text-gray-600 transition-colors dark:hover:text-gray-300`} href={"/snippets"}>
+                        <Link className={`${currentPath === "/tips" ? "font-semibold" : ""} hover:text-gray-600 transition-colors dark:hover:text-gray-300`} href={"/snippets"}>
                             <DropdownMenu.Item className="group text-base leading-none rounded-[3px] flex items-center h-[30px] px-[3px] relative select-none outline-none data-[highlighted]:bg-orangeSite">
-                                Snippets{" "}
+                                Tips{" "}
                                 <div className="ml-auto pl-[20px] group-data-[highlighted]:text-white">
                                     <MdOutlineKeyboardArrowRight />
                                 </div>
