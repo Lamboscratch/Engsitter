@@ -42,14 +42,14 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={poppins.variable}>
-                <Theme className="flex flex-col min-h-dvh relative">
-                    <ChangeColorProvider>
+            <body className={"flex flex-col min-h-dvh relative " + poppins.variable}>
+                <ChangeColorProvider>
+                    <Theme>
                         <NavBar></NavBar>
                         <main>{children}</main>
                         <Footer></Footer>
-                    </ChangeColorProvider>
-                </Theme>
+                    </Theme>
+                </ChangeColorProvider>
             </body>
         </html>
     );

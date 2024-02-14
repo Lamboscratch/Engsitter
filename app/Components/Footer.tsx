@@ -13,13 +13,13 @@ const Footer = () => {
                         &copy; {currentYear} Devsitter
                     </Text>
                     <Flex align="center" justify="between" gap="2">
-                        <Link className="rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite" href="https://www.facebook.com/">
+                        <Link className="rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite" href="https://www.facebook.com/" aria-label="Link to Facebook">
                             <PiFacebookLogo size={33}></PiFacebookLogo>
                         </Link>
-                        <Link className="rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite" href="https://www.instagram.com/">
+                        <Link className="rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite" href="https://www.instagram.com/" aria-label="Link to Youtube">
                             <PiYoutubeLogo size={33}></PiYoutubeLogo>
                         </Link>
-                        <Link className="rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite" href="https://www.youtube.com/">
+                        <Link className="rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite" href="https://www.youtube.com/" aria-label="Link to Instagram">
                             <PiInstagramLogo size={33}></PiInstagramLogo>
                         </Link>
                     </Flex>

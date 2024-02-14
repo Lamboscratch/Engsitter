@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 
 export function ChangeColorProvider({ children }: { children: ReactNode }) {
     return (
-        <ThemeProvider attribute="class" enableSystem defaultTheme="system">
+        <ThemeProvider attribute="class" enableSystem={true} defaultTheme="system">
             {children}
         </ThemeProvider>
     );
