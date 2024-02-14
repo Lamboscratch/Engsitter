@@ -42,7 +42,6 @@ const NavBar = () => {
                             ))}
                         </ul>
                         <DropDownMenu></DropDownMenu>
-                        {/* <RxDividerVertical className="initial:block sm:hidden" color="rgb(229, 231, 235)" size={29}></RxDividerVertical> */}
                         <Separator.Root className="initial:block sm:hidden bg-gray-200 dark:bg-zinc-800 h-full data-[orientation=vertical]:w-px mx-[45px]" decorative orientation="vertical" />
                         <DarkModeButton />
                     </Flex>
