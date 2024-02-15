@@ -1,9 +1,14 @@
 import { Heading } from "@radix-ui/themes";
+import { ReactNode } from "react";
 
-const HeadingPrimary = () => {
+interface Props {
+    children: ReactNode;
+}
+
+const HeadingPrimary = ({ children }: Props) => {
     return (
         <Heading className="py-11" size="9">
-            All Posts
+            {children}
         </Heading>
     );
 };

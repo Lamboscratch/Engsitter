@@ -6,18 +6,20 @@ import Link from "next/link";
 const index = () => {
     return (
         <ContainerApp>
-            <HeadingPrimary></HeadingPrimary>
-            <Flex className="mb-11" direction={{ initial: "column", sm: "row" }} gap={{ initial: "6", sm: "3" }}>
+            <HeadingPrimary>All Posts</HeadingPrimary>
+            <Flex className="mb-7" direction={{ initial: "column", sm: "row" }} gap={{ initial: "6", sm: "3" }}>
                 <Flex className="w-1/2 initial:w-full" direction="column">
                     <Heading as="h2" size="7">
-                        Python
+                        <Link className="hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-2" href="/posts/python">
+                            Python
+                        </Link>
                     </Heading>
                     <Flex className="border-l-2 border-solid border-orangeSite text-xl font-medium pt-2 mt-2" direction="column">
                         <Flex align="center">
                             <Box className="h-[2px] pl-[15px] border border-solid border-orangeSite"></Box>
                             <Text className="!ml-2">
-                                <Link className="hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-2" href="/posts/intro">
-                                    components
+                                <Link className="hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-2" href="/posts/python/introduction-to-python">
+                                    Introduction to Python
                                 </Link>
                             </Text>
                         </Flex>

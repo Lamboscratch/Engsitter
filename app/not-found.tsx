@@ -4,7 +4,7 @@ import ContainerApp from "./Components/ContainerApp";
 const NotFoundPage = () => {
     return (
         <ContainerApp>
-            <ContainerApp>
+            <ContainerApp style="my-16">
                 <Flex direction="column" align="center">
                     <Heading as="h1" size="9">
                         404
