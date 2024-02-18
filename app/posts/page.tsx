@@ -18,7 +18,7 @@ const index = () => {
                         <Flex align="center">
                             <Box className="h-[2px] pl-[15px] border border-solid border-orangeSite"></Box>
                             <Text className="!ml-2">
-                                <Link className="hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4" href="/posts/python/introduction-to-python">
+                                <Link className="hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4" href="/posts/python/Introduction-to-Python">
                                     Introduction to Python
                                 </Link>
                             </Text>

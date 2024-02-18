@@ -16,10 +16,10 @@ const Article = ({ article }: Props) => {
                 remarkPlugins={[gfm]}
                 components={{
                     code(props) {
-                        const { children, className, ...rest } = props;
+                        const { children, className, node, ...rest } = props;
                         const match = /language-(\w+)/.exec(className || "");
                         return match ? (
-                            <SyntaxHighlighter {...rest} PreTag="div" children={String(children).replace(/\n$/, "")} language={match[1]} style={style} />
+                            <SyntaxHighlighter {...rest} children={String(children).replace(/\n$/, "")} language={match[1]} style={style} />
                         ) : (
                             <code {...rest} className={className}>
                                 {children}
@@ -27,7 +27,7 @@ const Article = ({ article }: Props) => {
                         );
                     },
                     h1(props) {
-                        const { children, ...rest } = props;
+                        const { children, node, ...rest } = props;
                         return (
                             <h1 className={`initial:text-5xl sm:text-6xl font-bold`} {...rest}>
                                 {children}
@@ -35,15 +35,23 @@ const Article = ({ article }: Props) => {
                         );
                     },
                     h2(props) {
-                        const { children, ...rest } = props;
+                        const { children, node, ...rest } = props;
                         return (
                             <h2 className={`initial:text-2xl sm:text-3xl font-bold initial:mt-6 initial:mb-3 sm:mt-7 sm:mb-4`} {...rest}>
                                 {children}
                             </h2>
                         );
                     },
+                    h3(props) {
+                        const { children, node, ...rest } = props;
+                        return (
+                            <h3 className={`initial:text-xl sm:text-2xl font-bold initial:mt-6 initial:mb-3 sm:mt-7 sm:mb-4`} {...rest}>
+                                {children}
+                            </h3>
+                        );
+                    },
                     ul(props) {
-                        const { children, ...rest } = props;
+                        const { children, node, ...rest } = props;
                         return (
                             <ul className={`list-inside list-disc ${margins}`} {...rest}>
                                 {children}
@@ -51,11 +59,19 @@ const Article = ({ article }: Props) => {
                         );
                     },
                     a(props) {
-                        const { children, ...rest } = props;
+                        const { children, node, ...rest } = props;
                         return (
                             <a className={`underline decoration-solid decoration-orangeSite underline-offset-4`} {...rest}>
                                 {children}
                             </a>
+                        );
+                    },
+                    p(props) {
+                        const { children, node, ...rest } = props;
+                        return (
+                            <p className={`initial:mb-2 sm:mb-3`} {...rest}>
+                                {children}
+                            </p>
                         );
                     },
                 }}

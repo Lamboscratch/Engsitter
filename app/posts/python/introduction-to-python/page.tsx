@@ -1,6 +1,6 @@
 import Article from "@/app/Components/Article";
 import ContainerApp from "@/app/Components/ContainerApp";
-import HeadingPrimary from "@/app/Components/HeadingPrimary";
+import Navigator from "@/app/Components/Navigator";
 import ReleaseDate from "@/app/Components/ReleaseDate";
 import { Flex } from "@radix-ui/themes";
 import { promises as fs } from "fs";
@@ -13,7 +13,8 @@ const page = async () => {
     return (
         <ContainerApp>
             <Flex className="mb-11" direction="column">
-                <h1 className="mt-11 initial:mb-2 sm:mb-4 initial:text-5xl sm:text-6xl font-bold">react-markdown</h1>
+                <Navigator></Navigator>
+                <h1 className="initial:my-2 sm:my-4 initial:text-5xl sm:text-6xl font-bold">react-markdown</h1>
                 <ReleaseDate>02/01/2024</ReleaseDate>
             </Flex>
             <Article article={article}></Article>
