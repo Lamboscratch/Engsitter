@@ -2,12 +2,13 @@ import { Heading } from "@radix-ui/themes";
 import { ReactNode } from "react";
 
 interface Props {
+    styles?: string;
     children: ReactNode;
 }
 
-const HeadingPrimary = ({ children }: Props) => {
+const HeadingPrimary = ({ children, styles }: Props) => {
     return (
-        <Heading className="py-11" size="9">
+        <Heading className={"pt-11 initial:pb-3 initial:text-5xl sm:pb-5 " + styles} size="9">
             {children}
         </Heading>
     );

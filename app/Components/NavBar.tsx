@@ -1,6 +1,6 @@
 "use client";
 
-import * as Separator from "@radix-ui/react-separator";
+import { Root } from "@radix-ui/react-separator";
 import { Flex } from "@radix-ui/themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -12,6 +12,19 @@ import ImageTheme from "./ImageTheme";
 interface Links {
     name: string;
     path: string;
+}
+
+function checkLink(currentPath: string, itemPath: string) {
+    if (currentPath === "/" && itemPath === "/") {
+        return true;
+    }
+    if (currentPath.startsWith("/posts") && itemPath.startsWith("/posts")) {
+        return true;
+    }
+    if (currentPath.startsWith("/tips") && itemPath.startsWith("/tips")) {
+        return true;
+    }
+    return false;
 }
 
 const NavBar = () => {
@@ -35,14 +48,14 @@ const NavBar = () => {
                         <ul className="flex space-x-7 text-xl initial:hidden sm:flex">
                             {links.map((item) => (
                                 <li key={item.path}>
-                                    <Link className={`${currentPath === item.path ? "font-semibold" : ""} hover:text-gray-600 transition-colors rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite dark:hover:text-gray-300`} href={item.path}>
+                                    <Link className={`${checkLink(currentPath, item.path) ? "font-semibold" : ""} hover:text-gray-600 transition-colors rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite dark:hover:text-gray-300`} href={item.path}>
                                         {item.name}
                                     </Link>
                                 </li>
                             ))}
                         </ul>
                         <DropDownMenu></DropDownMenu>
-                        <Separator.Root className="initial:block sm:hidden bg-gray-200 dark:bg-zinc-800 h-full data-[orientation=vertical]:w-px mx-[45px]" decorative orientation="vertical" />
+                        <Root className="initial:block sm:hidden bg-gray-200 dark:bg-zinc-800 h-full data-[orientation=vertical]:w-px mx-[45px]" decorative orientation="vertical" />
                         <DarkModeButton />
                     </Flex>
                 </Flex>
