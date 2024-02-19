@@ -13,8 +13,6 @@ function capitalizeFirstLetter(text: string) {
 function calculatePath(pathsArray: string[], index: number) {
     let calculatedPath = "/";
     for (let i = 0; i <= index; i++) {
-        console.log(i);
-        console.log(pathsArray[i]);
         calculatedPath = calculatedPath + pathsArray[i] + "/";
     }
     return calculatedPath;

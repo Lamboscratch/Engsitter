@@ -10,7 +10,7 @@ interface Props {
 const Article = ({ article }: Props) => {
     const margins = "initial:mt-3 initial:mb-2 sm:mt-4 sm:mb-3";
     return (
-        <article className="max-w-prose">
+        <article className="max-w-prose initial:mb-5 sm:mb-6">
             <Markdown
                 className="initial:text-base sm:text-lg"
                 remarkPlugins={[gfm]}
