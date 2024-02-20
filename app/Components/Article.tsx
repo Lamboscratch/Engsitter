@@ -2,6 +2,7 @@ import Markdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { materialDark as style } from "react-syntax-highlighter/dist/esm/styles/prism";
 import gfm from "remark-gfm";
+import Copy from "./Copy";
 
 interface Props {
     article: string;
@@ -19,7 +20,10 @@ const Article = ({ article }: Props) => {
                         const { children, className, node, ...rest } = props;
                         const match = /language-(\w+)/.exec(className || "");
                         return match ? (
-                            <SyntaxHighlighter {...rest} children={String(children).replace(/\n$/, "")} language={match[1]} style={style} />
+                            <div className="relative">
+                                <Copy text={children!.toString()}></Copy>
+                                <SyntaxHighlighter {...rest} className={className + " initial:!text-sm sm:!text-base"} children={String(children).replace(/\n$/, "")} language={match[1]} style={style} />
+                            </div>
                         ) : (
                             <code {...rest} className={className}>
                                 {children}

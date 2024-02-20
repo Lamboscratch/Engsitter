@@ -6,7 +6,7 @@ import Link from "next/link";
 const index = () => {
     return (
         <ContainerApp>
-            <HeadingPrimary>All Posts</HeadingPrimary>
+            <HeadingPrimary styles="!pb-11">All Posts</HeadingPrimary>
             <Flex className="mb-7" direction={{ initial: "column", sm: "row" }} gap={{ initial: "6", sm: "3" }}>
                 <Flex className="w-1/2 initial:w-full" direction="column">
                     <Heading as="h2" size="7">

@@ -6,8 +6,9 @@ const config: Config = {
         extend: {
             colors: {
                 orangeSite: "#ffad00",
-                blackPrimary: "color(display-p3 0.067 0.067 0.074)",
-                whitePrimary: "#fff",
+                orangeSiteDarker: "#e69c00",
+                blackPrimary: "rgba(17, 17, 19, 0.91)",
+                whitePrimary: "rgba(255, 255, 255, 0.91)",
             },
             lineHeight: {
                 extraSmall: "0.8",

@@ -7,7 +7,7 @@ import React from "react";
 const page = () => {
     return (
         <ContainerApp>
-            <HeadingPrimary>Python</HeadingPrimary>
+            <HeadingPrimary styles="!pb-11">Python</HeadingPrimary>
             <TopicPosts></TopicPosts>
         </ContainerApp>
     );
