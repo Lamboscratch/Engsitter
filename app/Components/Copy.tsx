@@ -19,9 +19,9 @@ const Copy = ({ text }: Props) => {
     };
 
     return (
-        <button className="absolute top-0 right-0 z-10 p-2">
+        <button className="absolute top-0 right-0 z-10 p-2" aria-label="Copy text button">
             <CopyToClipboard text={text} onCopy={(copied) => copy()}>
-                {copied ? <IoMdCheckmarkCircleOutline className="text-lg m-1 text-orangeSite" /> : <IoMdCopy className="text-lg m-1 text-orangeSite transition-colors hover:text-orangeSiteDarker" />}
+                {copied ? <IoMdCheckmarkCircleOutline className="text-lg m-1 text-orangeSite" /> : <IoMdCopy className="text-lg m-1 text-grayPrimary transition-colors hover:text-lightGrayPrimary" />}
             </CopyToClipboard>
         </button>
     );

@@ -6,7 +6,7 @@ import { TbMoonFilled, TbSunFilled } from "react-icons/tb";
 
 const DarkModeButton = () => {
     const [mounted, setMounted] = useState(false);
-    const { theme, setTheme } = useTheme();
+    const { resolvedTheme, setTheme } = useTheme();
 
     useEffect(() => {
         setMounted(true);
@@ -16,11 +16,18 @@ const DarkModeButton = () => {
         return null;
     }
 
-    return (
-        <button className="rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite" onClick={() => (theme === "dark" ? setTheme("light") : setTheme("dark"))} aria-label="Change color button">
-            {theme === "dark" ? <TbMoonFilled size={24} /> : <TbSunFilled size={24} />}
-        </button>
-    );
+    if (resolvedTheme === "dark")
+        return (
+            <button className="rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite" onClick={() => setTheme("light")} aria-label="Change color button">
+                <TbMoonFilled size={24} />
+            </button>
+        );
+    if (resolvedTheme === "light")
+        return (
+            <button className="rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite" onClick={() => setTheme("dark")} aria-label="Change color button">
+                <TbSunFilled size={24} />
+            </button>
+        );
 };
 
 export default DarkModeButton;
