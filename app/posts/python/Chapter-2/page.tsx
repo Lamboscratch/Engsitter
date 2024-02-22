@@ -9,7 +9,7 @@ import { promises as fs } from "fs";
 
 const page = async () => {
     // const article = (await fs.readFile(process.cwd() + "/app/posts/python/introduction-to-python/article.md", "utf8")).replace("ImageDark", ImageDark.src);
-    const article = await fs.readFile(process.cwd() + "/app/posts/python/introduction-to-python/article.md", "utf8");
+    const article = await fs.readFile(process.cwd() + "/app/posts/python/Chapter-2/article.md", "utf8");
 
     return (
         <ContainerApp>

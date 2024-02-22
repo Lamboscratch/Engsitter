@@ -1,6 +1,6 @@
 import Markdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { materialDark as style } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { okaidia as style } from "react-syntax-highlighter/dist/esm/styles/prism";
 import gfm from "remark-gfm";
 import Copy from "./Copy";
 

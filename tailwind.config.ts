@@ -8,9 +8,11 @@ const config: Config = {
                 orangeSite: "#ffad00",
                 orangeSiteDarker: "#e69c00",
                 blackPrimary: "rgba(17, 17, 19, 0.91)",
+                blackPrimaryFull: "rgba(17, 17, 19)",
                 grayPrimary: "#979797",
                 lightGrayPrimary: "#d5d5d5",
                 whitePrimary: "rgba(255, 255, 255, 0.91)",
+                whitePrimaryFull: "rgba(255, 255, 255)",
             },
             lineHeight: {
                 extraSmall: "0.8",
