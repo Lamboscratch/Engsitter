@@ -39,7 +39,7 @@ const NavBar = () => {
     return (
         <nav className="sticky top-0 z-20 backdrop-blur-sm bg-whitePrimary dark:bg-blackPrimary mb-auto">
             <ContainerApp>
-                <Flex className="py-7 border-solid border-gray-200 border-b dark:border-zinc-800" justify="between">
+                <Flex className="py-4 border-solid border-gray-200 border-b dark:border-zinc-800" justify="between">
                     <Link className="flex items-center rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite" href="/">
                         <ImageTheme />
                         <p className="font-semibold text-2xl ml-4 initial:ml-3.5">Devsitter</p>

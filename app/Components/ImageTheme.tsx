@@ -1,19 +1,5 @@
-import Image from "next/image";
-import logoDark from "../../public/images/logo-flat-dark.svg";
-import logoLight from "../../public/images/logo-flat-light.svg";
-
 const ImageTheme = () => {
-    const imageSize = 27;
-
     return (
-        // <>
-        //     <div>
-        //         <Image className="block dark:hidden" src={logoDark} alt="Logo" width={imageSize} height={imageSize} />
-        //     </div>
-        //     <div>
-        //         <Image className="hidden dark:block" src={logoLight} alt="Logo" width={imageSize} height={imageSize} />
-        //     </div>
-        // </>
         <svg className="w-7 h-7" version="1.1" height="480" width="480" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
             <path className="stroke-blackPrimaryFull dark:stroke-whitePrimaryFull" d="M240 35 A200 200 0 0 1 240 445" fill="none" strokeWidth="70" />
             <rect className="fill-blackPrimaryFull dark:fill-whitePrimaryFull" x="0" y="272" width="70" height="208"></rect>

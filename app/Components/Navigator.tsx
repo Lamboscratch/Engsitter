@@ -23,7 +23,7 @@ const Navigator = () => {
     const paths = currentPath.slice(1).split("/");
 
     return (
-        <Flex className="initial:mt-4 sm:mt-5">
+        <Flex>
             {paths.map((value, index) => (
                 <Flex className="mr-1.5" align="center" key={value}>
                     <Link className="!mr-1.5 text-sm hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4" href={calculatePath(paths, index)}>

@@ -15,7 +15,7 @@ const page = async () => {
         <ContainerApp>
             <Flex className="initial:!block sm:!flex" justify="between" gap={{ initial: "0", sm: "7" }}>
                 <Flex direction="column">
-                    <Flex className="mb-11" direction="column">
+                    <Flex className="initial:my-4 sm:my-5" direction="column">
                         <Navigator></Navigator>
                         <h1 className="initial:my-2 sm:my-4 initial:text-5xl sm:text-6xl font-bold">react-markdown</h1>
                         <ReleaseDate>02/01/2024</ReleaseDate>

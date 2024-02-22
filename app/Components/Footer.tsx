@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <footer className="mt-auto">
             <ContainerApp>
-                <Flex className="py-7 border-solid border-gray-200 border-t dark:border-zinc-800" justify="between">
+                <Flex className="py-4 border-solid border-gray-200 border-t dark:border-zinc-800" justify="between">
                     <Text className="flex items-center" as="p">
                         &copy; {currentYear} Devsitter
                     </Text>
