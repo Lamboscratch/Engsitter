@@ -1,48 +1,8 @@
-React component to render markdown.
-
-## Contents
-
--   [What is this?](#what-is-this)
--   [When should I use this?](#when-should-i-use-this)
--   [Install](#install)
--   [Use](#use)
--   [API](#api)
-    -   [`Markdown`](#markdown)
-    -   [`defaultUrlTransform(url)`](#defaulturltransformurl)
-    -   [`AllowElement`](#allowelement)
-    -   [`Components`](#components)
-    -   [`ExtraProps`](#extraprops)
-    -   [`Options`](#options)
-    -   [`UrlTransform`](#urltransform)
--   [Examples](#examples)
-    -   [Use a plugin](#use-a-plugin)
-    -   [Use a plugin with options](#use-a-plugin-with-options)
-    -   [Use custom components (syntax highlight)](#use-custom-components-syntax-highlight)
-    -   [Use remark and rehype plugins (math)](#use-remark-and-rehype-plugins-math)
--   [Plugins](#plugins)
--   [Syntax](#syntax)
--   [Types](#types)
--   [Compatibility](#compatibility)
--   [Architecture](#architecture)
--   [Appendix A: HTML in markdown](#appendix-a-html-in-markdown)
--   [Appendix B: Components](#appendix-b-components)
--   [Appendix C: line endings in markdown (and JSX)](#appendix-c-line-endings-in-markdown-and-jsx)
--   [Security](#security)
--   [Related](#related)
--   [Contribute](#contribute)
--   [License](#license)
-
-## What is this?
-
-This package is a [React][] component that can be given a string of markdown
-that it’ll safely render to React elements.
-You can pass plugins to change how markdown is transformed and pass components
-that will be used instead of normal HTML elements.
-
--   to learn markdown, see this [cheatsheet and tutorial][commonmark-help]
--   to try out `react-markdown`, see [our demo][demo]
+# Introduction
 
 ## When should I use this?
+
+[//]: <> (This is also a comment.)
 
 There are other ways to use markdown in React out there so why use this one?
 The three main reasons are that they often rely on `dangerouslySetInnerHTML`,

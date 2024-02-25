@@ -49,7 +49,7 @@ const Posts = () => {
             </Heading>
             <Flex direction="column" align="start" justify="center" gap="5">
                 {posts.map((item) => (
-                    <Flex key={item.link} className="p-3 rounded-lg border-solid border-gray-200 border" direction={{ initial: "column", sm: "row" }} gap={{ initial: "3", sm: "9" }}>
+                    <Flex key={item.link} className="p-3 rounded-lg border-solid border-gray-200 border dark:border-zinc-800" direction={{ initial: "column", sm: "row" }} gap={{ initial: "3", sm: "9" }}>
                         <Text className="text-nowrap min-w-36">{item.date}</Text>
                         <Flex direction="column" gap="2" justify="start">
                             <Heading as="h3" size="6">

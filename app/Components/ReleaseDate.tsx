@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 interface Props {
-    children: ReactNode;
+    date: Date;
 }
 
 const months = new Map();
@@ -18,13 +18,17 @@ months.set("10", "October");
 months.set("11", "November");
 months.set("12", "December");
 
-const ReleaseDate = ({ children }: Props) => {
-    const date = children?.toString().split("/");
-    const day = date![0];
-    const month = date![1];
-    const year = date![2];
+const ReleaseDate = ({ date }: Props) => {
+    const creationDate = date.toLocaleDateString().split("/");
+    const day = creationDate[0];
+    const month = creationDate[1];
+    const year = creationDate[2];
 
-    return <time className="text-sm" dateTime={`${year}-${month}-${day}`}>{`${months.get(month)} ${day}, ${year}`}</time>;
+    return (
+        <time className="text-sm initial:pb-4 sm:pb-5 border-solid border-gray-200 border-b dark:border-zinc-800" dateTime={`${year}-${month}-${day}`}>
+            {`${months.get(month)} ${day}, ${year}`}
+        </time>
+    );
 };
 
 export default ReleaseDate;

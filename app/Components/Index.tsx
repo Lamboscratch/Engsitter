@@ -10,7 +10,7 @@ const Index = () => {
     const boxClassFour = "h-[2px] pl-[15px] border border-solid border-orangeSite self-center";
 
     return (
-        <Flex className="sticky top-[6.8rem] self-start initial:mb-5 sm:mb-6 initial:mt-4 sm:mt-5 initial:!hidden md:!flex" direction="column" gap={{ initial: "6", sm: "3" }}>
+        <Flex className="sticky top-[5.2rem] self-start initial:mb-5 sm:mb-6 initial:!hidden md:!flex" direction="column" gap={{ initial: "6", sm: "3" }}>
             <Heading as="h2" size="7">
                 <Link className={linkClass} href="/posts/python">
                     Python
