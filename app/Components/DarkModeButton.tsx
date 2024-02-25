@@ -16,16 +16,20 @@ const DarkModeButton = () => {
         return null;
     }
 
+    const styleClass = "rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite";
+    const ariaLabel = "Change color button";
+    const imageSize = 24;
+
     if (resolvedTheme === "dark")
         return (
-            <button className="rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite" onClick={() => setTheme("light")} aria-label="Change color button">
-                <TbMoonFilled size={24} />
+            <button className={styleClass} onClick={() => setTheme("light")} aria-label={ariaLabel}>
+                <TbMoonFilled size={imageSize} />
             </button>
         );
     if (resolvedTheme === "light")
         return (
-            <button className="rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite" onClick={() => setTheme("dark")} aria-label="Change color button">
-                <TbSunFilled size={24} />
+            <button className={styleClass} onClick={() => setTheme("dark")} aria-label={ariaLabel}>
+                <TbSunFilled size={imageSize} />
             </button>
         );
 };

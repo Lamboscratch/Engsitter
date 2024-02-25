@@ -5,6 +5,10 @@ import ContainerApp from "./ContainerApp";
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
+
+    const linkClass = "rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite";
+    const logoSize = 33;
+
     return (
         <footer className="mt-auto">
             <ContainerApp>
@@ -13,14 +17,14 @@ const Footer = () => {
                         &copy; {currentYear} Engsitter
                     </Text>
                     <Flex align="center" justify="between" gap="2">
-                        <Link className="rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite" href="https://www.facebook.com/" aria-label="Link to Facebook">
-                            <PiFacebookLogo size={33}></PiFacebookLogo>
+                        <Link className={linkClass} href="https://www.facebook.com/" aria-label="Link to Facebook">
+                            <PiFacebookLogo size={logoSize}></PiFacebookLogo>
                         </Link>
-                        <Link className="rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite" href="https://www.instagram.com/" aria-label="Link to Youtube">
-                            <PiYoutubeLogo size={33}></PiYoutubeLogo>
+                        <Link className={linkClass} href="https://www.instagram.com/" aria-label="Link to Youtube">
+                            <PiYoutubeLogo size={logoSize}></PiYoutubeLogo>
                         </Link>
-                        <Link className="rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite" href="https://www.youtube.com/" aria-label="Link to Instagram">
-                            <PiInstagramLogo size={33}></PiInstagramLogo>
+                        <Link className={linkClass} href="https://www.youtube.com/" aria-label="Link to Instagram">
+                            <PiInstagramLogo size={logoSize}></PiInstagramLogo>
                         </Link>
                     </Flex>
                 </Flex>
