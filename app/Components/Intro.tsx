@@ -6,7 +6,7 @@ const Intro = () => {
             <Heading as="h1" size="9" align="center">
                 Welcome to{" "}
                 <Text className="text-orangeSite" as="span">
-                    Dev
+                    Eng
                 </Text>
                 sitter
             </Heading>

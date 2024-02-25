@@ -42,7 +42,7 @@ const NavBar = () => {
                 <Flex className="py-4 border-solid border-gray-200 border-b dark:border-zinc-800" justify="between">
                     <Link className="flex items-center rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite" href="/">
                         <ImageTheme />
-                        <p className="font-semibold text-2xl ml-4 initial:ml-3.5">Devsitter</p>
+                        <p className="font-semibold text-2xl ml-4 initial:ml-3.5">Engsitter</p>
                     </Link>
                     <Flex className="flex space-x-6 items-center justify-between initial:space-x-3.5 sm:space-x-6">
                         <ul className="flex space-x-7 text-xl initial:hidden sm:flex">
