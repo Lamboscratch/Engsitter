@@ -1,12 +1,10 @@
 "use client";
 
-import { Root } from "@radix-ui/react-separator";
 import { Flex } from "@radix-ui/themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ContainerApp from "./ContainerApp";
 import DarkModeButton from "./DarkModeButton";
-import DropDownMenu from "./DropDownMenu";
 import ImageTheme from "./ImageTheme";
 
 interface Links {
@@ -39,25 +37,24 @@ const NavBar = () => {
     return (
         <nav className="sticky top-0 z-20 backdrop-blur-sm bg-whitePrimary dark:bg-blackPrimary mb-auto">
             <ContainerApp>
-                <Flex className="py-4 border-solid border-gray-200 border-b dark:border-zinc-800" justify="between">
-                    <Link className="flex items-center rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite" href="/">
+                <Flex className="py-4 min-h-16 border-solid border-gray-200 border-b dark:border-zinc-800">
+                    <Link className="flex items-center initial:mr-0 sm:mr-auto" href="/">
                         <ImageTheme />
-                        <p className="font-semibold text-2xl ml-4 initial:ml-3.5">Engsitter</p>
+                        <p className="font-semibold text-2xl ml-4 initial:ml-3.5 leading-6 initial:hidden sm:block">Engsitter</p>
                     </Link>
-                    <Flex className="flex space-x-6 items-center justify-between initial:space-x-3.5 sm:space-x-6">
-                        <ul className="flex space-x-7 text-xl initial:hidden sm:flex">
-                            {links.map((item) => (
-                                <li key={item.path}>
-                                    <Link className={`${checkLink(currentPath, item.path) ? "font-semibold" : ""} hover:text-gray-600 transition-colors rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite dark:hover:text-gray-300`} href={item.path}>
-                                        {item.name}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                        <DropDownMenu></DropDownMenu>
-                        <Root className="initial:block sm:hidden bg-gray-200 dark:bg-zinc-800 h-full data-[orientation=vertical]:w-px mx-[45px]" decorative orientation="vertical" />
-                        <DarkModeButton />
-                    </Flex>
+                    <ul className="flex space-x-6 text-xl mt-0.5 initial:mx-auto sm:mr-0">
+                        {links.map((item) => (
+                            <li key={item.path}>
+                                <Link
+                                    className={`${checkLink(currentPath, item.path) ? "font-semibold underline decoration-solid decoration-orangeSite underline-offset-4" : ""} rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite dark:hover:text-gray-300`}
+                                    href={item.path}
+                                >
+                                    {item.name}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                    <DarkModeButton />
                 </Flex>
             </ContainerApp>
         </nav>

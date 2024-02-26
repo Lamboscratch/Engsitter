@@ -12,12 +12,7 @@ const page = async () => {
 
     return (
         <ContainerApp>
-            <Flex className="mb-11" direction="column">
-                <Navigator></Navigator>
-                <h1 className="initial:my-2 sm:my-4 initial:text-5xl sm:text-6xl font-bold">react-markdown</h1>
-                <ReleaseDate>02/01/2024</ReleaseDate>
-            </Flex>
-            <Article article={article}></Article>
+            <h1 className="initial:my-2 sm:my-4 initial:text-5xl sm:text-6xl font-bold">react-markdown</h1>
         </ContainerApp>
     );
 };

@@ -7,12 +7,12 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     const linkClass = "rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite";
-    const logoSize = 33;
+    const logoSize = 30;
 
     return (
         <footer className="mt-auto">
             <ContainerApp>
-                <Flex className="py-4 border-solid border-gray-200 border-t dark:border-zinc-800" justify="between">
+                <Flex className="py-4 min-h-16 border-solid border-gray-200 border-t dark:border-zinc-800" justify="between">
                     <Text className="flex items-center" as="p">
                         &copy; {currentYear} Engsitter
                     </Text>
