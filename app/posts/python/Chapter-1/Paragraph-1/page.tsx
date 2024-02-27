@@ -7,7 +7,7 @@ import { promises as fs } from "fs";
 
 const page = async () => {
     // const article = (await fs.readFile(process.cwd() + "/app/posts/python/introduction-to-python/article.md", "utf8")).replace("ImageDark", ImageDark.src);
-    const path = "/app/Posts/Python/Chapter-2/article.md";
+    const path = "/app/Posts/Python/Chapter-1/Paragraph-1/article.md";
     const article = await fs.readFile(process.cwd() + path, "utf8");
     const { birthtime } = await fs.stat(process.cwd() + path);
 

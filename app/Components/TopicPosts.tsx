@@ -14,7 +14,7 @@ const TopicPosts = () => {
                 <Grid columns={{ initial: "2", sm: "3" }} align="start" justify="center" gap="5">
                     <Flex className={containerPostClass} direction="column" gap="2" justify="start">
                         <Heading as="h3" size="6">
-                            <Link className={linkClass} href="/posts/python/introduction-to-python">
+                            <Link className={linkClass} href="/Posts/Python/introduction-to-python">
                                 Introduction to Python
                             </Link>
                         </Heading>

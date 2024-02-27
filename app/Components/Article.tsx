@@ -38,7 +38,7 @@ const Article = ({ article, date }: Props) => {
                     h1(props) {
                         const { children, node, ...rest } = props;
                         return (
-                            <Flex className="initial:mt-4 sm:mt-5 initial:mb-7 sm:mb-8" direction="column">
+                            <Flex className="initial:mt-0 sm:mt-5 initial:mb-7 sm:mb-8" direction="column">
                                 <Navigator></Navigator>
                                 <h1 className={`initial:text-5xl sm:text-6xl font-bold initial:mt-4 sm:mt-5 initial:mb-2 sm:mb-3`} {...rest}>
                                     {children}

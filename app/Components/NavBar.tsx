@@ -16,10 +16,10 @@ function checkLink(currentPath: string, itemPath: string) {
     if (currentPath === "/" && itemPath === "/") {
         return true;
     }
-    if (currentPath.startsWith("/posts") && itemPath.startsWith("/posts")) {
+    if (currentPath.startsWith("/Posts") && itemPath.startsWith("/Posts")) {
         return true;
     }
-    if (currentPath.startsWith("/tips") && itemPath.startsWith("/tips")) {
+    if (currentPath.startsWith("/Tips") && itemPath.startsWith("/Tips")) {
         return true;
     }
     return false;
@@ -30,8 +30,8 @@ const NavBar = () => {
 
     const links: Links[] = [
         { name: "Home", path: "/" },
-        { name: "Posts", path: "/posts" },
-        { name: "Tips", path: "/tips" },
+        { name: "Posts", path: "/Posts" },
+        { name: "Tips", path: "/Tips" },
     ];
 
     return (

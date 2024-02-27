@@ -18,7 +18,7 @@ const index = () => {
             <Flex className="mb-7" direction={{ initial: "column", sm: "row" }} gap={{ initial: "6", sm: "3" }}>
                 <Flex className="w-1/2 initial:w-full" direction="column">
                     <Heading as="h2" size="7">
-                        <Link className={linkClass} href="/posts/python">
+                        <Link className={linkClass} href="/Posts/Python">
                             Python
                         </Link>
                     </Heading>
@@ -26,7 +26,7 @@ const index = () => {
                         <Flex align="center">
                             <Box className={containerOneClass}></Box>
                             <Text className="!ml-2">
-                                <Link className={linkClass} href="/posts/python/Introduction-to-Python">
+                                <Link className={linkClass} href="/Posts/Python/Introduction-to-Python">
                                     Introduction to Python
                                 </Link>
                             </Text>

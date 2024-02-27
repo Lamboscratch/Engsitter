@@ -8,7 +8,7 @@ export default function Home() {
         <ContainerApp>
             <Intro></Intro>
             <Posts></Posts>
-            <GoToLink name="All Posts" link="/posts"></GoToLink>
+            <GoToLink name="All Posts" link="/Posts"></GoToLink>
         </ContainerApp>
     );
 }
