@@ -1,11 +1,8 @@
-import { Flex } from "@radix-ui/themes";
 import Markdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { okaidia as style } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { oneDark as style } from "react-syntax-highlighter/dist/esm/styles/prism";
 import gfm from "remark-gfm";
 import Copy from "./Copy";
-import Navigator from "./Navigator";
-import ReleaseDate from "./ReleaseDate";
 
 interface Props {
     article: string;
@@ -16,7 +13,7 @@ const Article = ({ article, date }: Props) => {
     const margins = "initial:mt-3 initial:mb-2 sm:mt-4 sm:mb-3";
 
     return (
-        <article className="max-w-prose">
+        <article className="initial:w-full sm:min-w-[65ch]">
             <Markdown
                 className="initial:text-base sm:text-lg"
                 remarkPlugins={[gfm]}
@@ -33,18 +30,6 @@ const Article = ({ article, date }: Props) => {
                             <code {...rest} className={className}>
                                 {children}
                             </code>
-                        );
-                    },
-                    h1(props) {
-                        const { children, node, ...rest } = props;
-                        return (
-                            <Flex className="initial:mt-0 sm:mt-5 initial:mb-7 sm:mb-8" direction="column">
-                                <Navigator></Navigator>
-                                <h1 className={`initial:text-5xl sm:text-6xl font-bold initial:mt-4 sm:mt-5 initial:mb-2 sm:mb-3`} {...rest}>
-                                    {children}
-                                </h1>
-                                <ReleaseDate date={date}></ReleaseDate>
-                            </Flex>
                         );
                     },
                     h2(props) {

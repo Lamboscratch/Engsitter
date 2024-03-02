@@ -16,6 +16,9 @@ const poppins = Poppins({
     variable: "--font-poppins",
 });
 
+// Script UMAMI
+// <script defer src="https://analytics.us.umami.is/script.js" data-website-id="9dff9671-a95a-45a4-ae29-667158928411"></script>
+
 export const metadata: Metadata = {
     title: "Engsitter",
     description: "Comprehensive articles on networking and cybersecurity",

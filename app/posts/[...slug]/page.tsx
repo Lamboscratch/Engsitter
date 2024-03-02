@@ -1,6 +1,10 @@
 import Article from "@/app/Components/Article";
 import ContainerApp from "@/app/Components/ContainerApp";
+import Index from "@/app/Components/Index";
+import Navigator from "@/app/Components/Navigator";
+import ReleaseDate from "@/app/Components/ReleaseDate";
 import siteMetadata from "@/app/Data/siteMetadata";
+import { Flex } from "@radix-ui/themes";
 import type { Post } from "contentlayer/generated";
 import { allPosts } from "contentlayer/generated";
 import { Metadata } from "next";
@@ -67,11 +71,17 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
 
     const post = allPosts.find((p: any) => p.slug === slug) as Post;
 
-    console.log(post.readingTime);
-
     return (
         <ContainerApp>
-            <Article article={post.body.raw} date={new Date()}></Article>
+            <Flex className="initial:mt-0 sm:mt-5" direction="column">
+                <Navigator></Navigator>
+                <h1 className={`initial:text-5xl sm:text-6xl text-center font-bold initial:mt-4 sm:mt-5 initial:mb-2 sm:mb-3`}>{post.title}</h1>
+                <ReleaseDate date={new Date()}></ReleaseDate>
+            </Flex>
+            <Flex className="initial:!block sm:!flex w-full" justify="between">
+                <Article article={post.body.raw} date={new Date()}></Article>
+                <Index></Index>
+            </Flex>
         </ContainerApp>
     );
 }

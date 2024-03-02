@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 interface Props {
     date: Date;
 }
@@ -25,7 +23,7 @@ const ReleaseDate = ({ date }: Props) => {
     const year = creationDate[2];
 
     return (
-        <time className="text-sm initial:pb-4 sm:pb-5 border-solid border-gray-200 border-b dark:border-zinc-800" dateTime={`${year}-${month}-${day}`}>
+        <time className="text-sm initial:pb-4 sm:pb-5 text-center border-solid border-gray-200 border-b dark:border-zinc-800" dateTime={`${year}-${month}-${day}`}>
             {`${months.get(month)} ${day}, ${year}`}
         </time>
     );
