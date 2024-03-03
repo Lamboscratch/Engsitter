@@ -14,7 +14,7 @@ const page = async () => {
     return (
         <ContainerApp>
             <Flex className="initial:!block sm:!flex" justify="between" gap={{ initial: "0", sm: "7" }}>
-                <Article article={article} date={birthtime}></Article>
+                <Article article={article}></Article>
                 <Index></Index>
             </Flex>
         </ContainerApp>

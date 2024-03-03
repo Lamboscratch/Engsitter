@@ -6,10 +6,11 @@ import Copy from "./Copy";
 
 interface Props {
     article: string;
-    date: Date;
 }
 
-const Article = ({ article, date }: Props) => {
+/* TODO: change SyntaxHighlighter with rehype-prism-plus */
+
+const Article = ({ article }: Props) => {
     const margins = "initial:mt-3 initial:mb-2 sm:mt-4 sm:mb-3";
 
     return (

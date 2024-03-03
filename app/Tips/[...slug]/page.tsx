@@ -16,11 +16,9 @@ const Page = async ({ params }: { params: { slug: string[] } }) => {
 
     const post = allPosts.find((p: any) => p.slug === slug) as Post;
 
-    console.log(post.readingTime);
-
     return (
         <ContainerApp>
-            <Article article={post.body.raw} date={new Date()}></Article>
+            <Article article={post.body.raw}></Article>
         </ContainerApp>
     );
 };
