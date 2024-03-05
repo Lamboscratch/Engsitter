@@ -1,16 +1,16 @@
 import { Flex, Heading, Text } from "@radix-ui/themes";
 import type { Post } from "contentlayer/generated";
 import Link from "next/link";
-import ReleaseDate from "./Components/ReleaseDate";
+import ReleaseDate from "./ReleaseDate";
 import { CoreContent } from "pliny/utils/contentlayer.js";
 
-interface Props {
+export interface PostsType {
     posts: CoreContent<Post>[];
 }
 
 const MAX_DISPLAY = 5;
 
-export default function Home({ posts }: Props) {
+export default function Home({ posts }: PostsType) {
     return (
         <Flex direction="column" align="start" justify="center" gap="5">
             <Heading as="h2" size="8" weight="bold">
