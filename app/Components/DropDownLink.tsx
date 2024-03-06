@@ -11,7 +11,7 @@ interface Props {
     rightArrowClass: string;
 }
 
-const DropDownLink = ({ currentPath, path, name, linkClass, itemClass, rightArrowClass }: Props) => {
+export default function DropDownLink({ currentPath, path, name, linkClass, itemClass, rightArrowClass }: Props) {
     return (
         <Link className={`${currentPath === path ? "font-semibold" : ""} ${linkClass}`} href={path}>
             <Item className={itemClass}>
@@ -22,6 +22,4 @@ const DropDownLink = ({ currentPath, path, name, linkClass, itemClass, rightArro
             </Item>
         </Link>
     );
-};
-
-export default DropDownLink;
+}

@@ -24,7 +24,7 @@ export default function Home({ posts }: PostsType) {
                         </Text>
                         <Flex direction="column" gap="2" justify="start">
                             <Heading as="h3" size="6">
-                                <Link className="hover:text-gray-600 transition-colors dark:hover:text-gray-300 dark:color-inherit" href={post.path}>
+                                <Link className="hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4" href={post.path}>
                                     {post.title}
                                 </Link>
                             </Heading>

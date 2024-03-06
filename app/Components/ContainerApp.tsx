@@ -6,12 +6,10 @@ interface Props {
     style?: string;
 }
 
-const ContainerApp = ({ children, style }: Props) => {
+export default function ContainerApp({ children, style }: Props) {
     return (
         <Container className={style + " mx-4"} size="4">
             {children}
         </Container>
     );
-};
-
-export default ContainerApp;
+}

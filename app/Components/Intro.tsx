@@ -1,6 +1,6 @@
 import { Flex, Heading, Text } from "@radix-ui/themes";
 
-const Intro = () => {
+export default function Intro() {
     return (
         <Flex className="my-24" direction="column" align="center" justify="center" gap="4">
             <Heading as="h1" size="9" align="center">
@@ -15,6 +15,4 @@ const Intro = () => {
             </Text>
         </Flex>
     );
-};
-
-export default Intro;
+}

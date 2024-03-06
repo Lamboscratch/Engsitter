@@ -3,7 +3,7 @@ import Link from "next/link";
 import { PiFacebookLogo, PiInstagramLogo, PiYoutubeLogo } from "react-icons/pi";
 import ContainerApp from "./ContainerApp";
 
-const Footer = () => {
+export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     const linkClass = "rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite";
@@ -31,6 +31,4 @@ const Footer = () => {
             </ContainerApp>
         </footer>
     );
-};
-
-export default Footer;
+}

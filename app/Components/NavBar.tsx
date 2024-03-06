@@ -25,7 +25,7 @@ function checkLink(currentPath: string, itemPath: string) {
     return false;
 }
 
-const NavBar = () => {
+export default function NavBar() {
     const currentPath = usePathname();
 
     const links: Links[] = [
@@ -59,6 +59,4 @@ const NavBar = () => {
             </ContainerApp>
         </nav>
     );
-};
-
-export default NavBar;
+}

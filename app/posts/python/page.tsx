@@ -1,14 +1,19 @@
 import ContainerApp from "@/app/Components/ContainerApp";
 import HeadingPrimary from "@/app/Components/HeadingPrimary";
-import Posts from "@/app/Components/Posts";
-import TopicPosts from "@/app/Components/TopicPosts";
-import React from "react";
+import { allPosts } from "contentlayer/generated";
+import { allCoreContent, sortPosts } from "pliny/utils/contentlayer.js";
+import CoursePosts from "@/app/Components/CoursePosts";
 
-const page = () => {
+export const page = () => {
+    const sortedPosts = sortPosts(allPosts);
+    const arrayPosts = allCoreContent(sortedPosts);
+
+    const course = "Python";
+
     return (
         <ContainerApp>
-            <HeadingPrimary styles="!pb-11">Python</HeadingPrimary>
-            <TopicPosts></TopicPosts>
+            <HeadingPrimary styles="!pb-11">{course}</HeadingPrimary>
+            <CoursePosts posts={arrayPosts} course={course} />
         </ContainerApp>
     );
 };

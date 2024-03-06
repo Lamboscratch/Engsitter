@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { TbMoonFilled, TbSunFilled } from "react-icons/tb";
 
-const DarkModeButton = () => {
+export default function DarkModeButton() {
     const [mounted, setMounted] = useState(false);
     const { resolvedTheme, setTheme } = useTheme();
 
@@ -32,6 +32,4 @@ const DarkModeButton = () => {
                 <TbSunFilled size={imageSize} />
             </button>
         );
-};
-
-export default DarkModeButton;
+}

@@ -3,7 +3,7 @@ import { usePathname } from "next/navigation";
 import { IoIosArrowDropdown } from "react-icons/io";
 import DropDownLink from "./DropDownLink";
 
-const DropDownMenu = () => {
+export default function DropDownMenu() {
     const currentPath = usePathname();
 
     const itemClass = "group text-base leading-none rounded-[3px] flex items-center h-[30px] px-[3px] relative select-none outline-none data-[highlighted]:bg-orangeSite";
@@ -32,6 +32,4 @@ const DropDownMenu = () => {
             </Root>
         </div>
     );
-};
-
-export default DropDownMenu;
+}

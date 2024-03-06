@@ -7,7 +7,7 @@ interface Props {
     link: string;
 }
 
-const GoToLink = ({ name, link }: Props) => {
+export default function GoToLink({ name, link }: Props) {
     return (
         <Flex className="my-6" align="end" justify="end">
             <Link className="flex items-center p-3 rounded-lg border-solid border-gray-200 border transition-colors hover:bg-orangeSite text-xl" href={link}>
@@ -16,6 +16,4 @@ const GoToLink = ({ name, link }: Props) => {
             </Link>
         </Flex>
     );
-};
-
-export default GoToLink;
+}

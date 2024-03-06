@@ -1,7 +1,7 @@
 import { Box, Flex, Heading, Text } from "@radix-ui/themes";
 import Link from "next/link";
 
-const Index = () => {
+export default function Index() {
     const linkClass = "hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4";
     const containerClass = "border-l-2 border-solid border-orangeSite ml-9";
     const boxClassOne = "h-[2px] pl-[15px] border border-solid border-orangeSite";
@@ -136,6 +136,4 @@ const Index = () => {
             </Flex>
         </Flex>
     );
-};
-
-export default Index;
+}

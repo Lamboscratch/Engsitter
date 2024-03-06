@@ -17,7 +17,7 @@ months.set(9, "October");
 months.set(10, "November");
 months.set(11, "December");
 
-const ReleaseDate = ({ date, style }: Props) => {
+export default function ReleaseDate({ date, style }: Props) {
     const creationDate = new Date(date);
     const day = creationDate.getDate();
     const month = creationDate.getMonth();
@@ -28,6 +28,4 @@ const ReleaseDate = ({ date, style }: Props) => {
             {`${months.get(month)} ${day}, ${year}`}
         </time>
     );
-};
-
-export default ReleaseDate;
+}

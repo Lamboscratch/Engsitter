@@ -18,7 +18,7 @@ function calculatePath(pathsArray: string[], index: number) {
     return calculatedPath;
 }
 
-const Navigator = () => {
+export default function Navigator() {
     const currentPath = usePathname();
     const paths = currentPath.slice(1).split("/");
 
@@ -34,6 +34,4 @@ const Navigator = () => {
             ))}
         </Flex>
     );
-};
-
-export default Navigator;
+}

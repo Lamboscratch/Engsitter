@@ -8,7 +8,7 @@ interface Props {
     text: string;
 }
 
-const Copy = ({ text }: Props) => {
+export default function Copy({ text }: Props) {
     const [copied, setCopied] = useState(false);
 
     const copy = () => {
@@ -25,6 +25,4 @@ const Copy = ({ text }: Props) => {
             </CopyToClipboard>
         </button>
     );
-};
-
-export default Copy;
+}

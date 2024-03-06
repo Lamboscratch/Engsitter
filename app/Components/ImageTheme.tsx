@@ -1,4 +1,4 @@
-const ImageTheme = () => {
+export default function ImageTheme() {
     const darkLightClass = "fill-blackPrimaryFull dark:fill-whitePrimaryFull stroke-blackPrimaryFull dark:stroke-whitePrimaryFull";
 
     return (
@@ -15,6 +15,4 @@ const ImageTheme = () => {
             <polygon className={darkLightClass} points="240, 400 480, 320 480, 400 240, 480" stroke="#111113" fill="#111113" strokeWidth="1" />
         </svg>
     );
-};
-
-export default ImageTheme;
+}
