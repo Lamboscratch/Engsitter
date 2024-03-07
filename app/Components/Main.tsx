@@ -13,7 +13,7 @@ const MAX_DISPLAY = 5;
 export default function Home({ posts }: PostsType) {
     return (
         <Flex direction="column" align="start" justify="center" gap="5">
-            <Heading as="h2" size="8" weight="bold">
+            <Heading className="!text-[1.875rem]" as="h2" size="8" weight="bold">
                 Recent Posts
             </Heading>
             <Flex direction="column" align="start" justify="center" gap="5">

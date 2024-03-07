@@ -9,7 +9,7 @@ export default function Course({ posts }: PostsType) {
 
     return (
         <Flex className="w-1/2 initial:w-full" direction="column">
-            <Heading as="h2" size="7">
+            <Heading className="!text-[1.875rem]" as="h2" size="7">
                 <Link className={linkClass} href={`/${posts[0].path.split("/")[0]}/${posts[0].path.split("/")[1]}`}>
                     {posts[0].path.split("/")[1]}
                 </Link>

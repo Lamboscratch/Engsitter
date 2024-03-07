@@ -28,7 +28,7 @@ const Page = async ({ params }: { params: { slug: string[] } }) => {
             </Flex>
             <Flex className="initial:!block sm:!flex w-full" justify="between">
                 <Article article={post.body.raw}></Article>
-                <Index></Index>
+                <Index posts={sortedCoreContents} course={post.path.split("/")[1]}></Index>
             </Flex>
         </ContainerApp>
     );

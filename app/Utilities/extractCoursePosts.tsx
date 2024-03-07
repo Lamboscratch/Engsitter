@@ -1,6 +1,6 @@
 import { PostsType } from "../Components/Main";
 
-export default function extractPosts(posts: PostsType["posts"], course: string) {
+export default function extractCoursePosts(posts: PostsType["posts"], course: string) {
     const courses = posts.filter((post) => {
         return post.path.split("/")[0] === "Posts";
     });
@@ -8,8 +8,6 @@ export default function extractPosts(posts: PostsType["posts"], course: string) 
     const coursesPost = courses.filter((post) => {
         return post.path.split("/")[1] === course;
     });
-
-    console.log(coursesPost);
 
     return coursesPost;
 }
