@@ -4,7 +4,7 @@ import { allPosts } from "contentlayer/generated";
 import { allCoreContent, sortPosts } from "pliny/utils/contentlayer.js";
 import CoursePosts from "@/app/Components/CoursePosts";
 
-export const page = () => {
+const page = () => {
     const sortedPosts = sortPosts(allPosts);
     const arrayPosts = allCoreContent(sortedPosts);
 
