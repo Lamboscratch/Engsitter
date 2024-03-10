@@ -9,8 +9,6 @@ const AdBlockerDetector = () => {
     const pathname = usePathname();
     const adBlockDetected = useDetectAdBlock();
 
-    console.log(pathname);
-
     useEffect(() => {
         if (adBlockDetected) {
             router.push("/adBlockerDetected");
