@@ -9,6 +9,7 @@ import Footer from "./Components/Footer";
 import NavBar from "./Components/NavBar";
 import "./globals.css";
 import "./theme-config.css";
+import AdBlockerDetector from "./Components/AdBlockerDetector";
 
 const poppins = Poppins({
     weight: ["400", "500", "600", "700"],
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <body className={"flex flex-col min-h-dvh relative " + poppins.variable}>
                 <ChangeColorProvider>
                     <Theme>
+                        <AdBlockerDetector></AdBlockerDetector>
                         <NavBar></NavBar>
                         <main>{children}</main>
                         <Footer></Footer>
