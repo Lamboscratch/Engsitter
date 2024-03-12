@@ -1,4 +1,4 @@
-import { ComputedFields, defineDocumentType, makeSource } from "contentlayer/source-files";
+import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import { extractTocHeadings } from "pliny/mdx-plugins/index.js";
 import readingTime from "reading-time";
 

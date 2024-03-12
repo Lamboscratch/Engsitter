@@ -3,6 +3,8 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark as style } from "react-syntax-highlighter/dist/esm/styles/prism";
 import gfm from "remark-gfm";
 import Copy from "./Copy";
+import Link from "next/link";
+import calculateHeadersUrl from "../Utilities/calculateHeadersUrl";
 
 interface Props {
     article: string;
@@ -36,16 +38,16 @@ export default function Article({ article }: Props) {
                     h2(props) {
                         const { children, node, ...rest } = props;
                         return (
-                            <h2 className={`initial:text-2xl sm:text-3xl font-bold initial:mt-6 initial:mb-3 sm:mt-7 sm:mb-4`} {...rest}>
-                                {children}
+                            <h2 id={calculateHeadersUrl(children?.toString()!)} className={`initial:text-2xl sm:text-3xl font-bold initial:mt-6 initial:mb-3 sm:mt-7 sm:mb-4`} {...rest}>
+                                <Link href={`#${calculateHeadersUrl(children?.toString()!)}`}>{children}</Link>
                             </h2>
                         );
                     },
                     h3(props) {
                         const { children, node, ...rest } = props;
                         return (
-                            <h3 className={`initial:text-xl sm:text-2xl font-bold initial:mt-6 initial:mb-3 sm:mt-7 sm:mb-4`} {...rest}>
-                                {children}
+                            <h3 id={calculateHeadersUrl(children?.toString()!)} className={`initial:text-xl sm:text-2xl font-bold initial:mt-6 initial:mb-3 sm:mt-7 sm:mb-4`} {...rest}>
+                                <Link href={`#${calculateHeadersUrl(children?.toString()!)}`}>{children}</Link>
                             </h3>
                         );
                     },
