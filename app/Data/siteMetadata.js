@@ -1,7 +1,7 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
     title: "Engsitter",
-    author: "Lamboscratch",
+    author: "Engsitter",
     headerTitle: "Engsitter",
     description: "Comprehensive articles on networking and cybersecurity",
     language: "en-us",

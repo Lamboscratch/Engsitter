@@ -17,7 +17,7 @@ export default function CoursePosts({ posts, course }: Props) {
         <Flex className="mb-7" direction="column" align="start" justify="center" gap="7">
             <Grid columns={{ initial: "1", sm: "3" }} align="start" justify="center" gap="5">
                 {courses.map((course) => (
-                    <Flex className={containerPostClass} direction="column" gap="2" justify="start">
+                    <Flex key={course.path} className={containerPostClass} direction="column" gap="2" justify="start">
                         <Heading as="h3" size="6">
                             <Link className={linkClass} href={`/${course.path}`}>
                                 {course.title}

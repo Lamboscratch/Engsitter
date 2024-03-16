@@ -43,3 +43,6 @@ next-env.d.ts
 
 # search.json
 public/search.json
+
+# RSS feed
+/public/feed.xml
