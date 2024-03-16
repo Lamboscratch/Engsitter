@@ -40,6 +40,12 @@ const siteMetadata = {
         //   googleAnalyticsId: '', // e.g. G-XXXXXXX
         // },
     },
+    search: {
+        provider: "kbar",
+        kbarConfig: {
+            searchDocumentsPath: "search.json", // path to load documents to search
+        },
+    },
 };
 
 module.exports = siteMetadata;

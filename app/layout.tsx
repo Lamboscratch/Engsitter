@@ -4,12 +4,13 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import logoDark from "../public/images/logo-dark.svg";
 import logoLight from "../public/images/logo-light.svg";
+import AdBlockerDetector from "./Components/AdBlockerDetector";
 import { ChangeColorProvider } from "./Components/ChangeColorProvider";
 import Footer from "./Components/Footer";
 import NavBar from "./Components/NavBar";
+import SearchProvider from "./Components/SearchProvider";
 import "./globals.css";
 import "./theme-config.css";
-import AdBlockerDetector from "./Components/AdBlockerDetector";
 
 const poppins = Poppins({
     weight: ["400", "500", "600", "700"],
@@ -45,10 +46,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <body className={"flex flex-col min-h-dvh relative " + poppins.variable}>
                 <ChangeColorProvider>
                     <Theme>
-                        <AdBlockerDetector></AdBlockerDetector>
-                        <NavBar></NavBar>
-                        <main>{children}</main>
-                        <Footer></Footer>
+                        <SearchProvider>
+                            <AdBlockerDetector></AdBlockerDetector>
+                            <NavBar></NavBar>
+                            <main>{children}</main>
+                            <Footer></Footer>
+                        </SearchProvider>
                     </Theme>
                 </ChangeColorProvider>
             </body>

@@ -11,7 +11,7 @@ interface Props {
 export default function CoursePosts({ posts, course }: Props) {
     const courses = extractCoursePosts(posts, course);
     const linkClass = "hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4";
-    const containerPostClass = "p-3 rounded-lg border border-solid border-gray-200 dark:border-zinc-800";
+    const containerPostClass = "p-3 rounded-lg border border-solid border-gray-200 dark:border-zinc-700";
 
     return (
         <Flex className="mb-7" direction="column" align="start" justify="center" gap="7">

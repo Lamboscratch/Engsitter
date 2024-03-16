@@ -18,7 +18,7 @@ export default function Home({ posts }: PostsType) {
             </Heading>
             <Flex direction="column" align="start" justify="center" gap="5">
                 {posts.slice(0, MAX_DISPLAY).map((post) => (
-                    <Flex key={post.path} className="p-3 rounded-lg border-solid border-gray-200 border dark:border-zinc-800" direction={{ initial: "column", sm: "row" }} gap={{ initial: "3", sm: "9" }}>
+                    <Flex key={post.path} className="p-3 rounded-lg border-solid border-gray-200 border dark:border-zinc-700" direction={{ initial: "column", sm: "row" }} gap={{ initial: "3", sm: "9" }}>
                         <Text className="text-nowrap min-w-36">
                             <ReleaseDate date={post.date}></ReleaseDate>
                         </Text>

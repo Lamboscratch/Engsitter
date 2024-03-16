@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import ContainerApp from "./ContainerApp";
 import DarkModeButton from "./DarkModeButton";
 import ImageTheme from "./ImageTheme";
+import Search from "./Search";
 
 interface Links {
     name: string;
@@ -37,12 +38,12 @@ export default function NavBar() {
     return (
         <nav className="sticky top-0 z-20 backdrop-blur-sm bg-whitePrimary dark:bg-blackPrimary mb-auto">
             <ContainerApp>
-                <Flex className="py-4 min-h-16 border-solid border-gray-200 border-b dark:border-zinc-800">
-                    <Link className="flex items-center initial:mr-0 sm:mr-auto" href="/">
+                <Flex className="py-4 min-h-16 border-solid border-gray-200 border-b dark:border-zinc-700">
+                    <Link className="flex items-center mr-auto" href="/">
                         <ImageTheme />
-                        <p className="font-semibold text-2xl ml-4 initial:ml-3.5 leading-6 initial:hidden sm:block">Engsitter</p>
+                        <p className="font-semibold text-2xl ml-4 initial:ml-3.5 leading-6">Engsitter</p>
                     </Link>
-                    <ul className="flex space-x-6 text-xl mt-0.5 initial:mx-auto sm:mr-0">
+                    <ul className="flex space-x-6 text-xl mt-0.5 initial:hidden sm:flex sm:mr-0">
                         {links.map((item) => (
                             <li key={item.path}>
                                 <Link
@@ -54,6 +55,10 @@ export default function NavBar() {
                             </li>
                         ))}
                     </ul>
+                    <Search style="ml-6" />
+                    <svg stroke="currentColor" fill="none" strokeWidth="0" viewBox="0 0 15 15" height="31" width="31" xmlns="http://www.w3.org/2000/svg">
+                        <path className="!fill-gray-200 dark:!fill-zinc-700" fillRule="evenodd" clipRule="evenodd" d="M7.5 2C7.77614 2 8 2.22386 8 2.5L8 12.5C8 12.7761 7.77614 13 7.5 13C7.22386 13 7 12.7761 7 12.5L7 2.5C7 2.22386 7.22386 2 7.5 2Z" fill="currentColor"></path>
+                    </svg>
                     <DarkModeButton />
                 </Flex>
             </ContainerApp>

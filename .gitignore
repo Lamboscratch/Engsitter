@@ -28,6 +28,9 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# env file
+.env
+
 # vercel
 .vercel
 
@@ -37,3 +40,6 @@ next-env.d.ts
 
 # contentlayer
 .contentlayer
+
+# search.json
+public/search.json

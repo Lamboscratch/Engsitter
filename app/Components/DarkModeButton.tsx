@@ -16,7 +16,7 @@ export default function DarkModeButton() {
         return null;
     }
 
-    const styleClass = "rounded-sm outline-none initial:ml:0 sm:ml-6 focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite";
+    const styleClass = "rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite";
     const ariaLabel = "Change color button";
     const imageSize = 25;
 

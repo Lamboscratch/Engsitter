@@ -1,6 +1,10 @@
+import siteMetadata from "./app/Data/siteMetadata";
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import { writeFileSync } from "fs";
 import { extractTocHeadings } from "pliny/mdx-plugins/index.js";
+import { allCoreContent, sortPosts } from "pliny/utils/contentlayer.js";
 import readingTime from "reading-time";
+import { Post as PostType } from "./.contentlayer/generated";
 
 export const Post = defineDocumentType(() => ({
     name: "Post",
@@ -66,7 +70,18 @@ export const Post = defineDocumentType(() => ({
     },
 }));
 
+function createSearchIndex(allPosts: PostType[]) {
+    if (siteMetadata?.search?.provider === "kbar" && siteMetadata.search.kbarConfig.searchDocumentsPath) {
+        writeFileSync(`public/${siteMetadata.search.kbarConfig.searchDocumentsPath}`, JSON.stringify(allCoreContent(sortPosts(allPosts))));
+        console.log("Local search index generated...");
+    }
+}
+
 export default makeSource({
     contentDirPath: "app/Data", // Source directory where the content is located
     documentTypes: [Post],
+    onSuccess: async (importData) => {
+        const { allPosts } = await importData();
+        createSearchIndex(allPosts);
+    },
 });

@@ -37,8 +37,6 @@ export default function Index({ posts, course, id }: Props) {
         url: `#${calculateHeadersUrl(header.value)}`,
     }));
 
-    console.log(finalHeaders);
-
     return (
         <Flex className="sticky top-[5.4rem] pl-10 self-start initial:mb-5 sm:mb-6 initial:mt-0 sm:mt-7 initial:!hidden md:!flex" direction="column" gap={{ initial: "6", sm: "3" }}>
             <Heading className="!text-[1.875rem]" as="h2" size="7">

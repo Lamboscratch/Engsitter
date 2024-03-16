@@ -12,7 +12,7 @@ export default function Footer() {
     return (
         <footer className="mt-auto">
             <ContainerApp>
-                <Flex className="py-4 min-h-16 border-solid border-gray-200 border-t dark:border-zinc-800" justify="between">
+                <Flex className="py-4 min-h-16 border-solid border-gray-200 border-t dark:border-zinc-700" justify="between">
                     <Text className="flex items-center" as="p">
                         &copy; {currentYear} Engsitter
                     </Text>
