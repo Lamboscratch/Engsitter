@@ -5,9 +5,9 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 });
 
 const ContentSecurityPolicy = `
-    default-src 'self';
-    script-src 'self' giscus.app analytics.umami.is;
-    style-src 'self';
+    default-src 'self' https://www3.doubleclick.net/ https://marketingplatform.google.com/about/enterprise/;
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' giscus.app analytics.umami.is;
+    style-src 'self' 'unsafe-inline';
     font-src 'self';
     form-action 'self';
     frame-ancestors 'none';
