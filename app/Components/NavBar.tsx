@@ -56,8 +56,8 @@ export default function NavBar() {
                         ))}
                     </ul>
                     <Search style="ml-6" />
-                    <svg stroke="currentColor" fill="none" strokeWidth="0" viewBox="0 0 15 15" height="31" width="31" xmlns="http://www.w3.org/2000/svg">
-                        <path className="!fill-gray-200 dark:!fill-zinc-700" fillRule="evenodd" clipRule="evenodd" d="M7.5 2C7.77614 2 8 2.22386 8 2.5L8 12.5C8 12.7761 7.77614 13 7.5 13C7.22386 13 7 12.7761 7 12.5L7 2.5C7 2.22386 7.22386 2 7.5 2Z" fill="currentColor"></path>
+                    <svg className="pt-1" xmlns="http://www.w3.org/2000/svg" strokeWidth="0" stroke="currentColor" fill="none" width="27" height="27" viewBox="0 0 1 31">
+                        <rect className="!fill-gray-200 dark:!fill-zinc-700" fillRule="evenodd" clipRule="evenodd" fill="currentColor" width="1" height="31" />
                     </svg>
                     <DarkModeButton />
                 </Flex>
