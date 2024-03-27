@@ -8,6 +8,8 @@ import giscusConfigs from "@/app/Configs/giscus.config";
 export default function Comments() {
     const { resolvedTheme } = useTheme();
 
+    /* TODO: change theme color (see DarkModeButton.tsx) */
+
     return (
         <div className="mx-auto max-w-prose py-6">
             <Giscus
