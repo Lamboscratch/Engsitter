@@ -1,10 +1,10 @@
+import Link from "next/link";
 import Markdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark as style } from "react-syntax-highlighter/dist/esm/styles/prism";
 import gfm from "remark-gfm";
-import Copy from "./Copy";
-import Link from "next/link";
 import calculateHeadersUrl from "../Utilities/calculateHeadersUrl";
+import Copy from "./Copy";
 // import Comments from "./Comments";
 // import { Flex } from "@radix-ui/themes";
 

@@ -23,13 +23,13 @@ export default function DarkModeButton() {
     if (resolvedTheme === "dark")
         return (
             <button className={styleClass} onClick={() => setTheme("light")} aria-label={ariaLabel}>
-                <TbMoonFilled size={imageSize} />
+                <TbMoonFilled className="w-[1.65rem] h-[1.65rem]" />
             </button>
         );
     if (resolvedTheme === "light")
         return (
             <button className={styleClass} onClick={() => setTheme("dark")} aria-label={ariaLabel}>
-                <TbSunFilled size={imageSize} />
+                <TbSunFilled className="w-[1.65rem] h-[1.65rem]" />
             </button>
         );
 }

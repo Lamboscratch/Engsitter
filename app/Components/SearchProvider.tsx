@@ -59,7 +59,7 @@ export default function SearchProvider({ children }: Props) {
                     <KBarAnimator className="w-full max-w-xl">
                         <Box className="overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-blackPrimary">
                             <Flex className="flex items-center space-x-4 p-4">
-                                <CiSearch size={31} />
+                                <CiSearch className="w-[1.65rem] h-[1.65rem]" />
                                 <KBarSearch className="radix-themes h-8 w-full bg-transparent text-gray-600 placeholder-gray-400 focus:outline-none dark:text-gray-200 dark:placeholder-gray-500" />
                                 <kbd className="inline-block whitespace-nowrap rounded border px-1.5 align-middle font-medium tracking-wide text-sm text-gray-400 border-gray-400">ESC</kbd>
                             </Flex>

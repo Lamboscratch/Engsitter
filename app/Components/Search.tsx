@@ -10,7 +10,7 @@ export default function Search({ style }: Props) {
     if (siteMetadata.search && siteMetadata.search.provider === "kbar") {
         return (
             <KBarButton className={style} aria-label="Search">
-                <IoSearchOutline className="text-blackPrimary dark:text-whitePrimary" size={27} />
+                <IoSearchOutline className="text-blackPrimary dark:text-whitePrimary w-[1.65rem] h-[1.65rem]" />
             </KBarButton>
         );
     }

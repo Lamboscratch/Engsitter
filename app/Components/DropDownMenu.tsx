@@ -15,7 +15,7 @@ export default function DropDownMenu() {
             <Root>
                 <Trigger asChild>
                     <button className="w-[31px] h-[31px] inline-flex items-center justify-center shadow-black rounded-full outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite" aria-label="Customise options">
-                        <IoIosArrowDropdown size={29} />
+                        <IoIosArrowDropdown className="w-[1.65rem] h-[1.65rem]" />
                     </button>
                 </Trigger>
                 <Portal>

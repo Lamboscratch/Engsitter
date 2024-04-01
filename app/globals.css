@@ -23,3 +23,17 @@ body > div {
 main {
     flex-shrink: 1;
 }
+
+.shadowBoxLight {
+    box-shadow: rgba(255, 173, 0, 0.3) 0rem 0rem 0rem 0.25rem, rgba(255, 255, 255) 0px 0px 0px 0.5rem;
+}
+
+@layer utilities {
+    .shadowBoxDark {
+        box-shadow: rgba(255, 173, 0, 0.3) 0rem 0rem 0rem 0.25rem, rgba(17, 17, 19) 0px 0px 0px 0.5rem;
+    }
+}
+
+.halfHeight {
+    top: calc(0.95rem / 2);
+}

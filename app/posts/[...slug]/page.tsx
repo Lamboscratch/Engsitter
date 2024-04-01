@@ -75,7 +75,7 @@ const Page = async ({ params }: { params: { slug: string[] } }) => {
             <Flex className="initial:mt-0 sm:mt-5" direction="column">
                 <Navigator></Navigator>
                 <h1 className={`initial:text-5xl sm:text-6xl text-center font-bold initial:mt-4 sm:mt-5 initial:mb-2 sm:mb-3`}>{post.title}</h1>
-                <ReleaseDate style="border-solid border-gray-200 border-b dark:border-zinc-700" date={post.date}></ReleaseDate>
+                <ReleaseDate style="initial:pb-4 sm:pb-5 border-solid border-gray-200 border-b dark:border-zinc-700" date={post.date}></ReleaseDate>
             </Flex>
             <Flex className="initial:!block sm:!flex w-full" justify="between">
                 <Article article={post.body.raw}></Article>

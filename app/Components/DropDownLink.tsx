@@ -17,7 +17,7 @@ export default function DropDownLink({ currentPath, path, name, linkClass, itemC
             <Item className={itemClass}>
                 {name + " "}
                 <div className={rightArrowClass}>
-                    <MdOutlineKeyboardArrowRight />
+                    <MdOutlineKeyboardArrowRight className="w-[1.65rem] h-[1.65rem]" />
                 </div>
             </Item>
         </Link>

@@ -21,7 +21,7 @@ export default function Copy({ text }: Props) {
     return (
         <button className="absolute top-0 right-0 z-10 p-2" aria-label="Copy text button">
             <CopyToClipboard text={text} onCopy={(copied) => copy()}>
-                {copied ? <IoMdCheckmarkCircleOutline className="text-lg m-1 text-orangeSite" /> : <IoMdCopy className="text-lg m-1 text-grayPrimary transition-colors hover:text-lightGrayPrimary" />}
+                {copied ? <IoMdCheckmarkCircleOutline className="w-[1.1rem] h-[1.1rem] text-lg m-1 text-orangeSite" /> : <IoMdCopy className="w-[1.1rem] h-[1.1rem] text-lg m-1 text-grayPrimary transition-colors hover:text-lightGrayPrimary" />}
             </CopyToClipboard>
         </button>
     );

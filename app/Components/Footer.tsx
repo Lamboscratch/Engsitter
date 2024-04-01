@@ -18,13 +18,13 @@ export default function Footer() {
                     </Text>
                     <Flex align="center" justify="between" gap="2">
                         <Link className={linkClass} href="https://www.facebook.com/" aria-label="Link to Facebook">
-                            <PiFacebookLogo size={logoSize}></PiFacebookLogo>
+                            <PiFacebookLogo className="w-[1.65rem] h-[1.65rem]"></PiFacebookLogo>
                         </Link>
                         <Link className={linkClass} href="https://www.instagram.com/" aria-label="Link to Youtube">
-                            <PiYoutubeLogo size={logoSize}></PiYoutubeLogo>
+                            <PiYoutubeLogo className="w-[1.65rem] h-[1.65rem]"></PiYoutubeLogo>
                         </Link>
                         <Link className={linkClass} href="https://www.youtube.com/" aria-label="Link to Instagram">
-                            <PiInstagramLogo size={logoSize}></PiInstagramLogo>
+                            <PiInstagramLogo className="w-[1.65rem] h-[1.65rem]"></PiInstagramLogo>
                         </Link>
                     </Flex>
                 </Flex>

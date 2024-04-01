@@ -24,7 +24,7 @@ export default function ReleaseDate({ date, style }: Props) {
     const year = creationDate.getFullYear();
 
     return (
-        <time className={`text-sm initial:pb-4 sm:pb-5 text-center ${style}`} dateTime={date}>
+        <time className={`text-sm text-center ${style}`} dateTime={date}>
             {`${months.get(month)} ${day}, ${year}`}
         </time>
     );
