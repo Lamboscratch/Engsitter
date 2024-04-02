@@ -28,10 +28,10 @@ export default function Article({ article }: Props) {
                             const { children, className, node, ...rest } = props;
                             const match = /language-(\w+)/.exec(className || "");
                             return match ? (
-                                <div className="relative">
+                                <span className="block relative">
                                     <Copy text={children!.toString()}></Copy>
-                                    <SyntaxHighlighter {...rest} className={className + " initial:!text-sm sm:!text-base"} children={String(children).replace(/\n$/, "")} language={match[1]} style={style} />
-                                </div>
+                                    <SyntaxHighlighter {...rest} className={className + " block initial:!text-sm sm:!text-base"} children={String(children).replace(/\n$/, "")} language={match[1]} style={style} />
+                                </span>
                             ) : (
                                 <code {...rest} className={className}>
                                     {children}

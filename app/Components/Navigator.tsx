@@ -20,7 +20,7 @@ function calculatePath(pathsArray: string[], index: number) {
 
 export default function Navigator() {
     const currentPath = usePathname();
-    const paths = currentPath.slice(1).split("/");
+    const paths = currentPath!.slice(1).split("/");
 
     return (
         <Flex className="initial:pb-4 sm:pb-5 border-solid border-gray-200 border-b dark:border-zinc-700 initial:!hidden sm:!flex">

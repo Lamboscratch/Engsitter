@@ -47,7 +47,7 @@ export default function NavBar() {
                         {links.map((item) => (
                             <li key={item.path}>
                                 <Link
-                                    className={`${checkLink(currentPath, item.path) ? "font-semibold underline decoration-solid decoration-orangeSite underline-offset-4" : ""} rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite dark:hover:text-gray-300`}
+                                    className={`${checkLink(currentPath!, item.path) ? "font-semibold underline decoration-solid decoration-orangeSite underline-offset-4" : ""} rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite dark:hover:text-gray-300`}
                                     href={item.path}
                                 >
                                     {item.name}
