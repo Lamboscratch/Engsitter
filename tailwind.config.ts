@@ -41,6 +41,13 @@ const config: Config = {
                 slideUpAndFade: "slideUpAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)",
                 slideRightAndFade: "slideRightAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)",
             },
+            gridTemplateRows: {
+                rows: "2fr 1fr",
+            },
+            gridTemplateColumns: {
+                colsSmall: "3fr 1fr 2px 1fr 3fr",
+                colsBig: "5fr 2fr 2px 2fr 5fr",
+            },
         },
         screens: {
             initial: "0px",

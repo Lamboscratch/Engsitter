@@ -11,7 +11,6 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
-    scrollbar-gutter: stable both-edges;
 }
 
 body > div {
@@ -36,4 +35,12 @@ main {
 
 .halfHeight {
     top: calc(0.95rem / 2);
+}
+
+.halfWidth {
+    width: calc(50% + 1px);
+}
+
+.notFoundHeight {
+    height: calc(100dvh - 8rem);
 }

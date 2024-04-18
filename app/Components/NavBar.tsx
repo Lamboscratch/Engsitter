@@ -36,7 +36,7 @@ export default function NavBar() {
     ];
 
     return (
-        <nav className="sticky top-0 z-20 backdrop-blur-sm bg-whitePrimary dark:bg-blackPrimary mb-auto">
+        <nav className={`sticky top-0 z-20 backdrop-blur-sm bg-whitePrimary dark:bg-blackPrimary ${currentPath.startsWith("/Tips") ? "mb-auto" : "mb-0"}`}>
             <ContainerApp>
                 <Flex className="py-4 min-h-16 border-solid border-gray-200 border-b dark:border-zinc-700">
                     <Link className="flex items-center mr-auto" href="/">

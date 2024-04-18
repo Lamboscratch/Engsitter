@@ -21,17 +21,30 @@ function calculatePath(pathsArray: string[], index: number) {
 export default function Navigator() {
     const currentPath = usePathname();
     const paths = currentPath!.slice(1).split("/");
+    const initialPaths = paths.slice(0, paths.length - 1);
 
     return (
-        <Flex className="initial:pb-4 sm:pb-5 border-solid border-gray-200 border-b dark:border-zinc-700 initial:!hidden sm:!flex">
-            {paths.map((value, index) => (
-                <Flex className="mr-1.5" align="center" key={value}>
-                    <Link className="!mr-1.5 text-sm hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4" href={calculatePath(paths, index)}>
-                        {capitalizeFirstLetter(value)}
-                    </Link>
-                    {index === paths.length - 1 ? null : <MdKeyboardArrowRight />}
-                </Flex>
-            ))}
-        </Flex>
+        <>
+            <Flex className="initial:pb-4 initial:pt-[0.875rem] sm:pb-5 sm:pt-[1.125rem] border-solid border-gray-200 border-b dark:border-zinc-700 initial:!hidden sm:!flex">
+                {paths.map((value, index) => (
+                    <Flex className="mr-1.5" align="center" key={value}>
+                        <Link className="!mr-1.5 text-sm hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4" href={calculatePath(paths, index)}>
+                            {capitalizeFirstLetter(value)}
+                        </Link>
+                        {index === paths.length - 1 ? null : <MdKeyboardArrowRight />}
+                    </Flex>
+                ))}
+            </Flex>
+            <Flex className="initial:pb-4 initial:pt-[0.875rem] sm:pb-5 sm:pt-[1.125rem] border-solid border-gray-200 border-b dark:border-zinc-700 initial:!flex sm:!hidden">
+                {initialPaths.map((value, index) => (
+                    <Flex className="mr-1.5" align="center" key={value}>
+                        <Link className="!mr-1.5 text-sm hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4" href={calculatePath(paths, index)}>
+                            {capitalizeFirstLetter(value)}
+                        </Link>
+                        {index === paths.length - 2 ? null : <MdKeyboardArrowRight />}
+                    </Flex>
+                ))}
+            </Flex>
+        </>
     );
 }

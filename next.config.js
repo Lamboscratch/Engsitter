@@ -1,24 +1,10 @@
-const { withContentlayer } = require("next-contentlayer");
+const { withContentlayer } = require("next-contentlayer2");
 
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
     enabled: process.env.ANALYZE === "true",
 });
 
-const ContentSecurityPolicy = `
-    default-src 'self' https://www3.doubleclick.net/ https://marketingplatform.google.com/about/enterprise/;
-    script-src 'self' 'unsafe-inline' 'unsafe-eval' giscus.app analytics.umami.is;
-    style-src 'self' 'unsafe-inline';
-    font-src 'self';
-    form-action 'self';
-    frame-ancestors 'none';
-    frame-src giscus.app
-`;
-
 const securityHeaders = [
-    {
-        key: "Content-Security-Policy",
-        value: ContentSecurityPolicy.replace(/\n/g, ""),
-    },
     {
         key: "Referrer-Policy",
         value: "strict-origin-when-cross-origin",
@@ -47,6 +33,9 @@ const securityHeaders = [
 module.exports = () => {
     const plugins = [withContentlayer, withBundleAnalyzer];
     return plugins.reduce((acc, next) => next(acc), {
+        compiler: {
+            removeConsole: true,
+        },
         reactStrictMode: true,
         poweredByHeader: false,
         pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],

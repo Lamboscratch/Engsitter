@@ -3,8 +3,8 @@ import ContainerApp from "./Components/ContainerApp";
 
 const NotFoundPage = () => {
     return (
-        <ContainerApp style="my-16">
-            <Flex direction="column" align="center">
+        <ContainerApp>
+            <Flex className="notFoundHeight" direction="column" align="center" justify="center">
                 <Heading as="h1" size="9">
                     404
                 </Heading>

@@ -2,6 +2,7 @@ import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { headers } from "next/headers";
 import logoDark from "../public/images/logo-dark.svg";
 import logoLight from "../public/images/logo-light.svg";
 import AdBlockerDetector from "./Components/AdBlockerDetector";
@@ -9,9 +10,9 @@ import { ChangeColorProvider } from "./Components/ChangeColorProvider";
 import Footer from "./Components/Footer";
 import NavBar from "./Components/NavBar";
 import SearchProvider from "./Components/SearchProvider";
+import siteMetadata from "./Data/siteMetadata";
 import "./globals.css";
 import "./theme-config.css";
-import siteMetadata from "./Data/siteMetadata";
 
 const poppins = Poppins({
     weight: ["400", "500", "600", "700"],
@@ -49,17 +50,19 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+    const nonce = headers().get("x-nonce");
+
     return (
         <html lang="en" suppressHydrationWarning>
             <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-            <body className={"flex flex-col min-h-dvh relative " + poppins.variable}>
+            <body className={"flex flex-col pl-[calc(100vw-100%)] min-h-dvh relative " + poppins.variable}>
                 <ChangeColorProvider>
                     <Theme>
                         <SearchProvider>
-                            <AdBlockerDetector></AdBlockerDetector>
-                            <NavBar></NavBar>
+                            <AdBlockerDetector />
+                            <NavBar />
                             <main>{children}</main>
-                            <Footer></Footer>
+                            <Footer />
                         </SearchProvider>
                     </Theme>
                 </ChangeColorProvider>

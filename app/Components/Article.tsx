@@ -1,10 +1,9 @@
 import Link from "next/link";
 import Markdown from "react-markdown";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneDark as style } from "react-syntax-highlighter/dist/esm/styles/prism";
 import gfm from "remark-gfm";
 import calculateHeadersUrl from "../Utilities/calculateHeadersUrl";
 import Copy from "./Copy";
+import Highlight from "./Highlight";
 // import Comments from "./Comments";
 // import { Flex } from "@radix-ui/themes";
 
@@ -18,8 +17,6 @@ export default function Article({ article }: Props) {
     return (
         <div className="initial:w-full sm:min-w-[65ch]">
             <article className="pb-3.5">
-                {" "}
-                {/* // border-solid border-b border-gray-200 dark:border-zinc-700 */}
                 <Markdown
                     className="initial:text-base sm:text-lg"
                     remarkPlugins={[gfm]}
@@ -30,7 +27,7 @@ export default function Article({ article }: Props) {
                             return match ? (
                                 <span className="block relative">
                                     <Copy text={children!.toString()}></Copy>
-                                    <SyntaxHighlighter {...rest} className={className + " block initial:!text-sm sm:!text-base"} children={String(children).replace(/\n$/, "")} language={match[1]} style={style} />
+                                    <Highlight children={String(children)} language={match[1]} />
                                 </span>
                             ) : (
                                 <code {...rest} className={className}>

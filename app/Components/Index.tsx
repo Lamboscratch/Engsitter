@@ -40,9 +40,7 @@ export default function Index({ posts, course, id }: Props) {
     return (
         <Flex className="sticky top-[5.4rem] pl-10 self-start initial:mb-5 sm:mb-6 initial:mt-0 sm:mt-7 initial:!hidden md:!flex" direction="column" gap={{ initial: "6", sm: "3" }}>
             <Heading className="!text-[1.875rem]" as="h2" size="7">
-                <Link className={linkClass} href={`/${courses[0].path.split("/")[0]}/${courses[0].path.split("/")[1]}`}>
-                    {courses[0].path.split("/")[1]}
-                </Link>
+                {"Table Of Contents"}
             </Heading>
             <Flex className="border-l-2 border-solid border-orangeSite text-xl font-medium pt-2 mt-2" direction="column">
                 {finalHeaders.map((header, index) => (

@@ -1,15 +1,19 @@
 import ListLayout from "@/app/Components/ListLayout";
 import { allCoreContent, sortPosts } from "pliny/utils/contentlayer.js";
 import { allPosts } from "contentlayer/generated";
-import { genPageMetadata } from "@/app/seo";
 
 const POSTS_PER_PAGE = 5;
 
-export const metadata = genPageMetadata({ title: "Posts" });
+export const generateStaticParams = async () => {
+    const totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE);
+    const paths = Array.from({ length: totalPages }, (_, i) => ({ page: (i + 1).toString() }));
 
-export default function Page() {
+    return paths;
+};
+
+export default function Page({ params }: { params: { page: string } }) {
     const posts = allCoreContent(sortPosts(allPosts));
-    const pageNumber = 1;
+    const pageNumber = parseInt(params.page as string);
     const initialDisplayPosts = posts.slice(POSTS_PER_PAGE * (pageNumber - 1), POSTS_PER_PAGE * pageNumber);
     const pagination = {
         currentPage: pageNumber,
