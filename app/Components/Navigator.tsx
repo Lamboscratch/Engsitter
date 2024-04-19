@@ -5,6 +5,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
+interface Props {
+    title: string;
+}
+
 function capitalizeFirstLetter(text: string) {
     text = text.replaceAll("-", " ");
     return text.charAt(0).toUpperCase() + text.slice(1);
@@ -18,7 +22,7 @@ function calculatePath(pathsArray: string[], index: number) {
     return calculatedPath;
 }
 
-export default function Navigator() {
+export default function Navigator({ title }: Props) {
     const currentPath = usePathname();
     const paths = currentPath!.slice(1).split("/");
     const initialPaths = paths.slice(0, paths.length - 1);
@@ -29,7 +33,7 @@ export default function Navigator() {
                 {paths.map((value, index) => (
                     <Flex className="mr-1.5" align="center" key={value}>
                         <Link className="!mr-1.5 text-sm hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4" href={calculatePath(paths, index)}>
-                            {capitalizeFirstLetter(value)}
+                            {index === paths.length - 1 ? title : capitalizeFirstLetter(value)}
                         </Link>
                         {index === paths.length - 1 ? null : <MdKeyboardArrowRight />}
                     </Flex>
