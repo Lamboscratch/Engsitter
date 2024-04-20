@@ -16,12 +16,12 @@ export default function SearchProvider({ children }: Props) {
     const router = useRouter();
 
     const dynamicActions = searchResults.map((post) => ({
-        id: post.path,
+        id: post.slug,
         name: post.title,
         keywords: post?.summary || "",
         section: "Blog",
         subtitle: post.date,
-        perform: () => router.push(`/${post.path}`),
+        perform: () => router.push(`/Posts/${post.slug}`),
     }));
 
     const staticActions = [

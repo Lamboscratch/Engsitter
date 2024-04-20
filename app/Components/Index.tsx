@@ -18,12 +18,10 @@ export interface Header {
 }
 
 export default function Index({ posts, course, id }: Props) {
-    const linkClass = "hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4";
-
     const courses = extractCoursePosts(posts, course);
 
     const article = courses.filter((course) => {
-        return course.path === id;
+        return course.slug === id;
     });
 
     const headers = article[0].toc;
@@ -44,7 +42,7 @@ export default function Index({ posts, course, id }: Props) {
             </Heading>
             <Flex className="border-l-2 border-solid border-orangeSite text-xl font-medium pt-2 mt-2" direction="column">
                 {finalHeaders.map((header, index) => (
-                    <TableOfContent key={header.url} header={header} path={article[0].path} index={index} resolvedHeaders={finalHeaders} />
+                    <TableOfContent key={header.url} header={header} path={article[0].slug} index={index} resolvedHeaders={finalHeaders} />
                 ))}
             </Flex>
         </Flex>

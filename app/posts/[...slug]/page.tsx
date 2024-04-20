@@ -56,13 +56,13 @@ export async function generateMetadata({ params }: { params: { slug: string[] } 
 }
 
 export const generateStaticParams = async () => {
-    const paths = allPosts.map((p: any) => ({ slug: p.slug.split("/") }));
+    const paths = allPosts.map((p: any) => ({ slug: `${p._raw.sourceFileDir.replace("Posts/", "")}/${p.title.toLowerCase().replaceAll(" ", "-")}`.split("/") }));
 
     return paths;
 };
 
 const page = async ({ params }: { params: { slug: string[] } }) => {
-    const slug = decodeURI(params.slug.join("/"));
+    const slug = params.slug.join("/");
     const sortedCoreContents = allCoreContent(sortPosts(allPosts));
     const postIndex = sortedCoreContents.findIndex((p) => p.slug === slug);
     if (postIndex === -1) {
@@ -81,7 +81,7 @@ const page = async ({ params }: { params: { slug: string[] } }) => {
             </Flex>
             <Flex className="initial:!block sm:!flex w-full" justify="between">
                 <Article article={post.body.raw} />
-                <Index posts={sortedCoreContents} course={post.path.split("/")[1]} id={post.path} />
+                <Index posts={sortedCoreContents} course={post.slug.split("/")[1]} id={post.slug} />
             </Flex>
         </ContainerApp>
     );

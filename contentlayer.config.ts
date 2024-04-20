@@ -50,7 +50,7 @@ export const Post = defineDocumentType(() => ({
         },
         slug: {
             type: "string",
-            resolve: (doc) => doc._raw.flattenedPath.replace(/^.+?(\/)/, ""),
+            resolve: (doc) => `${doc._raw.sourceFileDir.replace("Posts/", "")}/${doc.title.toLowerCase().replaceAll(" ", "-")}`,
         },
         path: {
             type: "string",
