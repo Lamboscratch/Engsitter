@@ -1,7 +1,7 @@
+import PostsList from "@/app/components/PostsList";
 import { Flex, Heading } from "@radix-ui/themes";
 import type { Post } from "contentlayer/generated";
 import { CoreContent } from "pliny/utils/contentlayer.js";
-import PostsList from "./PostsList";
 
 export interface PostsType {
     posts: CoreContent<Post>[];

@@ -1,7 +1,7 @@
+import DropDownLink from "@/app/components/DropDownLink";
 import { Arrow, Content, Portal, Root, Trigger } from "@radix-ui/react-dropdown-menu";
 import { usePathname } from "next/navigation";
 import { IoIosArrowDropdown } from "react-icons/io";
-import DropDownLink from "./DropDownLink";
 
 export default function DropDownMenu() {
     const currentPath = usePathname();
@@ -24,8 +24,8 @@ export default function DropDownMenu() {
                         sideOffset={5}
                     >
                         <DropDownLink currentPath={currentPath!} path="/" name="Home" linkClass={linkClass} itemClass={itemClass} rightArrowClass={rightArrowClass} />
-                        <DropDownLink currentPath={currentPath!} path="/Posts" name="Posts" linkClass={linkClass} itemClass={itemClass} rightArrowClass={rightArrowClass} />
-                        <DropDownLink currentPath={currentPath!} path="/Tips" name="Tips" linkClass={linkClass} itemClass={itemClass} rightArrowClass={rightArrowClass} />
+                        <DropDownLink currentPath={currentPath!} path="/posts" name="Posts" linkClass={linkClass} itemClass={itemClass} rightArrowClass={rightArrowClass} />
+                        <DropDownLink currentPath={currentPath!} path="/tips" name="Tips" linkClass={linkClass} itemClass={itemClass} rightArrowClass={rightArrowClass} />
                         <Arrow className="fill-white" />
                     </Content>
                 </Portal>

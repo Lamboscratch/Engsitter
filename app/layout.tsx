@@ -1,18 +1,18 @@
+import { ChangeColorProvider } from "@/app/components//ChangeColorProvider";
+import Footer from "@/app/components//Footer";
+import NavBar from "@/app/components//NavBar";
+import SearchProvider from "@/app/components//SearchProvider";
+import AdBlockerDetector from "@/app/components/AdBlockerDetector";
+import siteMetadata from "@/app/data/siteMetadata";
+import "@/app/globals.css";
+import "@/app/theme-config.css";
+import logoDark from "@/public/images/logo-dark.svg";
+import logoLight from "@/public/images/logo-light.svg";
 import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { headers } from "next/headers";
-import logoDark from "../public/images/logo-dark.svg";
-import logoLight from "../public/images/logo-light.svg";
-import AdBlockerDetector from "./Components/AdBlockerDetector";
-import { ChangeColorProvider } from "./Components/ChangeColorProvider";
-import Footer from "./Components/Footer";
-import NavBar from "./Components/NavBar";
-import SearchProvider from "./Components/SearchProvider";
-import siteMetadata from "./Data/siteMetadata";
-import "./globals.css";
-import "./theme-config.css";
 
 const poppins = Poppins({
     weight: ["400", "500", "600", "700"],

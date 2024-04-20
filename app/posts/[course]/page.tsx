@@ -1,6 +1,6 @@
-import ContainerApp from "@/app/Components/ContainerApp";
-import PostsList from "@/app/Components/PostsList";
-import PostsNavigator from "@/app/Components/PostsNavigator";
+import ContainerApp from "@/app/components/ContainerApp";
+import PostsList from "@/app/components/PostsList";
+import PostsNavigator from "@/app/components/PostsNavigator";
 import tagData from "@/public/tag-data.json";
 import { Flex } from "@radix-ui/themes";
 import { allPosts } from "contentlayer/generated";

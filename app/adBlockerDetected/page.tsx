@@ -1,5 +1,5 @@
 import { Flex, Heading, Text } from "@radix-ui/themes";
-import ContainerApp from "../Components/ContainerApp";
+import ContainerApp from "@/app/components/ContainerApp";
 
 const page = () => {
     return (

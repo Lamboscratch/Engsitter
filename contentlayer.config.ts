@@ -4,7 +4,7 @@ import { extractTocHeadings } from "pliny/mdx-plugins/index.js";
 import { allCoreContent, sortPosts } from "pliny/utils/contentlayer.js";
 import readingTime from "reading-time";
 import { Post as PostType } from "./.contentlayer/generated";
-import siteMetadata from "./app/Data/siteMetadata";
+import siteMetadata from "./app/data/siteMetadata";
 
 export const Post = defineDocumentType(() => ({
     name: "Post",
@@ -50,7 +50,7 @@ export const Post = defineDocumentType(() => ({
         },
         slug: {
             type: "string",
-            resolve: (doc) => `${doc._raw.sourceFileDir.replace("Posts/", "")}/${doc.title.toLowerCase().replaceAll(" ", "-")}`,
+            resolve: (doc) => `${doc._raw.sourceFileDir.replace("posts/", "")}/${doc.title.toLowerCase().replaceAll(" ", "-")}`,
         },
         path: {
             type: "string",
@@ -97,7 +97,7 @@ function createSearchIndex(allPosts: PostType[]) {
 }
 
 export default makeSource({
-    contentDirPath: "app/Data", // Source directory where the content is located
+    contentDirPath: "app/data", // Source directory where the content is located
     documentTypes: [Post],
     onSuccess: async (importData) => {
         const { allPosts } = await importData();

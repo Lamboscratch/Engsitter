@@ -1,12 +1,12 @@
 "use client";
 
+import SearchResults from "@/app/components/SearchResults";
 import searchResults from "@/public/search.json";
 import { Box, Flex } from "@radix-ui/themes";
 import { KBarAnimator, KBarPortal, KBarPositioner, KBarProvider, KBarSearch } from "kbar";
 import { useRouter } from "next/navigation";
 import { ReactNode } from "react";
 import { CiSearch } from "react-icons/ci";
-import SearchResults from "./SearchResults";
 
 interface Props {
     children: ReactNode;
@@ -21,7 +21,7 @@ export default function SearchProvider({ children }: Props) {
         keywords: post?.summary || "",
         section: "Blog",
         subtitle: post.date,
-        perform: () => router.push(`/Posts/${post.slug}`),
+        perform: () => router.push(`/posts/${post.slug}`),
     }));
 
     const staticActions = [
@@ -39,7 +39,7 @@ export default function SearchProvider({ children }: Props) {
             keywords: "",
             shortcut: ["p"],
             section: "Nav",
-            perform: () => router.push("/Posts"),
+            perform: () => router.push("/posts"),
         },
         {
             id: "tips",
@@ -47,7 +47,7 @@ export default function SearchProvider({ children }: Props) {
             keywords: "",
             shortcut: ["t"],
             section: "Nav",
-            perform: () => router.push("/Tips"),
+            perform: () => router.push("/tips"),
         },
         ...dynamicActions,
     ];

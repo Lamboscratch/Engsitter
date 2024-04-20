@@ -1,10 +1,10 @@
-import { allPosts } from "../../.contentlayer/generated/index.mjs";
 import { writeFileSync } from "fs";
 import { sortPosts } from "pliny/utils/contentlayer.js";
 import { escape } from "pliny/utils/htmlEscaper.js";
-import siteMetadata from "../Data/siteMetadata.js";
+import { allPosts } from "../../.contentlayer/generated/index.mjs";
+import siteMetadata from "../data/siteMetadata.js";
 
-const postPath = "Posts";
+const postPath = "posts";
 
 const generateRssItem = (config, post) => `
   <item>
@@ -43,9 +43,7 @@ async function generateRSS(config, allPosts, page = "feed.xml") {
     }
 }
 
-const rss = () => {
+export default function rss() {
     generateRSS(siteMetadata, allPosts);
     console.log("RSS feed generated...");
-};
-
-export default rss;
+}

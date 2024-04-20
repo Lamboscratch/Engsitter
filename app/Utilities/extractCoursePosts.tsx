@@ -1,4 +1,4 @@
-import { PostsType } from "../Components/Main";
+import { PostsType } from "@/app/components/Main";
 
 export default function extractCoursePosts(posts: PostsType["posts"], course: string) {
     const courses = posts.filter((post) => {

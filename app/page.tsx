@@ -1,9 +1,9 @@
-import ContainerApp from "./Components/ContainerApp";
-import GoToLink from "./Components/GoToLink";
-import Intro from "./Components/Intro";
-import { sortPosts, allCoreContent } from "pliny/utils/contentlayer.js";
+import ContainerApp from "@/app/components/ContainerApp";
+import GoToLink from "@/app/components/GoToLink";
+import Intro from "@/app/components/Intro";
+import Main from "@/app/components/Main";
 import { allPosts } from "contentlayer/generated";
-import Main from "./Components/Main";
+import { allCoreContent, sortPosts } from "pliny/utils/contentlayer.js";
 
 export default function Home() {
     const sortedPosts = sortPosts(allPosts);
@@ -13,7 +13,7 @@ export default function Home() {
         <ContainerApp>
             <Intro />
             <Main posts={posts} />
-            <GoToLink name="All Posts" link="/Posts" />
+            <GoToLink name="All Posts" link="/posts" />
         </ContainerApp>
     );
 }

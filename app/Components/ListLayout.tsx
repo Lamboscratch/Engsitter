@@ -1,14 +1,14 @@
 "use client";
 
+import ContainerApp from "@/app/components/ContainerApp";
+import PostsList from "@/app/components/PostsList";
+import PostsNavigator from "@/app/components/PostsNavigator";
 import tagData from "@/public/tag-data.json";
 import { Flex } from "@radix-ui/themes";
 import type { Post } from "contentlayer/generated";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CoreContent } from "pliny/utils/contentlayer.js";
-import ContainerApp from "./ContainerApp";
-import PostsList from "./PostsList";
-import PostsNavigator from "./PostsNavigator";
 
 interface PaginationProps {
     totalPages: number;

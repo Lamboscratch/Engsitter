@@ -1,9 +1,9 @@
+import Highlight from "@/app/components//Highlight";
+import Copy from "@/app/components/Copy";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import gfm from "remark-gfm";
-import calculateHeadersUrl from "../Utilities/calculateHeadersUrl";
-import Copy from "./Copy";
-import Highlight from "./Highlight";
+import calculateHeadersUrl from "../utilities/calculateHeadersUrl";
 // import Comments from "./Comments";
 // import { Flex } from "@radix-ui/themes";
 

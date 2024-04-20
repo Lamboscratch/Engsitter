@@ -9,9 +9,15 @@ interface Props {
     title: string;
 }
 
-function capitalizeFirstLetter(text: string) {
-    text = text.replaceAll("-", " ");
-    return text.charAt(0).toUpperCase() + text.slice(1);
+const coursesName = new Map();
+coursesName.set("posts", "Posts");
+coursesName.set("ccna", "CCNA");
+coursesName.set("ceh", "CEH");
+coursesName.set("python", "Python");
+coursesName.set("welcome", "Welcome");
+
+function setCourseName(text: string) {
+    return coursesName.get(text);
 }
 
 function calculatePath(pathsArray: string[], index: number) {
@@ -33,7 +39,7 @@ export default function Navigator({ title }: Props) {
                 {paths.map((value, index) => (
                     <Flex className="mr-1.5" align="center" key={value}>
                         <Link className="!mr-1.5 text-sm hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4" href={calculatePath(paths, index)}>
-                            {index === paths.length - 1 ? title : capitalizeFirstLetter(value)}
+                            {index === paths.length - 1 ? title : setCourseName(value)}
                         </Link>
                         {index === paths.length - 1 ? null : <MdKeyboardArrowRight />}
                     </Flex>
@@ -43,7 +49,7 @@ export default function Navigator({ title }: Props) {
                 {initialPaths.map((value, index) => (
                     <Flex className="mr-1.5" align="center" key={value}>
                         <Link className="!mr-1.5 text-sm hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4" href={calculatePath(paths, index)}>
-                            {capitalizeFirstLetter(value)}
+                            {setCourseName(value)}
                         </Link>
                         {index === paths.length - 2 ? null : <MdKeyboardArrowRight />}
                     </Flex>

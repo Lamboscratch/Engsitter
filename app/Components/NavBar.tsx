@@ -1,12 +1,12 @@
 "use client";
 
+import ContainerApp from "@/app/components/ContainerApp";
+import DarkModeButton from "@/app/components/DarkModeButton";
+import ImageTheme from "@/app/components/ImageTheme";
+import Search from "@/app/components/Search";
 import { Flex } from "@radix-ui/themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import ContainerApp from "./ContainerApp";
-import DarkModeButton from "./DarkModeButton";
-import ImageTheme from "./ImageTheme";
-import Search from "./Search";
 
 interface Links {
     name: string;
@@ -17,10 +17,10 @@ function checkLink(currentPath: string, itemPath: string) {
     if (currentPath === "/" && itemPath === "/") {
         return true;
     }
-    if (currentPath.startsWith("/Posts") && itemPath.startsWith("/Posts")) {
+    if (currentPath.startsWith("/posts") && itemPath.startsWith("/posts")) {
         return true;
     }
-    if (currentPath.startsWith("/Tips") && itemPath.startsWith("/Tips")) {
+    if (currentPath.startsWith("/tips") && itemPath.startsWith("/tips")) {
         return true;
     }
     return false;
@@ -31,12 +31,12 @@ export default function NavBar() {
 
     const links: Links[] = [
         { name: "Home", path: "/" },
-        { name: "Posts", path: "/Posts" },
-        { name: "Tips", path: "/Tips" },
+        { name: "Posts", path: "/posts" },
+        { name: "Tips", path: "/tips" },
     ];
 
     return (
-        <nav className={`sticky top-0 z-20 backdrop-blur-sm bg-whitePrimary dark:bg-blackPrimary ${currentPath.startsWith("/Tips") ? "mb-auto" : "mb-0"}`}>
+        <nav className={`sticky top-0 z-20 backdrop-blur-sm bg-whitePrimary dark:bg-blackPrimary ${currentPath.startsWith("/tips") ? "mb-auto" : "mb-0"}`}>
             <ContainerApp>
                 <Flex className="py-4 min-h-16 border-solid border-gray-200 border-b dark:border-zinc-700">
                     <Link className="flex items-center mr-auto" href="/">

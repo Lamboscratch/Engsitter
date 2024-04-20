@@ -1,6 +1,6 @@
 "use client";
 
-import "@/app/Data/atom-one-dark.min.css";
+import "@/app/data/atom-one-dark.min.css";
 import hljs from "highlight.js";
 
 interface Props {

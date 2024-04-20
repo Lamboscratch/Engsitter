@@ -1,4 +1,4 @@
-import type { Header } from "@/app/Components/Index";
+import type { Header } from "@/app/components/Index";
 import { Box, Flex } from "@radix-ui/themes";
 import Link from "next/link";
 

@@ -1,4 +1,4 @@
-import siteMetadata from "@/app/Data/siteMetadata";
+import siteMetadata from "@/app/data/siteMetadata";
 import { KBarButton } from "pliny/search/KBarButton.js";
 import { IoSearchOutline } from "react-icons/io5";
 

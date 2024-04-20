@@ -1,10 +1,10 @@
-import Article from "@/app/Components/Article";
-import ContainerApp from "@/app/Components/ContainerApp";
-import Index from "@/app/Components/Index";
-import Navigator from "@/app/Components/Navigator";
-import ReleaseDate from "@/app/Components/ReleaseDate";
-import ScrollBar from "@/app/Components/ScrollBar";
-import siteMetadata from "@/app/Data/siteMetadata";
+import Article from "@/app/components/Article";
+import ContainerApp from "@/app/components/ContainerApp";
+import Index from "@/app/components/Index";
+import Navigator from "@/app/components/Navigator";
+import ReleaseDate from "@/app/components/ReleaseDate";
+import ScrollBar from "@/app/components/ScrollBar";
+import siteMetadata from "@/app/data/siteMetadata";
 import { Flex } from "@radix-ui/themes";
 import type { Post } from "contentlayer/generated";
 import { allPosts } from "contentlayer/generated";
@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: { params: { slug: string[] } 
 }
 
 export const generateStaticParams = async () => {
-    const paths = allPosts.map((p: any) => ({ slug: `${p._raw.sourceFileDir.replace("Posts/", "")}/${p.title.toLowerCase().replaceAll(" ", "-")}`.split("/") }));
+    const paths = allPosts.map((p: any) => ({ slug: `${p._raw.sourceFileDir.replace("posts/", "")}/${p.title.toLowerCase().replaceAll(" ", "-")}`.split("/") }));
 
     return paths;
 };

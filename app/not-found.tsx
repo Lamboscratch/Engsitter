@@ -1,5 +1,5 @@
+import ContainerApp from "@/app/components/ContainerApp";
 import { Flex, Heading, Text } from "@radix-ui/themes";
-import ContainerApp from "./Components/ContainerApp";
 
 const NotFoundPage = () => {
     return (

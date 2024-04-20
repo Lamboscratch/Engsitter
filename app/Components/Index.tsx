@@ -1,9 +1,8 @@
+import extractCoursePosts from "@/app//utilities/extractCoursePosts";
+import { PostsType } from "@/app/components/Main";
+import TableOfContent from "@/app/components/TableOfContent";
+import calculateHeadersUrl from "@/app/utilities/calculateHeadersUrl";
 import { Flex, Heading } from "@radix-ui/themes";
-import Link from "next/link";
-import calculateHeadersUrl from "../Utilities/calculateHeadersUrl";
-import extractCoursePosts from "../Utilities/extractCoursePosts";
-import { PostsType } from "./Main";
-import TableOfContent from "./TableOfContent";
 
 interface Props {
     posts: PostsType["posts"];

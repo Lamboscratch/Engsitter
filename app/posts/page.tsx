@@ -1,7 +1,7 @@
-import ListLayout from "@/app/Components/ListLayout";
-import { allCoreContent, sortPosts } from "pliny/utils/contentlayer.js";
-import { allPosts } from "contentlayer/generated";
+import ListLayout from "@/app/components/ListLayout";
 import { genPageMetadata } from "@/app/seo";
+import { allPosts } from "contentlayer/generated";
+import { allCoreContent, sortPosts } from "pliny/utils/contentlayer.js";
 
 const POSTS_PER_PAGE = 5;
 
