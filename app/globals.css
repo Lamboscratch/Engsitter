@@ -23,6 +23,10 @@ main {
     flex-shrink: 1;
 }
 
+.radix-themes {
+    --default-font-family: var(--font-poppins) !important;
+}
+
 .shadowBoxLight {
     box-shadow: rgba(255, 173, 0, 0.3) 0rem 0rem 0rem 0.25rem, rgba(255, 255, 255) 0px 0px 0px 0.5rem;
 }

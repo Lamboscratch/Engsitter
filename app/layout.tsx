@@ -5,7 +5,6 @@ import SearchProvider from "@/app/components//SearchProvider";
 import AdBlockerDetector from "@/app/components/AdBlockerDetector";
 import siteMetadata from "@/app/data/siteMetadata";
 import "@/app/globals.css";
-import "@/app/theme-config.css";
 import logoDark from "@/public/images/logo-dark.svg";
 import logoLight from "@/public/images/logo-light.svg";
 import { Theme } from "@radix-ui/themes";
