@@ -1,7 +1,7 @@
 import ReleaseDate from "@/app/components/ReleaseDate";
 import { KBarResults, useMatches } from "kbar";
 
-export default function RenderResults() {
+export default function SearchResults() {
     const { results } = useMatches();
 
     return (
