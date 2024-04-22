@@ -24,7 +24,7 @@ export const generateStaticParams = async () => {
     return paths;
 };
 
-const page = ({ params }: { params: { course: string } }) => {
+export default function Page({ params }: { params: { course: string } }) {
     const tagCounts = tagData as Record<string, number>;
     const filteredPosts = allCoreContent(sortPosts(allPosts.filter((post) => post.tags[0] === params.course)));
     let pathsArray: string[] = [];
@@ -49,6 +49,4 @@ const page = ({ params }: { params: { course: string } }) => {
             </div>
         </ContainerApp>
     );
-};
-
-export default page;
+}

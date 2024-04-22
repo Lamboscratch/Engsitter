@@ -61,7 +61,7 @@ export const generateStaticParams = async () => {
     return paths;
 };
 
-const page = async ({ params }: { params: { slug: string[] } }) => {
+export default function Page({ params }: { params: { slug: string[] } }) {
     const slug = params.slug.join("/");
     const sortedCoreContents = allCoreContent(sortPosts(allPosts));
     const postIndex = sortedCoreContents.findIndex((p) => p.slug === slug);
@@ -85,6 +85,4 @@ const page = async ({ params }: { params: { slug: string[] } }) => {
             </Flex>
         </ContainerApp>
     );
-};
-
-export default page;
+}

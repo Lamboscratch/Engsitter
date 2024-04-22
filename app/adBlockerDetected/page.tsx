@@ -1,7 +1,7 @@
 import { Flex, Heading, Text } from "@radix-ui/themes";
 import ContainerApp from "@/app/components/ContainerApp";
 
-const page = () => {
+export default function Page() {
     return (
         <ContainerApp>
             <Flex className="notFoundHeight" direction="column" align="center" justify="center">
@@ -14,6 +14,4 @@ const page = () => {
             </Flex>
         </ContainerApp>
     );
-};
-
-export default page;
+}
