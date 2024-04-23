@@ -3,9 +3,9 @@ import { genPageMetadata } from "@/app/seo";
 import { allPosts } from "contentlayer/generated";
 import { allCoreContent, sortPosts } from "pliny/utils/contentlayer.js";
 
-const POSTS_PER_PAGE = 5;
+export const metadata = genPageMetadata({ title: "Posts | Engsitter" });
 
-export const metadata = genPageMetadata({ title: "Posts" });
+const POSTS_PER_PAGE = 5;
 
 export default function Page() {
     const posts = allCoreContent(sortPosts(allPosts));

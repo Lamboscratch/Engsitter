@@ -1,9 +1,13 @@
 import ContainerApp from "@/app/components/ContainerApp";
 import PostsList from "@/app/components/PostsList";
 import PostsNavigator from "@/app/components/PostsNavigator";
+import siteMetadata from "@/app/data/siteMetadata";
+import { genPageMetadata } from "@/app/seo";
+import coursesNameMap from "@/app/utilities/extractCourseName";
 import tagData from "@/public/tag-data.json";
 import { Flex } from "@radix-ui/themes";
 import { allPosts } from "contentlayer/generated";
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { allCoreContent, sortPosts } from "pliny/utils/contentlayer.js";
 
@@ -11,6 +15,14 @@ const tags = tagData as Record<string, number>;
 
 interface Path {
     course: string;
+}
+
+export async function generateMetadata({ params }: { params: { course: string } }): Promise<Metadata> {
+    const course = coursesNameMap.get(decodeURI(params.course));
+    return genPageMetadata({
+        title: `${course} | ${siteMetadata.title}`,
+        description: `List of posts - ${course}`,
+    });
 }
 
 export const generateStaticParams = async () => {

@@ -1,5 +1,8 @@
 import ContainerApp from "@/app/components/ContainerApp";
+import { genPageMetadata } from "@/app/seo";
 import { Flex, Heading } from "@radix-ui/themes";
+
+export const metadata = genPageMetadata({ title: "Tips | Engsitter" });
 
 export default function Page() {
     return (

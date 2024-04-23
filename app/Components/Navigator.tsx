@@ -1,5 +1,6 @@
 "use client";
 
+import coursesNameMap from "@/app/utilities/extractCourseName";
 import { Flex } from "@radix-ui/themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -9,15 +10,8 @@ interface Props {
     title: string;
 }
 
-const coursesName = new Map();
-coursesName.set("posts", "Posts");
-coursesName.set("ccna", "CCNA");
-coursesName.set("ceh", "CEH");
-coursesName.set("python", "Python");
-coursesName.set("welcome", "Welcome");
-
 function setCourseName(text: string) {
-    return coursesName.get(text);
+    return coursesNameMap.get(text);
 }
 
 function calculatePath(pathsArray: string[], index: number) {

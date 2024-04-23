@@ -1,8 +1,19 @@
 import ListLayout from "@/app/components/ListLayout";
+import siteMetadata from "@/app/data/siteMetadata";
+import { genPageMetadata } from "@/app/seo";
 import { allPosts } from "contentlayer/generated";
+import { Metadata } from "next";
 import { allCoreContent, sortPosts } from "pliny/utils/contentlayer.js";
 
 const POSTS_PER_PAGE = 5;
+
+export async function generateMetadata({ params }: { params: { page: string } }): Promise<Metadata> {
+    const page = decodeURI(params.page);
+    return genPageMetadata({
+        title: `Page ${page} | ${siteMetadata.title}`,
+        description: `List of posts - page ${page}`,
+    });
+}
 
 export const generateStaticParams = async () => {
     const totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE);

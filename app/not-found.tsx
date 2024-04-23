@@ -1,5 +1,15 @@
 import ContainerApp from "@/app/components/ContainerApp";
+import siteMetadata from "@/app/data/siteMetadata";
+import { genPageMetadata } from "@/app/seo";
 import { Flex, Heading, Text } from "@radix-ui/themes";
+import { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+    return genPageMetadata({
+        title: `Page not found | ${siteMetadata.title}`,
+        description: `Not found page`,
+    });
+}
 
 const NotFoundPage = () => {
     return (
