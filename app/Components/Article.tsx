@@ -38,7 +38,7 @@ export default function Article({ article }: Props) {
                         h2(props) {
                             const { children, node, ...rest } = props;
                             return (
-                                <h2 id={calculateHeadersUrl(children?.toString()!)} className={`initial:text-2xl sm:text-3xl font-bold initial:mt-6 initial:mb-3 sm:mt-7 sm:mb-4`} {...rest}>
+                                <h2 id={calculateHeadersUrl(children?.toString()!)} className={`initial:text-2xl sm:text-3xl font-bold mt-6 initial:mb-3 sm:mb-4`} {...rest}>
                                     <Link href={`#${calculateHeadersUrl(children?.toString()!)}`}>{children}</Link>
                                 </h2>
                             );

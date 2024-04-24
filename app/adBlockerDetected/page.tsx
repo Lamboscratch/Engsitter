@@ -15,10 +15,10 @@ export default function Page() {
     return (
         <ContainerApp>
             <Flex className="notFoundHeight" direction="column" align="center" justify="center">
-                <Heading as="h1" size="8">
+                <Heading className="!text-4xl" as="h1">
                     AdBlocker detected
                 </Heading>
-                <Text className="pt-6 max-w-prose text-center" size="4" as="p">
+                <Text className="!text-lg pt-6 max-w-prose text-center" as="p">
                     It appears that you are using an ad-blocking extension in your browser. Please disable it and reload the page.
                 </Text>
             </Flex>

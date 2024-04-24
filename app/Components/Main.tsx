@@ -10,7 +10,7 @@ export interface PostsType {
 export default function Home({ posts }: PostsType) {
     return (
         <Flex direction="column" align="start" justify="center" gap="6">
-            <Heading className="!text-[2.25rem]" as="h2" size="8" weight="bold">
+            <Heading className="!text-[2.25rem]" as="h2" weight="bold">
                 Recent Posts
             </Heading>
             <PostsList posts={posts} maxDisplay={5} />

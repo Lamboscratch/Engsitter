@@ -8,7 +8,7 @@ export default function Page() {
     return (
         <ContainerApp style="my-16">
             <Flex direction="column" align="center">
-                <Heading className="text-center" as="h1" size="8">
+                <Heading className="!text-4xl text-center" as="h1">
                     Coming soon...
                 </Heading>
             </Flex>

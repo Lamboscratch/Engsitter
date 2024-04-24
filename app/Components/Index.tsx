@@ -35,8 +35,8 @@ export default function Index({ posts, course, id }: Props) {
     }));
 
     return (
-        <Flex className="sticky top-[5.4rem] pl-10 self-start initial:mb-5 sm:mb-6 initial:mt-0 sm:mt-7 initial:!hidden md:!flex" direction="column" gap={{ initial: "6", sm: "3" }}>
-            <Heading className="!text-[1.875rem]" as="h2" size="7">
+        <Flex className="sticky top-[5.4rem] pl-10 self-start initial:mb-5 sm:mb-6 initial:mt-0 sm:mt-6 initial:!hidden md:!flex" direction="column" gap={{ initial: "6", sm: "3" }}>
+            <Heading className="!text-3xl" as="h2">
                 {"Table Of Contents"}
             </Heading>
             <Flex className="border-l-2 border-solid border-orangeSite text-xl font-medium pt-2 mt-2" direction="column">

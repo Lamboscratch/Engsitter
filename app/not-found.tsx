@@ -15,13 +15,13 @@ const NotFoundPage = () => {
     return (
         <ContainerApp>
             <Flex className="notFoundHeight" direction="column" align="center" justify="center">
-                <Heading as="h1" size="9">
+                <Heading className="!text-6xl" as="h1" size="9">
                     404
                 </Heading>
-                <Heading className="pt-16" as="h2">
+                <Heading className="!text-2xl pt-16" as="h2">
                     Page not found
                 </Heading>
-                <Text className="pt-6 max-w-prose text-center" size="4" as="p">
+                <Text className="!text-lg pt-6 max-w-prose text-center" as="p">
                     The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
                 </Text>
             </Flex>
