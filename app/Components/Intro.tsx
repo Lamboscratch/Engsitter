@@ -1,8 +1,10 @@
+import ImageTheme from "@/app/components/ImageTheme";
 import { Flex, Heading, Text } from "@radix-ui/themes";
 
 export default function Intro() {
     return (
         <Flex className="my-24" direction="column" align="center" justify="center" gap="4">
+            <ImageTheme style="w-24 h-24 mb-6" />
             <Heading className="!text-6xl" as="h1" align="center">
                 Welcome to{" "}
                 <Text className="text-orangeSite" as="span">

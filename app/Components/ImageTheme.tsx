@@ -1,8 +1,12 @@
-export default function ImageTheme() {
+interface Props {
+    style: string;
+}
+
+export default function ImageTheme({ style }: Props) {
     const darkLightClass = "fill-blackPrimaryFull dark:fill-whitePrimaryFull stroke-blackPrimaryFull dark:stroke-whitePrimaryFull";
 
     return (
-        <svg className="w-6 h-6" version="1.1" height="480" width="480" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+        <svg className={style} version="1.1" height="480" width="480" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
             <polygon points="240, 80 0, 0 0, 80 240, 160" stroke="#ffad00" fill="#ffad00" strokeWidth="1" />
             <polygon points="0, 40 80, 40 80, 200 0, 200" stroke="#ffad00" fill="#ffad00" strokeWidth="1" />
             <polygon points="240, 240 0, 160 0, 240 240, 320" stroke="#ffad00" fill="#ffad00" strokeWidth="1" />
