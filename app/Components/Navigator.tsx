@@ -27,22 +27,25 @@ export default function Navigator({ title }: Props) {
     const paths = currentPath!.slice(1).split("/");
     const initialPaths = paths.slice(0, paths.length - 1);
 
+    const flexClass = "pb-5 pt-[1.125rem] border-solid border-gray-200 border-b dark:border-zinc-700";
+    const linkClass = "!mr-1.5 text-sm font-medium hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4";
+
     return (
         <>
-            <Flex className="initial:pb-4 initial:pt-[0.875rem] sm:pb-5 sm:pt-[1.125rem] border-solid border-gray-200 border-b dark:border-zinc-700 initial:!hidden sm:!flex">
+            <Flex className={`${flexClass} initial:!hidden sm:!flex`}>
                 {paths.map((value, index) => (
                     <Flex className="mr-1.5" align="center" key={value}>
-                        <Link className="!mr-1.5 text-sm hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4" href={calculatePath(paths, index)}>
+                        <Link className={linkClass} href={calculatePath(paths, index)}>
                             {index === paths.length - 1 ? title : setCourseName(value)}
                         </Link>
                         {index === paths.length - 1 ? null : <MdKeyboardArrowRight />}
                     </Flex>
                 ))}
             </Flex>
-            <Flex className="initial:pb-4 initial:pt-[0.875rem] sm:pb-5 sm:pt-[1.125rem] border-solid border-gray-200 border-b dark:border-zinc-700 initial:!flex sm:!hidden">
+            <Flex className={`${flexClass} initial:!flex sm:!hidden`}>
                 {initialPaths.map((value, index) => (
                     <Flex className="mr-1.5" align="center" key={value}>
-                        <Link className="!mr-1.5 text-sm hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4" href={calculatePath(paths, index)}>
+                        <Link className={linkClass} href={calculatePath(paths, index)}>
                             {setCourseName(value)}
                         </Link>
                         {index === paths.length - 2 ? null : <MdKeyboardArrowRight />}

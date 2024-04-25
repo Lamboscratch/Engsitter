@@ -76,8 +76,8 @@ export default function Page({ params }: { params: { slug: string[] } }) {
             <ScrollBar />
             <Flex direction="column">
                 <Navigator title={post.title} />
-                <h1 className={`initial:text-5xl sm:text-6xl text-center font-bold initial:mt-4 sm:mt-5 initial:mb-2 sm:mb-3`}>{post.title}</h1>
-                <ReleaseDate style="initial:pb-4 sm:pb-5 border-solid border-gray-200 border-b dark:border-zinc-700" date={post.date} />
+                <h1 className="text-5xl text-center font-bold mt-5 mb-3">{post.title}</h1>
+                <ReleaseDate style="pb-5 border-solid border-gray-200 border-b dark:border-zinc-700" date={post.date} />
             </Flex>
             <Flex className="initial:!block sm:!flex w-full" justify="between">
                 <Article article={post.body.raw} />

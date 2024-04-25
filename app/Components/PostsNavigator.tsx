@@ -1,5 +1,6 @@
 "use client";
 
+import coursesNameMap from "@/app/utilities/extractCourseName";
 import { Heading } from "@radix-ui/themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -8,19 +9,13 @@ interface Props {
     tagCounts: Record<string, number>;
 }
 
-const coursesName = new Map();
-coursesName.set("ccna", "CCNA");
-coursesName.set("ceh", "CEH");
-coursesName.set("python", "Python");
-coursesName.set("welcome", "Welcome");
-
 function renderLink(course: string, tagCounts: Record<string, number>, pathname: string) {
     const linkClassHover = "hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-8";
     const linkClassStatic = "underline decoration-solid decoration-orangeSite underline-offset-8";
 
     return (
-        <Link className={`pt-1 whitespace-nowrap ${pathname === "/posts/" + course ? linkClassStatic : linkClassHover}`} href={"/posts/" + course}>
-            {`${coursesName.get(course)} (${tagCounts[course]})`}
+        <Link className={`font-semibold pt-1 whitespace-nowrap ${pathname === "/posts/" + course ? linkClassStatic : linkClassHover}`} href={"/posts/" + course}>
+            {`${coursesNameMap.get(course)} (${tagCounts[course]})`}
         </Link>
     );
 }

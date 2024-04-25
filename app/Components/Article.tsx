@@ -12,13 +12,11 @@ interface Props {
 }
 
 export default function Article({ article }: Props) {
-    const margins = "initial:mt-3 initial:mb-2 sm:mt-4 sm:mb-3";
-
     return (
         <div className="initial:w-full sm:min-w-[65ch]">
             <article className="pb-3.5">
                 <Markdown
-                    className="initial:text-base sm:text-lg"
+                    className="text-lg"
                     remarkPlugins={[gfm]}
                     components={{
                         code(props) {
@@ -38,7 +36,7 @@ export default function Article({ article }: Props) {
                         h2(props) {
                             const { children, node, ...rest } = props;
                             return (
-                                <h2 id={calculateHeadersUrl(children?.toString()!)} className={`initial:text-2xl sm:text-3xl font-bold mt-6 initial:mb-3 sm:mb-4`} {...rest}>
+                                <h2 id={calculateHeadersUrl(children?.toString()!)} className={`text-3xl font-bold mt-6 mb-4`} {...rest}>
                                     <Link href={`#${calculateHeadersUrl(children?.toString()!)}`}>{children}</Link>
                                 </h2>
                             );
@@ -46,7 +44,7 @@ export default function Article({ article }: Props) {
                         h3(props) {
                             const { children, node, ...rest } = props;
                             return (
-                                <h3 id={calculateHeadersUrl(children?.toString()!)} className={`initial:text-xl sm:text-2xl font-bold initial:mt-6 initial:mb-3 sm:mt-7 sm:mb-4`} {...rest}>
+                                <h3 id={calculateHeadersUrl(children?.toString()!)} className={`text-2xl font-bold mt-7 mb-4`} {...rest}>
                                     <Link href={`#${calculateHeadersUrl(children?.toString()!)}`}>{children}</Link>
                                 </h3>
                             );
@@ -54,7 +52,7 @@ export default function Article({ article }: Props) {
                         ul(props) {
                             const { children, node, ...rest } = props;
                             return (
-                                <ul className={`list-inside list-disc ${margins}`} {...rest}>
+                                <ul className={`list-inside list-disc mb-3 mt-4`} {...rest}>
                                     {children}
                                 </ul>
                             );
@@ -70,7 +68,7 @@ export default function Article({ article }: Props) {
                         p(props) {
                             const { children, node, ...rest } = props;
                             return (
-                                <p className={`initial:mb-2 sm:mb-3`} {...rest}>
+                                <p className={`mb-3`} {...rest}>
                                     {children}
                                 </p>
                             );
