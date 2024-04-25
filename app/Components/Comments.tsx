@@ -1,5 +1,3 @@
-"use client";
-
 import giscusConfigs from "@/app/configs/giscus.config";
 import Giscus from "@giscus/react";
 import { useTheme } from "next-themes";

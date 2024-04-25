@@ -1,5 +1,3 @@
-"use client";
-
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { TbMoonFilled, TbSunFilled } from "react-icons/tb";
@@ -18,7 +16,6 @@ export default function DarkModeButton() {
 
     const styleClass = "rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite";
     const ariaLabel = "Change color button";
-    const imageSize = 25;
 
     if (resolvedTheme === "dark")
         return (
