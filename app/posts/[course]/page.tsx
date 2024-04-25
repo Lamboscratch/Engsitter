@@ -1,4 +1,5 @@
 import ContainerApp from "@/app/components/ContainerApp";
+import GoToLink from "@/app/components/GoToLink";
 import PostsList from "@/app/components/PostsList";
 import PostsNavigator from "@/app/components/PostsNavigator";
 import siteMetadata from "@/app/data/siteMetadata";
@@ -56,7 +57,7 @@ export default function Page({ params }: { params: { course: string } }) {
             <div className="flex initial:flex-col sm:flex-row initial:space-x-0 sm:space-x-6">
                 <Flex direction="column">
                     <PostsList posts={filteredPosts} maxDisplay={filteredPosts.length} />
-                    <div className="w-full h-16"></div>
+                    <GoToLink name="Back To Top" link="#top" type="top"></GoToLink>
                 </Flex>
             </div>
         </ContainerApp>

@@ -13,7 +13,7 @@ export default function Home() {
         <ContainerApp>
             <Intro />
             <Main posts={posts} />
-            <GoToLink name="All Posts" link="/posts" />
+            <GoToLink name="All Posts" link="/posts" type="posts" />
         </ContainerApp>
     );
 }

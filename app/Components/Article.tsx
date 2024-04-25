@@ -14,7 +14,7 @@ interface Props {
 export default function Article({ article }: Props) {
     return (
         <div className="initial:w-full sm:min-w-[65ch]">
-            <article className="pb-3.5">
+            <article>
                 <Markdown
                     className="text-lg"
                     remarkPlugins={[gfm]}

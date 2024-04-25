@@ -4,13 +4,14 @@ import Link from "next/link";
 interface Props {
     name: string;
     link: string;
+    type: string;
 }
 
-export default function GoToLink({ name, link }: Props) {
+export default function GoToLink({ name, link, type }: Props) {
     return (
-        <Flex className="my-6" align="end" justify="end">
-            <Link className="flex text-xl items-center p-3 rounded-lg border border-solid border-gray-200 dark:border-zinc-700 hover:bg-orangeSite dark:hover:text-zinc-700 hover:transition-colors" href={link}>
-                {name} &#10142;
+        <Flex className="my-5" align="end" justify={type === "posts" ? "end" : "center"}>
+            <Link className="flex text-base font-semibold items-center hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4" href={link}>
+                {name} {type === "posts" ? "➝" : "⭡"}
             </Link>
         </Flex>
     );

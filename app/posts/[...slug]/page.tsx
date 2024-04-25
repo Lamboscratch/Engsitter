@@ -1,5 +1,6 @@
 import Article from "@/app/components/Article";
 import ContainerApp from "@/app/components/ContainerApp";
+import GoToLink from "@/app/components/GoToLink";
 import Index from "@/app/components/Index";
 import Navigator from "@/app/components/Navigator";
 import ReleaseDate from "@/app/components/ReleaseDate";
@@ -83,6 +84,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
                 <Article article={post.body.raw} />
                 <Index posts={sortedCoreContents} course={post.slug.split("/")[1]} id={post.slug} />
             </Flex>
+            <GoToLink name="Back To Top" link="#top" type="top"></GoToLink>
         </ContainerApp>
     );
 }
