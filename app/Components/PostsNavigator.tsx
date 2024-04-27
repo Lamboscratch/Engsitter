@@ -14,7 +14,7 @@ function renderLink(course: string, tagCounts: Record<string, number>, pathname:
     const linkClassStatic = "underline decoration-solid decoration-orangeSite underline-offset-8";
 
     return (
-        <Link className={`font-semibold pt-1 whitespace-nowrap ${pathname === "/posts/" + course ? linkClassStatic : linkClassHover}`} href={"/posts/" + course}>
+        <Link className={`font-semibold pt-1 whitespace-nowrap ${pathname === "/posts/" + course ? linkClassStatic : linkClassHover}`} href={"/posts/" + course} aria-label={`Go to ${coursesNameMap.get(course)} course page`}>
             {`${coursesNameMap.get(course)} (${tagCounts[course]})`}
         </Link>
     );
@@ -26,7 +26,7 @@ export default function PostsNavigator({ tagCounts }: Props) {
     return (
         <div className="flex flex-col items-center justify-center my-16">
             <Heading className="!text-[2.5rem] pb-1 text-center !leading-10" as="h1" size="8" weight="bold">
-                <Link className="hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4" href={"/posts"}>
+                <Link className="hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4" href={"/posts"} aria-label="Go to posts page">
                     {"All Posts"}
                 </Link>
             </Heading>

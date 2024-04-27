@@ -32,26 +32,26 @@ export default function HamburgerMenu() {
                     </button>
                 </li>
                 <li className={liClass}>
-                    <Link className={`${checkLink(currentPath!, "/") ? underlineClass : ""} justify-self-center text-xl`} href="/" onClick={clickAction}>
+                    <Link className={`${checkLink(currentPath!, "/") ? underlineClass : ""} justify-self-center text-xl`} href="/" onClick={clickAction} aria-label="Go to home page">
                         Home
                     </Link>
-                    <Link className="ml-auto" href="/" onClick={clickAction}>
+                    <Link className="ml-auto" href="/" onClick={clickAction} aria-label="Go to home page">
                         <IoHomeSharp className={iconClass} />
                     </Link>
                 </li>
                 <li className={liClass}>
-                    <Link className={`${checkLink(currentPath!, "/posts") ? underlineClass : ""} justify-self-center text-xl`} href="/posts" onClick={clickAction}>
+                    <Link className={`${checkLink(currentPath!, "/posts") ? underlineClass : ""} justify-self-center text-xl`} href="/posts" onClick={clickAction} aria-label="Go to posts page">
                         Posts
                     </Link>
-                    <Link className="ml-auto" href="/posts" onClick={clickAction}>
+                    <Link className="ml-auto" href="/posts" onClick={clickAction} aria-label="Go to posts page">
                         <BsFilePost className={iconClass} />
                     </Link>
                 </li>
                 <li className={liClass}>
-                    <Link className={`${checkLink(currentPath!, "/tips") ? underlineClass : ""} justify-self-center text-xl`} href="/tips" onClick={clickAction}>
+                    <Link className={`${checkLink(currentPath!, "/tips") ? underlineClass : ""} justify-self-center text-xl`} href="/tips" onClick={clickAction} aria-label="Go to tips page">
                         Tips
                     </Link>
-                    <Link className="ml-auto" href="/tips" onClick={clickAction}>
+                    <Link className="ml-auto" href="/tips" onClick={clickAction} aria-label="Go to tips page">
                         <FaLightbulb className={iconClass} />
                     </Link>
                 </li>

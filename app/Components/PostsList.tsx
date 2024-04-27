@@ -22,7 +22,7 @@ export default function PostsList({ posts, maxDisplay }: PostsType) {
                         </div>
                         <div className="flex flex-col shrink-0 box-border justify-start flex-none h-auto whitespace-pre-wrap w-full break-words outline-none relative">
                             <h2 className="ml-5 whitespace-pre-wrap box-border tracking-tight text-start">
-                                <Link className="text-3xl font-semibold hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4" href={`/posts/${post.slug}`}>
+                                <Link className="text-3xl font-semibold hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4" href={`/posts/${post.slug}`} aria-label={`Navigate to ${post.title} post`}>
                                     {post.title}
                                 </Link>
                             </h2>
@@ -31,7 +31,11 @@ export default function PostsList({ posts, maxDisplay }: PostsType) {
                     <div className="ml-5 flex flex-col grow shrink-0 basis-0 gap-4 box-border content-start items-start justify-start h-min relative">
                         <div className="flex flex-none flex-col justify-start shrink-0 box-border border-b border-solid border-gray-200 dark:border-zinc-700 h-auto w-full outline-none relative">
                             <p className={`initial:mt-3 sm:mt-8 mb-3 text-start text-lg box-border`}>{post.summary}</p>
-                            <Link className="flex flex-row content-start items-center justify-start mb-3 text-base w-max font-semibold hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4" href={`/posts/${post.slug}`}>
+                            <Link
+                                className="flex flex-row content-start items-center justify-start mb-3 text-base w-max font-semibold hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4"
+                                href={`/posts/${post.slug}`}
+                                aria-label={`Navigate to ${post.title} post`}
+                            >
                                 <p className="inline">Read more &#10141;</p>
                             </Link>
                         </div>

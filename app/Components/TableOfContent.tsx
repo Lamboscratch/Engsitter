@@ -22,7 +22,7 @@ export default function TableOfContent({ header, path, index, resolvedHeaders }:
             <Flex align="center">
                 <Box className={boxClassOne} />
                 <Flex className="ml-2">
-                    <Link className={linkClass} href={`${header.url}`}>
+                    <Link className={linkClass} href={`${header.url}`} aria-label={`Go to ${header.value} section`}>
                         {header.value}
                     </Link>
                 </Flex>
@@ -33,7 +33,7 @@ export default function TableOfContent({ header, path, index, resolvedHeaders }:
             <Flex align="center" className={containerClass}>
                 <Box className={boxClassOne} />
                 <Flex className="ml-2">
-                    <Link className={linkClass} href={`${header.url}`}>
+                    <Link className={linkClass} href={`${header.url}`} aria-label={`Go to ${header.value} section`}>
                         {header.value}
                     </Link>
                 </Flex>
@@ -48,7 +48,7 @@ export default function TableOfContent({ header, path, index, resolvedHeaders }:
                 </Flex>
                 <Box className={boxClassFour}></Box>
                 <Flex className="!ml-2">
-                    <Link className={linkClass} href={`${header.url}`}>
+                    <Link className={linkClass} href={`${header.url}`} aria-label={`Go to ${header.value} section`}>
                         {header.value}
                     </Link>
                 </Flex>

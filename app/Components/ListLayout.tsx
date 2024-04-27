@@ -35,7 +35,7 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
                     </button>
                 )}
                 {prevPage && (
-                    <Link className="text-base" href={currentPage - 1 === 1 ? `/${basePath}/` : `/${basePath}/page/${currentPage - 1}`} rel="prev">
+                    <Link className="text-base" href={currentPage - 1 === 1 ? `/${basePath}/` : `/${basePath}/page/${currentPage - 1}`} rel="prev" aria-label="Go to previous post page">
                         Previous
                     </Link>
                 )}
@@ -48,7 +48,7 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
                     </button>
                 )}
                 {nextPage && (
-                    <Link className="text-base" href={`/${basePath}/page/${currentPage + 1}`} rel="next">
+                    <Link className="text-base" href={`/${basePath}/page/${currentPage + 1}`} rel="next" aria-label="Go to next post page">
                         Next
                     </Link>
                 )}

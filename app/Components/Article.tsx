@@ -35,17 +35,23 @@ export default function Article({ article }: Props) {
                         },
                         h2(props) {
                             const { children, node, ...rest } = props;
+                            const headerName = calculateHeadersUrl(children?.toString()!);
                             return (
-                                <h2 id={calculateHeadersUrl(children?.toString()!)} className={`text-3xl font-bold mt-6 mb-4`} {...rest}>
-                                    <Link href={`#${calculateHeadersUrl(children?.toString()!)}`}>{children}</Link>
+                                <h2 id={headerName} className={`text-3xl font-bold mt-6 mb-4`} {...rest}>
+                                    <Link href={`#${headerName}`} aria-label={`Link to ${headerName}`}>
+                                        {children}
+                                    </Link>
                                 </h2>
                             );
                         },
                         h3(props) {
                             const { children, node, ...rest } = props;
+                            const headerName = calculateHeadersUrl(children?.toString()!);
                             return (
-                                <h3 id={calculateHeadersUrl(children?.toString()!)} className={`text-2xl font-bold mt-7 mb-4`} {...rest}>
-                                    <Link href={`#${calculateHeadersUrl(children?.toString()!)}`}>{children}</Link>
+                                <h3 id={headerName} className={`text-2xl font-bold mt-7 mb-4`} {...rest}>
+                                    <Link href={`#${headerName}`} aria-label={`Link to ${headerName}`}>
+                                        {children}
+                                    </Link>
                                 </h3>
                             );
                         },
