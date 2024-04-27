@@ -35,19 +35,25 @@ export default function HamburgerMenu() {
                     <Link className={`${checkLink(currentPath!, "/") ? underlineClass : ""} justify-self-center text-xl`} href="/" onClick={clickAction}>
                         Home
                     </Link>
-                    <IoHomeSharp className={`ml-auto ${iconClass}`} />
+                    <Link className="ml-auto" href="/" onClick={clickAction}>
+                        <IoHomeSharp className={iconClass} />
+                    </Link>
                 </li>
                 <li className={liClass}>
                     <Link className={`${checkLink(currentPath!, "/posts") ? underlineClass : ""} justify-self-center text-xl`} href="/posts" onClick={clickAction}>
                         Posts
                     </Link>
-                    <BsFilePost className={`ml-auto ${iconClass}`} />
+                    <Link className="ml-auto" href="/posts" onClick={clickAction}>
+                        <BsFilePost className={iconClass} />
+                    </Link>
                 </li>
                 <li className={liClass}>
                     <Link className={`${checkLink(currentPath!, "/tips") ? underlineClass : ""} justify-self-center text-xl`} href="/tips" onClick={clickAction}>
                         Tips
                     </Link>
-                    <FaLightbulb className={`ml-auto ${iconClass}`} />
+                    <Link className="ml-auto" href="/tips" onClick={clickAction}>
+                        <FaLightbulb className={iconClass} />
+                    </Link>
                 </li>
             </ul>
         </Flex>
