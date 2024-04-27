@@ -4,36 +4,16 @@ import ContainerApp from "@/app/components/ContainerApp";
 import DarkModeButton from "@/app/components/DarkModeButton";
 import ImageTheme from "@/app/components/ImageTheme";
 import Search from "@/app/components/Search";
+import checkLink from "@/app/utilities/checkLink";
+import links from "@/app/utilities/extractPathName";
 import { Flex } from "@radix-ui/themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-interface Links {
-    name: string;
-    path: string;
-}
-
-function checkLink(currentPath: string, itemPath: string) {
-    if (currentPath === "/" && itemPath === "/") {
-        return true;
-    }
-    if (currentPath.startsWith("/posts") && itemPath.startsWith("/posts")) {
-        return true;
-    }
-    if (currentPath.startsWith("/tips") && itemPath.startsWith("/tips")) {
-        return true;
-    }
-    return false;
-}
+import HamburgerMenu from "./HamburgerMenu";
+import Separator from "./Separator";
 
 export default function NavBar() {
     const currentPath = usePathname();
-
-    const links: Links[] = [
-        { name: "Home", path: "/" },
-        { name: "Posts", path: "/posts" },
-        { name: "Tips", path: "/tips" },
-    ];
 
     return (
         <nav className={`sticky top-0 z-20 backdrop-blur-sm bg-whitePrimary dark:bg-blackPrimary ${currentPath.startsWith("/tips") ? "mb-auto" : "mb-0"}`}>
@@ -55,11 +35,11 @@ export default function NavBar() {
                             </li>
                         ))}
                     </ul>
-                    <Search style="ml-6" />
-                    <svg className="pt-1 w-[1.65rem] h-[1.65rem]" xmlns="http://www.w3.org/2000/svg" strokeWidth="0" stroke="currentColor" fill="none" viewBox="0 0 1 31">
-                        <rect className="!fill-gray-200 dark:!fill-zinc-700" fillRule="evenodd" clipRule="evenodd" fill="currentColor" width="1" height="31" />
-                    </svg>
+                    <Search style="initial:ml-0 sm:ml-6 initial:mr-3 sm:mr-0" />
+                    <Separator style="initial:hidden sm:block" />
                     <DarkModeButton />
+                    <Separator style="initial:block sm:hidden" />
+                    <HamburgerMenu />
                 </Flex>
             </ContainerApp>
         </nav>
