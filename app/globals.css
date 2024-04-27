@@ -24,7 +24,7 @@ main {
 }
 
 .radix-themes {
-    --default-font-family: var(--font-poppins) !important;
+    --default-font-family: var(--font-custom) !important;
 }
 
 .shadowBoxLight {

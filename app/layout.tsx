@@ -10,13 +10,13 @@ import logoLight from "@/public/images/logo-light.svg";
 import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import { headers } from "next/headers";
 
-const poppins = Poppins({
+const font = Montserrat({
     weight: ["400", "500", "600", "700"],
     subsets: ["latin"],
-    variable: "--font-poppins",
+    variable: "--font-custom",
 });
 
 // Script UMAMI
@@ -54,7 +54,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     return (
         <html lang="en" suppressHydrationWarning>
             <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-            <body className={"flex flex-col pl-[calc(100vw-100%)] min-h-dvh relative " + poppins.variable}>
+            <body className={"flex flex-col pl-[calc(100vw-100%)] min-h-dvh relative " + font.variable}>
                 <ChangeColorProvider>
                     <Theme>
                         <SearchProvider>
