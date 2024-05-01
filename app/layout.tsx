@@ -81,6 +81,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 
     return (
         <html lang="en" suppressHydrationWarning>
+            <script defer src="https://us.umami.is/script.js" data-website-id="9dff9671-a95a-45a4-ae29-667158928411"></script>
             <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
             <body className={"flex flex-col pl-[calc(100vw-100%)] min-h-dvh relative " + font.variable}>
                 <ChangeColorProvider>

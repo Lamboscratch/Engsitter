@@ -25,6 +25,10 @@ const securityHeaders = [
         key: "Strict-Transport-Security",
         value: "max-age=31536000; includeSubDomains",
     },
+    {
+        key: "Access-Control-Allow-Origin",
+        value: "https://api-gateway.umami.dev/api/send",
+    },
 ];
 
 /**
@@ -33,9 +37,9 @@ const securityHeaders = [
 module.exports = () => {
     const plugins = [withContentlayer, withBundleAnalyzer];
     return plugins.reduce((acc, next) => next(acc), {
-        // compiler: {
-        //     removeConsole: true,
-        // },
+        compiler: {
+            removeConsole: true,
+        },
         reactStrictMode: true,
         poweredByHeader: false,
         pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
