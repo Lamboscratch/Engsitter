@@ -7,7 +7,7 @@ const siteMetadata = {
     language: "en-us",
     theme: "system",
     siteUrl: "https://engsitter.com",
-    siteLogo: "/images/logo-dark.svg",
+    siteLogo: "/images/logo_dark.svg",
     socialBanner: "/images/card_light.png",
     email: "engsitter@gmail.com",
     // github: "https://github.com",
