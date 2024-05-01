@@ -4,7 +4,6 @@ import { extractTocHeadings } from "pliny/mdx-plugins/index.js";
 import { allCoreContent, sortPosts } from "pliny/utils/contentlayer.js";
 import readingTime from "reading-time";
 import { Post as PostType } from "./.contentlayer/generated";
-import siteMetadata from "./app/data/siteMetadata.js";
 
 export const Post = defineDocumentType(() => ({
     name: "Post",
@@ -90,10 +89,8 @@ function createTagCount(allPosts: PostType[]) {
 }
 
 function createSearchIndex(allPosts: PostType[]) {
-    if (siteMetadata?.search?.provider === "kbar" && siteMetadata.search.kbarConfig.searchDocumentsPath) {
-        writeFileSync(`public/${siteMetadata.search.kbarConfig.searchDocumentsPath}`, JSON.stringify(allCoreContent(sortPosts(allPosts))));
-        console.log("Local search index generated...");
-    }
+    writeFileSync("public/search.json", JSON.stringify(allCoreContent(sortPosts(allPosts))));
+    console.log("Local search index generated...");
 }
 
 export default makeSource({
