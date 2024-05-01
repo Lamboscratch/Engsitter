@@ -37,7 +37,7 @@ export default function Article({ article }: Props) {
                             const { children, node, ...rest } = props;
                             const headerName = calculateHeadersUrl(children?.toString()!);
                             return (
-                                <h2 id={headerName} className={`text-3xl font-bold mt-6 mb-4`} {...rest}>
+                                <h2 id={headerName} className="text-3xl font-bold mt-6 mb-4`" {...rest}>
                                     <Link href={`#${headerName}`} aria-label={`Link to ${headerName}`}>
                                         {children}
                                     </Link>
@@ -48,7 +48,7 @@ export default function Article({ article }: Props) {
                             const { children, node, ...rest } = props;
                             const headerName = calculateHeadersUrl(children?.toString()!);
                             return (
-                                <h3 id={headerName} className={`text-2xl font-bold mt-7 mb-4`} {...rest}>
+                                <h3 id={headerName} className="text-2xl font-bold mt-7 mb-4" {...rest}>
                                     <Link href={`#${headerName}`} aria-label={`Link to ${headerName}`}>
                                         {children}
                                     </Link>
@@ -58,7 +58,7 @@ export default function Article({ article }: Props) {
                         ul(props) {
                             const { children, node, ...rest } = props;
                             return (
-                                <ul className={`list-inside list-disc mb-3 mt-4`} {...rest}>
+                                <ul className="list-inside list-disc mb-3 mt-4" {...rest}>
                                     {children}
                                 </ul>
                             );
@@ -66,7 +66,7 @@ export default function Article({ article }: Props) {
                         a(props) {
                             const { children, node, ...rest } = props;
                             return (
-                                <a className={`underline decoration-solid decoration-orangeSite underline-offset-4`} target="_blank" {...rest}>
+                                <a className="underline decoration-solid decoration-orangeSite underline-offset-4" target="_blank" {...rest}>
                                     {children}
                                 </a>
                             );
@@ -74,7 +74,7 @@ export default function Article({ article }: Props) {
                         p(props) {
                             const { children, node, ...rest } = props;
                             return (
-                                <p className={`mb-3`} {...rest}>
+                                <p className="mb-3" {...rest}>
                                     {children}
                                 </p>
                             );

@@ -6,8 +6,6 @@ import { PiFacebookLogo, PiInstagramLogo, PiYoutubeLogo } from "react-icons/pi";
 export default function Footer() {
     const currentYear = new Date().getFullYear();
 
-    const linkClass = "rounded-sm outline-none focus-visible:shadow-[0_0_0_2px] focus-visible:shadow-orangeSite";
-
     return (
         <footer className="mt-auto">
             <ContainerApp>
@@ -16,14 +14,8 @@ export default function Footer() {
                         &copy; {currentYear} Engsitter
                     </Text>
                     <Flex align="center" justify="between" gap="2">
-                        <Link className={linkClass} href="https://www.facebook.com/" aria-label="Link to Facebook">
-                            <PiFacebookLogo className="w-[1.65rem] h-[1.65rem]"></PiFacebookLogo>
-                        </Link>
-                        <Link className={linkClass} href="https://www.youtube.com/" aria-label="Link to Youtube">
-                            <PiYoutubeLogo className="w-[1.65rem] h-[1.65rem]"></PiYoutubeLogo>
-                        </Link>
-                        <Link className={linkClass} href="https://www.instagram.com/" aria-label="Link to Instagram">
-                            <PiInstagramLogo className="w-[1.65rem] h-[1.65rem]"></PiInstagramLogo>
+                        <Link className="!text-base hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4" href="mailto:engsitter@gmail.com" aria-label="Link to email address">
+                            engsitter@gmail.com
                         </Link>
                     </Flex>
                 </Flex>
