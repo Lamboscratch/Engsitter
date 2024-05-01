@@ -4,7 +4,7 @@ import { extractTocHeadings } from "pliny/mdx-plugins/index.js";
 import { allCoreContent, sortPosts } from "pliny/utils/contentlayer.js";
 import readingTime from "reading-time";
 import { Post as PostType } from "./.contentlayer/generated";
-import siteMetadata from "./app/data/siteMetadata";
+import siteMetadata from "./app/data/siteMetadata.js";
 
 export const Post = defineDocumentType(() => ({
     name: "Post",
