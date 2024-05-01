@@ -12,6 +12,7 @@ import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import { headers } from "next/headers";
+import Script from "next/script";
 
 const font = Montserrat({
     weight: ["400", "500", "600", "700"],
@@ -81,7 +82,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 
     return (
         <html lang="en" suppressHydrationWarning>
-            <script defer src="https://us.umami.is/script.js" data-website-id="9dff9671-a95a-45a4-ae29-667158928411"></script>
+            <Script src="https://us.umami.is/script.js" data-website-id="9dff9671-a95a-45a4-ae29-667158928411" />
             <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
             <body className={"flex flex-col pl-[calc(100vw-100%)] min-h-dvh relative " + font.variable}>
                 <ChangeColorProvider>
