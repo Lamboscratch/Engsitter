@@ -1,7 +1,6 @@
 {
     "compilerOptions": {
         "lib": ["dom", "dom.iterable", "esnext"],
-        "forceConsistentCasingInFileNames": false,
         "allowJs": true,
         "skipLibCheck": true,
         "strict": true,
