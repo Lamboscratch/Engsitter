@@ -2,15 +2,15 @@
 
 import ContainerApp from "@/app/components/ContainerApp";
 import DarkModeButton from "@/app/components/DarkModeButton";
+import HamburgerMenu from "@/app/components/HamburgerMenu";
 import ImageTheme from "@/app/components/ImageTheme";
 import Search from "@/app/components/Search";
+import Separator from "@/app/components/Separator";
 import checkLink from "@/app/utilities/checkLink";
 import links from "@/app/utilities/extractPathName";
 import { Flex } from "@radix-ui/themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import HamburgerMenu from "./HamburgerMenu";
-import Separator from "./Separator";
 
 export default function NavBar() {
     const currentPath = usePathname();

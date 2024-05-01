@@ -1,7 +1,6 @@
 import ContainerApp from "@/app/components/ContainerApp";
 import { Flex, Text } from "@radix-ui/themes";
 import Link from "next/link";
-import { PiFacebookLogo, PiInstagramLogo, PiYoutubeLogo } from "react-icons/pi";
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
