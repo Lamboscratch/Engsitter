@@ -16,7 +16,7 @@ export default function SearchResults() {
                             <div className="flex w-full space-x-2">
                                 <div className="radix-themes w-full block">
                                     <div>{item.subtitle ? <ReleaseDate style="text-grayPrimary text-xs" date={item.subtitle}></ReleaseDate> : ""}</div>
-                                    {item.name === "Home" || item.name === "Posts" || item.name === "Tips" ? (
+                                    {item.name === "Home" || item.name === "Posts" || item.name === "Resources" ? (
                                         <div className="flex justify-between">
                                             <div>{item.name}</div>
                                             <kbd className="inline-block whitespace-nowrap rounded border px-1.5 align-middle font-medium tracking-wide text-sm text-gray-400 border-gray-400">{item.shortcut}</kbd>

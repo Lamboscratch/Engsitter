@@ -21,8 +21,8 @@ const links: Links[] = [
         Icon: BsFilePost,
     },
     {
-        name: "Tips",
-        path: "/tips",
+        name: "Resources",
+        path: "/resources",
         Icon: MdTipsAndUpdates,
     },
 ];

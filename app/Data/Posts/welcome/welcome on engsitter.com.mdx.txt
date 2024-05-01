@@ -1,0 +1,74 @@
+---
+title: "Benvenuti su engsitter.com"
+date: "2024-05-01"
+tags: ["welcome"]
+draft: false
+summary: Il processo decisionale che ha portato alla nascita di Engistter, qual è il principale obiettivo e come nagivare in maniera confortevole nel sito. 
+---
+
+## Chi sono?
+
+Prima di presentarmi, ci tengo a dare un caloroso benvenuto a chiunque si ritrovi a navigare tra queste pagine. Sono un **ingegnere informatico** con laurea
+magistrale e sono specializzato in networking e cybersecurity. Attualmente lavoro per una azienda nel settore della difesa con sede a Roma / Italia.
+La mia passione per l'informatica è nata durante l'adolescenza: trascorrevo ore davanti al computer ed ero particolarmente **attratto dal mondo
+dell'ethical hacking**. La sete di conoscenze, maturata nel corso del tempo, mi ha portato ad approfondire sempre di più questo ambito. Ma ora bando
+alle ciance e arriviamo al punto parlando di quest progetto.
+
+## Cos'è engsitter.com?
+
+![Engsitter logo](/images/card_light.png)
+
+Bellissima domanda. Credo che il miglior modo per spiegarlo sia con queste due parole: **mostro di Frankenstein**. Ciò che intendo è che il misto tra
+post / articoli / tutorial / lezioni che leggerete avrà lo scopo di fare divulgazione, principalmente, sul Networking e la Cybersecurity.
+L'intenzione è quella di spiegare argomenti, anche complessi, in maniera chiara e comprensibile per tutti.
+
+### La genesi dell'idea
+
+Dopo il mio primo anno di lavoro, sento l'esigenza di iniziare ad intraprendere un percorso parallelo. Ho trascorso molto tempo a pensare
+che progetto potessi far partire ma alla fine ho capito la strada da intraprendere. Se consideriamo che ho sempre ricevuto ottimi feedback sulle mie
+capacità di riuscire a spiegare un argomento in maniera semplice ed efficace, la scelta è ricaduta sulla **scrittura di contenuti di carattere tecnico**.
+E quale miglior modo per farlo se non quello di **aprire un blog** in cui poter diffondere le mie conoscenze? Detto, fatto.
+Circa tre mesi fa ho creato un repository su Github ed ora eccoci qui. Engistter è finalmente online.
+
+### L'eterno dubbio sul nome del progetto
+
+Ho trascorso ore, giorni, settimane a pensare che nome potessi dare a questa strana creatura 😅. Ero alla ricerca di un gioco di parole simpatico che
+sintetizzasse la natura del sito. E poi è arrivata l'intuizione:
+
+-   **Eng** + **sitter**
+
+Così come un babysitter si prende cura dei bambini, Engsitter vuole fornire assistenza nell'apprendimento ad ogni ingegnere inserito in questo ambito e
+accompagnarlo durante il viaggio di acquisizione di nuove conoscenze.
+
+## L'obiettivo principale
+
+L'obiettivo principale è quello di **diffondere la conoscenza in ambito networking e cybersecurity** in maniera facile e accessbile a tutti. Con cadenza regolare
+verranno pubblicati nuovi contenuti negli ambiti appena menzionati. Come vedremo più avanti, il sito è suddiviso in sezioni per facilitare la navigazione
+attraverso i post relativi all'argomento di interesse. Troverete, ad esempio, contenuti utili alla preparazione di una certificazione ma anche molti altri di
+supporto alla comprensione di tematiche relative alle aree più disparate dell'informatica.
+
+In ogni caso, quando ho deciso di iniziare questo percorso avevo molti dubbi ma anche una grande certezza: **rendere disponibile il contenuto del sito
+gratuitamente a chiunque**. Così ho iniziato a pensare al modo più sostenibile per genereare dei guadagni senza che nessuno dovesse sborsare neanche un centesimo.
+Ed ecco perchè tra non molto nel sito verranno inseriti annunci pubblicitari. Mi è sembrata la scelta migliore per poter usufruire dei contenuti e, al contempo,
+sostenere il progetto.
+
+### Topic trattati
+
+Si parlerà di tutto: dalla **preparazione per il conseguimento di certificazioni**, alla conoscenza nel dettaglio di tutto ciò che rende possibile
+**l'interconnesione di dispositivi di rete e la loro messa in sicurezza**. Ho deciso di iniziare con dei post relativi alla preparazione di [CCNA][] e [CEH]
+per poi proseguire con argomenti sempre più complessi.
+
+## Come navigare all'interno del sito
+
+Ho cercato di rendere il sito quanto più facile possibile da navigare. Il cuore dei contenuti si concentra al path [/posts][] in cui sono presenti tutti i
+post e divisi per sezioni. Cliccando su un generico argomento, comparirà la lista di post ordinati dal più vecchio al più nuovo proprio perchè i contenuti verranno
+postati in maniera sequenziale seguendo un riferimento logico. Con la lente di ingrandimento posizionata in alto a destra della viewport è possibile effettuare
+una ricerca in tutto il sito per poter trovare in maniera puntuale ciò che si sta cercando. Infine, al path [/resources][] sarà possibile trovare
+**tante risorse utili per rafforzare i concetti trattati**.
+
+Non mi resta che augurarvi buona permanenza. A presto! 👋
+
+[CCNA]: https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccna/index.html
+[CEH]: https://www.eccouncil.org/train-certify/certified-ethical-hacker-ceh/
+[/posts]: https://engsitter.com/posts
+[/resources]: https://engsitter.com/resources

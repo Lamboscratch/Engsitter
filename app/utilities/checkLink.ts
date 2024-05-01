@@ -5,7 +5,7 @@ export default function checkLink(currentPath: string, itemPath: string) {
     if (currentPath.startsWith("/posts") && itemPath.startsWith("/posts")) {
         return true;
     }
-    if (currentPath.startsWith("/tips") && itemPath.startsWith("/tips")) {
+    if (currentPath.startsWith("/resources") && itemPath.startsWith("/resources")) {
         return true;
     }
     return false;

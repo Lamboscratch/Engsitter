@@ -1,4 +1,4 @@
-import Highlight from "@/app/components//Highlight";
+import Highlight from "@/app/components/Highlight";
 import Copy from "@/app/components/Copy";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -66,7 +66,7 @@ export default function Article({ article }: Props) {
                         a(props) {
                             const { children, node, ...rest } = props;
                             return (
-                                <a className={`underline decoration-solid decoration-orangeSite underline-offset-4`} {...rest}>
+                                <a className={`underline decoration-solid decoration-orangeSite underline-offset-4`} target="_blank" {...rest}>
                                     {children}
                                 </a>
                             );

@@ -11,7 +11,7 @@ export interface PostsType {
 export default function PostsList({ posts, maxDisplay }: PostsType) {
     return (
         <ul className={`flex flex-none flex-col initial:mb-[-1px] sm:mb-0 initial:gap-7 sm:gap-3 border-solid border-l-[1px] border-gray-200 dark:border-zinc-700 h-min w-full box-border content-start items-start justify-start relative`}>
-            {posts.slice(0, maxDisplay).map((post) => (
+            {posts.slice(0, Math.min(posts.length, maxDisplay)).map((post) => (
                 <li key={post.slug} className={`flex flex-none initial:flex-col sm:flex-row initial:gap-0 sm:gap-10 w-full content-start items-start justify-start h-min box-border static`}>
                     <header className={`flex flex-col grow shrink-0 basis-0 h-min initial:pb-2 sm:pb-3 initial:static sm:sticky box-border content-start items-start justify-start top-20 z-10`}>
                         <div className="flex flex-none flex-col gap-2 box-border content-start items-start justify-start h-min overflow-visible relative">

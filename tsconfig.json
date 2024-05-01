@@ -23,6 +23,6 @@
             "contentlayer/generated": ["./.contentlayer/generated"]
         }
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".contentlayer/generated", "app/Scripts/rss.mjs"],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".contentlayer/generated", "app/scripts/rss.mjs"],
     "exclude": ["node_modules"]
 }

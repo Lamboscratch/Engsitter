@@ -1,8 +1,8 @@
-import { ChangeColorProvider } from "@/app/components//ChangeColorProvider";
-import Footer from "@/app/components//Footer";
-import NavBar from "@/app/components//NavBar";
-import SearchProvider from "@/app/components//SearchProvider";
 import AdBlockerDetector from "@/app/components/AdBlockerDetector";
+import { ChangeColorProvider } from "@/app/components/ChangeColorProvider";
+import Footer from "@/app/components/Footer";
+import NavBar from "@/app/components/NavBar";
+import SearchProvider from "@/app/components/SearchProvider";
 import siteMetadata from "@/app/data/siteMetadata";
 import "@/app/globals.css";
 import logoDark from "@/public/images/logo-dark.svg";

@@ -1,23 +1,12 @@
 "use client";
 
-import coursesNameMap from "@/app/utilities/extractCourseName";
+import RenderLink from "@/app/components/RenderLink";
 import { Heading } from "@radix-ui/themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 interface Props {
     tagCounts: Record<string, number>;
-}
-
-function renderLink(course: string, tagCounts: Record<string, number>, pathname: string) {
-    const linkClassHover = "hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-8";
-    const linkClassStatic = "underline decoration-solid decoration-orangeSite underline-offset-8";
-
-    return (
-        <Link className={`font-semibold pt-1 whitespace-nowrap ${pathname === "/posts/" + course ? linkClassStatic : linkClassHover}`} href={"/posts/" + course} aria-label={`Go to ${coursesNameMap.get(course)} course page`}>
-            {`${coursesNameMap.get(course)} (${tagCounts[course]})`}
-        </Link>
-    );
 }
 
 export default function PostsNavigator({ tagCounts }: Props) {
@@ -35,30 +24,30 @@ export default function PostsNavigator({ tagCounts }: Props) {
                 <li className="flex flex-col items-center text-lg font-medium">
                     <div className="h-[2px] halfWidth self-end bg-orangeSite"></div>
                     <div className="h-5 w-[2px] bg-orangeSite"></div>
-                    {renderLink("ccna", tagCounts, pathname)}
+                    <RenderLink course="ccna" tagCounts={tagCounts} pathname={pathname} />
                 </li>
                 <li className="w-full border-t-[2px] border-solid border-orangeSite"></li>
                 <li className="flex flex-col items-center text-lg font-medium">
                     <div className="h-[2px] w-full bg-orangeSite"></div>
                     <div className="h-5 w-[2px] bg-orangeSite"></div>
-                    {renderLink("ceh", tagCounts, pathname)}
+                    <RenderLink course="ceh" tagCounts={tagCounts} pathname={pathname} />
                 </li>
                 <li className="w-full border-t-[2px] border-solid border-orangeSite"></li>
                 <li className="flex flex-col items-center text-lg font-medium">
                     <div className="h-[2px] w-full bg-orangeSite"></div>
                     <div className="h-5 w-[2px] bg-orangeSite"></div>
-                    {renderLink("python", tagCounts, pathname)}
+                    <RenderLink course="python" tagCounts={tagCounts} pathname={pathname} />
                 </li>
                 <li className="w-full border-t-[2px] border-solid border-orangeSite"></li>
                 <li className="flex flex-col items-center text-lg font-medium">
                     <div className="h-[2px] halfWidth self-start bg-orangeSite"></div>
                     <div className="h-5 w-[2px] bg-orangeSite"></div>
-                    {renderLink("welcome", tagCounts, pathname)}
+                    <RenderLink course="welcome" tagCounts={tagCounts} pathname={pathname} />
                 </li>
             </ul>
             <ul className="initial:grid sm:hidden grid-rows-rows initial:grid-cols-colsSmall xs:grid-cols-colsBig w-full">
                 <li className="flex flex-row w-full self-end py-1 text-lg font-medium">
-                    {renderLink("ccna", tagCounts, pathname)}
+                    <RenderLink course="ccna" tagCounts={tagCounts} pathname={pathname} />
                     <div className="pl-3 flex flex-col w-full">
                         <div className="w-full h-1/2"></div>
                         <div className="w-full h-1/2 border-t-[2px] border-solid border-orangeSite"></div>
@@ -82,10 +71,10 @@ export default function PostsNavigator({ tagCounts }: Props) {
                         <div className="w-full h-1/2"></div>
                         <div className="w-full h-1/2 border-t-[2px] border-solid border-orangeSite"></div>
                     </div>
-                    {renderLink("ceh", tagCounts, pathname)}
+                    <RenderLink course="ceh" tagCounts={tagCounts} pathname={pathname} />
                 </li>
                 <li className="flex flex-row w-full py-1 text-lg font-medium">
-                    {renderLink("python", tagCounts, pathname)}
+                    <RenderLink course="python" tagCounts={tagCounts} pathname={pathname} />
                     <div className="pl-3 flex flex-col w-full">
                         <div className="w-full h-1/2 border-b-[2px] border-solid border-orangeSite"></div>
                         <div className="w-full h-1/2"></div>
@@ -109,7 +98,7 @@ export default function PostsNavigator({ tagCounts }: Props) {
                         <div className="w-full h-1/2 border-b-[2px] border-solid border-orangeSite"></div>
                         <div className="w-full h-1/2"></div>
                     </div>
-                    {renderLink("welcome", tagCounts, pathname)}
+                    <RenderLink course="welcome" tagCounts={tagCounts} pathname={pathname} />
                 </li>
             </ul>
         </div>

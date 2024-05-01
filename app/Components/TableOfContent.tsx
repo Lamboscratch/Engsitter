@@ -4,12 +4,11 @@ import Link from "next/link";
 
 interface Props {
     header: Header;
-    path: string;
     index: number;
     resolvedHeaders: Header[];
 }
 
-export default function TableOfContent({ header, path, index, resolvedHeaders }: Props) {
+export default function TableOfContent({ header, index, resolvedHeaders }: Props) {
     const linkClass = "text-lg hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4";
     const containerClass = "border-l-2 border-solid border-orangeSite ml-9";
     const boxClassOne = "h-[2px] pl-[15px] border border-solid border-orangeSite";

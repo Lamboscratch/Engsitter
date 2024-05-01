@@ -1,7 +1,7 @@
-import extractCoursePosts from "@/app//utilities/extractCoursePosts";
 import { PostsType } from "@/app/components/Main";
 import TableOfContent from "@/app/components/TableOfContent";
 import calculateHeadersUrl from "@/app/utilities/calculateHeadersUrl";
+import extractCoursePosts from "@/app/utilities/extractCoursePosts";
 import { Flex, Heading } from "@radix-ui/themes";
 
 interface Props {
@@ -41,7 +41,7 @@ export default function Index({ posts, course, id }: Props) {
             </Heading>
             <Flex className="border-l-2 border-solid border-orangeSite text-xl font-medium pt-2 mt-2" direction="column">
                 {finalHeaders.map((header, index) => (
-                    <TableOfContent key={header.url} header={header} path={article[0].slug} index={index} resolvedHeaders={finalHeaders} />
+                    <TableOfContent key={header.url} header={header} index={index} resolvedHeaders={finalHeaders} />
                 ))}
             </Flex>
         </Flex>

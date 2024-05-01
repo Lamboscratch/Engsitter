@@ -16,7 +16,7 @@ export default function NavBar() {
     const currentPath = usePathname();
 
     return (
-        <nav className={`sticky top-0 z-20 backdrop-blur-sm bg-whitePrimary dark:bg-blackPrimary ${currentPath.startsWith("/tips") ? "mb-auto" : "mb-0"}`}>
+        <nav className={`sticky top-0 z-20 backdrop-blur-sm bg-whitePrimary dark:bg-blackPrimary ${currentPath.startsWith("/resources") ? "mb-auto" : "mb-0"}`}>
             <ContainerApp>
                 <Flex className="py-4 min-h-16 border-solid border-gray-200 border-b dark:border-zinc-700">
                     <Link className="flex items-center mr-auto" href="/" aria-label="Go to home page">

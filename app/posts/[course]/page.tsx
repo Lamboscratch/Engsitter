@@ -39,7 +39,7 @@ export const generateStaticParams = async () => {
 
 export default function Page({ params }: { params: { course: string } }) {
     const tagCounts = tagData as Record<string, number>;
-    const filteredPosts = allCoreContent(sortPosts(allPosts.filter((post) => post.tags[0] === params.course)));
+    const filteredPosts = allCoreContent(sortPosts(allPosts.filter((post) => post.tags[0] === params.course))).reverse();
     let pathsArray: string[] = [];
 
     Object.entries(tags).forEach(([key, value]) => {
@@ -57,7 +57,7 @@ export default function Page({ params }: { params: { course: string } }) {
             <div className="flex initial:flex-col sm:flex-row initial:space-x-0 sm:space-x-6">
                 <Flex direction="column">
                     <PostsList posts={filteredPosts} maxDisplay={filteredPosts.length} />
-                    <GoToLink name="Back To Top" link="#top" type="top"></GoToLink>
+                    <GoToLink name="Scroll To Top" link="#top" type="top"></GoToLink>
                 </Flex>
             </div>
         </ContainerApp>

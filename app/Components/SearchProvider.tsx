@@ -42,12 +42,12 @@ export default function SearchProvider({ children }: Props) {
             perform: () => router.push("/posts"),
         },
         {
-            id: "tips",
-            name: "Tips",
+            id: "resources",
+            name: "Resources",
             keywords: "",
             shortcut: ["t"],
             section: "Nav",
-            perform: () => router.push("/tips"),
+            perform: () => router.push("/resources"),
         },
         ...dynamicActions,
     ];

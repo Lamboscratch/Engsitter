@@ -48,10 +48,10 @@ export default function HamburgerMenu() {
                     </Link>
                 </li>
                 <li className={liClass}>
-                    <Link className={`${checkLink(currentPath!, "/tips") ? underlineClass : ""} justify-self-center text-xl`} href="/tips" onClick={clickAction} aria-label="Go to tips page">
-                        Tips
+                    <Link className={`${checkLink(currentPath!, "/resources") ? underlineClass : ""} justify-self-center text-xl`} href="/resources" onClick={clickAction} aria-label="Go to resources page">
+                        Resources
                     </Link>
-                    <Link className="ml-auto" href="/tips" onClick={clickAction} aria-label="Go to tips page">
+                    <Link className="ml-auto" href="/resources" onClick={clickAction} aria-label="Go to resources page">
                         <FaLightbulb className={iconClass} />
                     </Link>
                 </li>
