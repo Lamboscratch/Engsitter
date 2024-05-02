@@ -1,6 +1,6 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { TbMoonFilled, TbSunFilled } from "react-icons/tb";
+import { TbMoon, TbSun } from "react-icons/tb";
 
 export default function DarkModeButton() {
     const [mounted, setMounted] = useState(false);
@@ -20,13 +20,13 @@ export default function DarkModeButton() {
     if (resolvedTheme === "dark")
         return (
             <button className={styleClass} onClick={() => setTheme("light")} aria-label={ariaLabel}>
-                <TbMoonFilled className="w-[1.65rem] h-[1.65rem]" />
+                <TbMoon className="w-[1.65rem] h-[1.65rem]" />
             </button>
         );
     if (resolvedTheme === "light")
         return (
             <button className={styleClass} onClick={() => setTheme("dark")} aria-label={ariaLabel}>
-                <TbSunFilled className="w-[1.65rem] h-[1.65rem]" />
+                <TbSun className="w-[1.65rem] h-[1.65rem]" />
             </button>
         );
 }

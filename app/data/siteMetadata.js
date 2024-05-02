@@ -6,7 +6,7 @@ const siteMetadata = {
     description: "Comprehensive articles on networking and cybersecurity",
     language: "en-us",
     theme: "system",
-    siteUrl: "https://engsitter.com",
+    siteUrl: "https://www.engsitter.com",
     siteLogo: "/images/logo_dark.svg",
     socialBanner: "/images/card_light.png",
     email: "engsitter@gmail.com",
