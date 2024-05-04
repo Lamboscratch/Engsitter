@@ -3,13 +3,13 @@ import GoToLink from "@/app/components/GoToLink";
 import PostsList from "@/app/components/PostsList";
 import PostsNavigator from "@/app/components/PostsNavigator";
 import siteMetadata from "@/app/data/siteMetadata";
+import NotFoundPage from "@/app/not-found";
 import { genPageMetadata } from "@/app/seo";
 import coursesNameMap from "@/app/utilities/extractCourseName";
 import tagData from "@/public/tag-data.json";
 import { Flex } from "@radix-ui/themes";
 import { allPosts } from "contentlayer/generated";
 import { Metadata } from "next";
-import { redirect } from "next/navigation";
 import { allCoreContent, sortPosts } from "pliny/utils/contentlayer.js";
 
 const tags = tagData as Record<string, number>;
@@ -48,7 +48,7 @@ export default function Page({ params }: { params: { course: string } }) {
 
     const postIndex = pathsArray.findIndex((p) => p === params.course);
     if (postIndex === -1) {
-        return redirect("/404");
+        return <NotFoundPage />;
     }
 
     return (
