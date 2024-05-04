@@ -18,13 +18,10 @@ htmlFiles.forEach((file) => {
         return addMagicString ? MAGIC_STRING : "";
     });
 
-    console.log;
-
     if (!scripts.length) {
         return;
     }
     console.log(`Processing ${file}`);
-    console.log(scripts.length);
 
     const chunk = scripts.join("");
     const hash = createHash("md5").update(chunk).digest("hex");
