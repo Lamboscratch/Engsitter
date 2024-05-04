@@ -9,6 +9,7 @@ import logoDark from "@/public/images/logo_dark.svg";
 import logoLight from "@/public/images/logo_light.svg";
 import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import Script from "next/script";
@@ -98,6 +99,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                         </SearchProvider>
                     </Theme>
                 </ChangeColorProvider>
+                <SpeedInsights />
             </body>
         </html>
     );
