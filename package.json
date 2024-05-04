@@ -5,7 +5,7 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
-        "postbuild": "node ./app/scripts/postbuild.mjs",
+        "postbuild": "node ./app/scripts/postbuild.mjs && node ./app/scripts/removeInlineScripts.mjs",
         "start": "next start",
         "lint": "next lint"
     },

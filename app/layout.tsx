@@ -11,7 +11,6 @@ import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-import { headers } from "next/headers";
 import Script from "next/script";
 
 const font = Montserrat({
@@ -83,8 +82,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-    const nonce = headers().get("x-nonce");
-
     return (
         <html lang="en" suppressHydrationWarning>
             <Script src="https://us.umami.is/script.js" data-website-id="9dff9671-a95a-45a4-ae29-667158928411" />
