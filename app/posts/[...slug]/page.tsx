@@ -10,6 +10,7 @@ import { Flex } from "@radix-ui/themes";
 import type { Post } from "contentlayer/generated";
 import { allPosts } from "contentlayer/generated";
 import { Metadata } from "next";
+import { redirect } from "next/navigation";
 import { allCoreContent, sortPosts } from "pliny/utils/contentlayer.js";
 
 export async function generateMetadata({ params }: { params: { slug: string[] } }): Promise<Metadata | undefined> {
@@ -64,6 +65,10 @@ export const generateStaticParams = async () => {
 export default function Page({ params }: { params: { slug: string[] } }) {
     const slug = params.slug.join("/");
     const sortedCoreContents = allCoreContent(sortPosts(allPosts));
+    const postIndex = sortedCoreContents.findIndex((p) => p.slug === slug);
+    if (postIndex === -1) {
+        return redirect("/404");
+    }
 
     const post = allPosts.find((p: any) => p.slug === slug) as Post;
 
