@@ -2,7 +2,6 @@ import ContainerApp from "@/app/components/ContainerApp";
 import GoToLink from "@/app/components/GoToLink";
 import PostsList from "@/app/components/PostsList";
 import PostsNavigator from "@/app/components/PostsNavigator";
-import siteMetadata from "@/app/data/siteMetadata";
 import { genPageMetadata } from "@/app/seo";
 import coursesNameMap from "@/app/utilities/extractCourseName";
 import tagData from "@/public/tag-data.json";
@@ -21,8 +20,8 @@ interface Path {
 export async function generateMetadata({ params }: { params: { course: string } }): Promise<Metadata> {
     const course = coursesNameMap.get(decodeURI(params.course));
     return genPageMetadata({
-        title: `${course} | ${siteMetadata.title}`,
-        description: `List of posts - ${course}`,
+        title: `${course}`,
+        description: `All posts for ${course} topic`,
     });
 }
 

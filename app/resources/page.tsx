@@ -1,8 +1,14 @@
 import ContainerApp from "@/app/components/ContainerApp";
 import { genPageMetadata } from "@/app/seo";
 import { Flex, Heading } from "@radix-ui/themes";
+import { Metadata } from "next";
 
-export const metadata = genPageMetadata({ title: "Resources | Engsitter" });
+export async function generateMetadata({ params }: { params: { page: string } }): Promise<Metadata> {
+    return genPageMetadata({
+        title: "Resources",
+        description: "Useful resources to strengthen understanding",
+    });
+}
 
 export default function Page() {
     return (

@@ -1,10 +1,15 @@
 import ListLayout from "@/app/components/ListLayout";
 import { genPageMetadata } from "@/app/seo";
 import { allPosts } from "contentlayer/generated";
+import { Metadata } from "next";
 import { allCoreContent, sortPosts } from "pliny/utils/contentlayer.js";
 
-export const metadata = genPageMetadata({ title: "Posts | Engsitter" });
-
+export async function generateMetadata(): Promise<Metadata> {
+    return genPageMetadata({
+        title: "Posts",
+        description: "List of all posts divided by topic",
+    });
+}
 const POSTS_PER_PAGE = 5;
 
 export default function Page() {

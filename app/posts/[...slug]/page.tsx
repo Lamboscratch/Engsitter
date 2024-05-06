@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: { params: { slug: string[] } 
         title: `${post.title} | ${siteMetadata.title}`,
         description: post.summary,
         openGraph: {
-            title: post.title,
+            title: `${post.title} | ${siteMetadata.title}`,
             description: post.summary,
             siteName: siteMetadata.title,
             locale: "en_US",
@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: { params: { slug: string[] } 
         },
         twitter: {
             card: "summary_large_image",
-            title: post.title,
+            title: `${post.title} | ${siteMetadata.title}`,
             description: post.summary,
             images: imageList,
         },
