@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
         rules: [
             {
                 userAgent: "Quantcastbot",
-                disallow: "",
+                allow: "/",
                 crawlDelay: 1,
             },
             {
@@ -19,7 +19,7 @@ export default function robots(): MetadataRoute.Robots {
             },
             {
                 userAgent: "*",
-                disallow: "",
+                allow: "/",
             },
         ],
         sitemap: `${siteMetadata.siteUrl}/sitemap.xml`,
