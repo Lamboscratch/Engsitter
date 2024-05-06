@@ -3,7 +3,7 @@ const siteMetadata = {
     title: "Engsitter",
     author: "Engsitter",
     headerTitle: "Engsitter",
-    description: "Comprehensive articles on networking and cybersecurity",
+    description: "The gateway to Networking and Cybersecurity insights",
     language: "en-us",
     theme: "system",
     siteUrl: "https://www.engsitter.com",

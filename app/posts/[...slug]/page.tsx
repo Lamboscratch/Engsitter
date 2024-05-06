@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: { params: { slug: string[] } 
     });
 
     return {
-        title: `${post.title} | ${siteMetadata.title}`,
+        title: `${post.title}`,
         description: post.summary,
         openGraph: {
             title: `${post.title} | ${siteMetadata.title}`,
