@@ -25,7 +25,7 @@ export default function HamburgerMenu() {
             <button className="initial:flex sm:hidden" onClick={clickAction} aria-label="Hamburger menu button">
                 <AiOutlineMenu className={iconClass} />
             </button>
-            <ul id="menu" className={`h-dvh w-dvw absolute top-0 left-0 z-30 ${isOpen ? "block" : "hidden"} sm:hidden bg-whitePrimaryFull dark:bg-blackPrimaryFull`}>
+            <ul id="menu" className={`h-dvh w-[calc(100vw-(100vw-100%))] absolute top-0 left-0 z-30 ${isOpen ? "block" : "hidden"} sm:hidden bg-whitePrimaryFull dark:bg-blackPrimaryFull`}>
                 <li className={liClass}>
                     <button className="ml-auto justify-self-center" onClick={clickAction} aria-label="Close menu button">
                         <AiOutlineClose className={iconClass} />
