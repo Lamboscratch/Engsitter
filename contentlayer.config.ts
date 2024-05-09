@@ -19,6 +19,10 @@ export const Post = defineDocumentType(() => ({
             type: "date",
             required: true,
         },
+        images: {
+            type: "json",
+            required: true,
+        },
         tags: {
             type: "list",
             of: {
@@ -36,10 +40,6 @@ export const Post = defineDocumentType(() => ({
         },
         lastmod: {
             type: "date",
-            required: false,
-        },
-        images: {
-            type: "json",
             required: false,
         },
     },
