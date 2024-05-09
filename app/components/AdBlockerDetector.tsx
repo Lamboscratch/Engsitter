@@ -10,7 +10,7 @@ export default function AdBlockerDetector() {
     const adBlockDetected = useDetectAdBlock();
 
     useEffect(() => {
-        if (adBlockDetected) {
+        if (adBlockDetected && pathname !== "/") {
             router.push("/adBlockerDetected");
         } else if (pathname === "/adBlockerDetected") {
             router.push("/");

@@ -6,7 +6,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 
 const cspHeader = `
         default-src 'self' https://www3.doubleclick.net/ https://marketingplatform.google.com/about/enterprise/ https://api-gateway.umami.dev/api/send;
-        script-src 'self' ${process.env.NODE_ENV === "production" ? "" : "'unsafe-eval'"} 'sha256-eMuh8xiwcX72rRYNAGENurQBAcH7kLlAUQcoOri3BIo=' 'sha256-10/0FESKC8299B5TCE+dGDo0JdZcRdny7kTczowOIYE=' giscus.app us.umami.is;
+        script-src 'self' 'sha256-eMuh8xiwcX72rRYNAGENurQBAcH7kLlAUQcoOri3BIo=' 'sha256-10/0FESKC8299B5TCE+dGDo0JdZcRdny7kTczowOIYE=' giscus.app us.umami.is;
         style-src 'self' 'sha256-jUf+GtHxjTTTtqEHmSnVBpcHE67W4pMA+IZfBvqzwYo=';
         font-src 'self';
         form-action 'self';
@@ -19,7 +19,7 @@ const contentSecurityPolicyHeaderValue = cspHeader.replace(/\s{2,}/g, " ").trim(
 const securityHeaders = [
     {
         key: "Content-Security-Policy",
-        value: contentSecurityPolicyHeaderValue,
+        value: process.env.NODE_ENV === "production" ? contentSecurityPolicyHeaderValue : "",
     },
     {
         key: "Referrer-Policy",
