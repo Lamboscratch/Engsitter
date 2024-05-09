@@ -2,6 +2,7 @@ import ReleaseDate from "@/app/components/ReleaseDate";
 import type { Post } from "contentlayer/generated";
 import Link from "next/link";
 import { CoreContent } from "pliny/utils/contentlayer.js";
+import Image from "next/image";
 
 export interface PostsType {
     posts: CoreContent<Post>[];
@@ -10,10 +11,10 @@ export interface PostsType {
 
 export default function PostsList({ posts, maxDisplay }: PostsType) {
     return (
-        <ul className="flex flex-none flex-col initial:mb-[-1px] sm:mb-0 initial:gap-7 sm:gap-3 border-solid border-l-[1px] border-gray-200 dark:border-zinc-700 h-min w-full box-border content-start items-start justify-start relative">
+        <ul className="flex flex-none flex-col initial:mb-[-1px] sm:mb-0 gap-8 border-solid border-l-[1px] border-gray-200 dark:border-zinc-700 h-min w-full box-border content-start items-start justify-start relative">
             {posts.slice(0, Math.min(posts.length, maxDisplay)).map((post) => (
                 <li key={post.slug} className="flex flex-none initial:flex-col sm:flex-row initial:gap-0 sm:gap-10 w-full content-start items-start justify-start h-min box-border static">
-                    <header className="flex flex-col grow shrink-0 basis-0 h-min initial:pb-2 sm:pb-3 initial:static sm:sticky box-border content-start items-start justify-start top-20 z-10">
+                    <header className="flex flex-col grow shrink-0 basis-0 h-min initial:pb-4 sm:pb-0 initial:static sm:sticky box-border content-start items-start justify-start top-20 z-10">
                         <div className="flex flex-none flex-col gap-2 box-border content-start items-start justify-start h-min overflow-visible relative">
                             <div className="shadowBoxLight dark:shadowBoxDark bg-orangeSite aspect-square rounded flex-none box-border overflow-visible absolute left-[-0.28rem] right-[1px] halfHeight w-[0.5rem] z-20"></div>
                             <div className="flex flex-col shrink-0 box-border justify-start flex-none w-auto h-auto outline-none whitespace-pre relative">
@@ -30,7 +31,8 @@ export default function PostsList({ posts, maxDisplay }: PostsType) {
                     </header>
                     <div className="ml-5 flex flex-col grow shrink-0 basis-0 gap-4 box-border content-start items-start justify-start h-min relative">
                         <div className="flex flex-none flex-col justify-start shrink-0 box-border border-b border-solid border-gray-200 dark:border-zinc-700 h-auto w-full outline-none relative">
-                            <p className="initial:mt-3 sm:mt-8 mb-3 text-start text-lg box-border">{post.summary}</p>
+                            <Image className="!w-full" src={post.images[0]} alt="Image of the post" sizes="100vw" width={500} height={300} />
+                            <p className="mt-3 mb-3 text-start text-lg box-border">{post.summary}</p>
                             <Link
                                 className="flex flex-row content-start items-center justify-start mb-3 text-base w-max font-semibold hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4"
                                 href={`/posts/${post.slug}`}

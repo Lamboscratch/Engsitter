@@ -10,7 +10,9 @@ const baseDir = ".next";
 const htmlFiles = globSync(`${baseDir}/**/*.html`);
 
 htmlFiles.forEach((file) => {
-    const contents = readFileSync(file).toString();
+    const contents = readFileSync(file)
+        .toString()
+        .replace(/style="color:transparent" /g, "");
     const scripts = [];
     const newFile = contents.replace(/<script>(.+?)<\/script>/g, (_, data) => {
         const addMagicString = scripts.length === 0;
