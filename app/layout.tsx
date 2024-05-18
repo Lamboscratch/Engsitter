@@ -89,6 +89,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
             <meta name="google-site-verification" content="n0DE0RbhBXrtxewBN8UX5vwfD0sGHJL8eYxqQabwFJE" />
             <body className={"flex flex-col pl-[calc(100vw-100%)] min-h-dvh relative " + font.variable}>
+                {/* <!-- Google tag (gtag.js) --> */}
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBG9F9XGGN"></script>
+                <Script id="googleAnalytics">{`function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-MBG9F9XGGN");`}</Script>
                 <ChangeColorProvider>
                     <Theme>
                         <SearchProvider>
