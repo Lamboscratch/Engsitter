@@ -5,6 +5,7 @@ import { allCoreContent, sortPosts } from "pliny/utils/contentlayer.js";
 import readingTime from "reading-time";
 import { Post as PostType } from "./.contentlayer/generated";
 import siteMetadata from "./app/data/siteMetadata";
+import replaceAccentedLetters from "./app/utilities/replaceAccentedLetters";
 
 export const Post = defineDocumentType(() => ({
     name: "Post",
@@ -50,7 +51,7 @@ export const Post = defineDocumentType(() => ({
         },
         slug: {
             type: "string",
-            resolve: (doc) => `${doc._raw.sourceFileDir.replace("posts/", "")}/${doc.title.toLowerCase().replaceAll(" ", "-")}`,
+            resolve: (doc) => `${doc._raw.sourceFileDir.replace("posts/", "")}/${replaceAccentedLetters(doc.title.toLowerCase()).replaceAll(":", "").replaceAll("?", "").replaceAll(" ", "-")}`,
         },
         path: {
             type: "string",

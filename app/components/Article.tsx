@@ -67,7 +67,7 @@ export default function Article({ article }: Props) {
                             const { children, node, ...rest } = props;
                             return (
                                 <a className="underline decoration-solid decoration-orangeSite underline-offset-4" target="_blank" {...rest}>
-                                    {children}
+                                    {children + " 🔗"}
                                 </a>
                             );
                         },
@@ -78,6 +78,10 @@ export default function Article({ article }: Props) {
                                     {children}
                                 </p>
                             );
+                        },
+                        img(props) {
+                            const { children, node, ...rest } = props;
+                            return <img className="first-of-type:mt-[1.875rem]" {...rest} />;
                         },
                     }}
                 >

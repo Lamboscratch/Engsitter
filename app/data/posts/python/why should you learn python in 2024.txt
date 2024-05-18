@@ -1,0 +1,12 @@
+---
+title: "Why should you learn Python in 2024?"
+date: "2024-05-16"
+tags: ["python"]
+draft: false
+summary: Python can be used for ethical hacking, artificial intelligence, automation, web development and much more. Let's find out why it has become so popular.
+images: ["/images/python/python_card.png"]
+---
+
+![Engsitter for Python](/images/python/python_card.png)
+
+## Cooming soon...

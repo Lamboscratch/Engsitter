@@ -6,6 +6,8 @@ draft: false
 summary: Il processo decisionale che ha portato alla nascita di Engistter, qual è il principale obiettivo e come nagivare in maniera confortevole nel sito. 
 ---
 
+![Engsitter logo](/images/card_light.png)
+
 ## Chi sono?
 
 Prima di presentarmi, ci tengo a dare un caloroso benvenuto a chiunque si ritrovi a navigare tra queste pagine. Sono un **ingegnere informatico** con laurea
@@ -15,8 +17,6 @@ dell'ethical hacking**. La sete di conoscenze, maturata nel corso del tempo, mi 
 alle ciance e arriviamo al punto parlando di quest progetto.
 
 ## Cos'è engsitter.com?
-
-![Engsitter logo](/images/card_light.png)
 
 Bellissima domanda. Credo che il miglior modo per spiegarlo sia con queste due parole: **mostro di Frankenstein**. Ciò che intendo è che il misto tra
 post / articoli / tutorial / lezioni che leggerete avrà lo scopo di fare divulgazione, principalmente, sul Networking e la Cybersecurity.

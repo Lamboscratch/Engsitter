@@ -1,0 +1,12 @@
+---
+title: "A great way to start your career in ethical hacking: the CEH certification"
+date: "2024-05-14"
+tags: ["ceh"]
+draft: false
+summary: Let's discover the advantages of getting certified with CEH to prove your ethical hacking skills and how it differs from other certifications.
+images: ["/images/ceh/ceh_card.png"]
+---
+
+![Engsitter for CEH](/images/ceh/ceh_card.png)
+
+## Perché certificarsi in ambito cybersecurity?

@@ -1,0 +1,10 @@
+---
+title: "Un ottimo modo per iniziare la propria carriera nell'ethical hacking: la certificazione CEH"
+date: "2024-05-14"
+tags: ["ceh"]
+draft: false
+summary: Scopriamo quali sono i vantaggi di certificarsi con la CEH per attestare le proprie doti di ethical haching e in cosa differisce rispetto alle altre certificazioni.
+images: ["/images/ceh/ceh_card.png"]
+---
+
+## Cooming soon...
