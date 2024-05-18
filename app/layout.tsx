@@ -20,9 +20,6 @@ const font = Montserrat({
     variable: "--font-custom",
 });
 
-// Script UMAMI
-// <script defer src="https://analytics.us.umami.is/script.js" data-website-id="9dff9671-a95a-45a4-ae29-667158928411"></script>
-
 export const metadata: Metadata = {
     metadataBase: new URL(siteMetadata.siteUrl),
     title: {
@@ -85,7 +82,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <Script src="https://us.umami.is/script.js" data-website-id="9dff9671-a95a-45a4-ae29-667158928411" />
+            <Script id="clarityAnalytics">{`!function(t,e,n,a,c,r,s){t[n]=t[n]||function(){(t[n].q=t[n].q||[]).push(arguments)},(r=e.createElement(a)).async=1,r.src="https://www.clarity.ms/tag/"+c,(s=e.getElementsByTagName(a)[0]).parentNode.insertBefore(r,s)}(window,document,"clarity","script","me3nb86ta9");`}</Script>
             <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
             <meta name="google-site-verification" content="n0DE0RbhBXrtxewBN8UX5vwfD0sGHJL8eYxqQabwFJE" />
             <body className={"flex flex-col pl-[calc(100vw-100%)] min-h-dvh relative " + font.variable}>
