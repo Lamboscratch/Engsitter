@@ -100,6 +100,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 <noscript>
                     <img src="https://queue.simpleanalyticscdn.com/noscript.gif?hostname=www.engsitter.com" alt="" referrerPolicy="no-referrer-when-downgrade" />
                 </noscript>
+                <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "ac5b0734f16a434da4dc0568ab3c78ac"}'></script>
             </body>
         </html>
     );
