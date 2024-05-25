@@ -82,13 +82,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <Script id="clarityAnalytics">{`!function(t,e,n,a,c,r,s){t[n]=t[n]||function(){(t[n].q=t[n].q||[]).push(arguments)},(r=e.createElement(a)).async=1,r.src="https://www.clarity.ms/tag/"+c,(s=e.getElementsByTagName(a)[0]).parentNode.insertBefore(r,s)}(window,document,"clarity","script","me3nb86ta9");`}</Script>
             <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
             <meta name="google-site-verification" content="n0DE0RbhBXrtxewBN8UX5vwfD0sGHJL8eYxqQabwFJE" />
             <body className={"flex flex-col pl-[calc(100vw-100%)] min-h-dvh relative " + font.variable}>
-                {/* <!-- Google tag (gtag.js) --> */}
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBG9F9XGGN"></script>
-                <Script id="googleAnalytics">{`function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-MBG9F9XGGN");`}</Script>
                 <ChangeColorProvider>
                     <Theme>
                         <SearchProvider>
@@ -100,6 +96,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                     </Theme>
                 </ChangeColorProvider>
                 <SpeedInsights />
+                <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+                <noscript>
+                    <img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerPolicy="no-referrer-when-downgrade" />
+                </noscript>
             </body>
         </html>
     );
