@@ -5,8 +5,8 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 });
 
 const cspHeader = `
-        default-src 'self' www3.doubleclick.net marketingplatform.google.com/about/enterprise *.google-analytics.com *.clarity.ms;
-        script-src 'self' 'sha256-eMuh8xiwcX72rRYNAGENurQBAcH7kLlAUQcoOri3BIo=' 'sha256-10/0FESKC8299B5TCE+dGDo0JdZcRdny7kTczowOIYE=' 'sha256-Ty/n49fce6igi3uzpvhOUJdx4yzxI1t+NO685DuQBZY=' 'sha256-/L8w2vQdO1VTv1L4yps6FmsGFS+dybW+xAPYq1soAYA=' www.clarity.ms giscus.app www.googletagmanager.com/gtag/js;
+        default-src 'self' www3.doubleclick.net marketingplatform.google.com queue.simpleanalyticscdn.com;
+        script-src 'self' 'sha256-eMuh8xiwcX72rRYNAGENurQBAcH7kLlAUQcoOri3BIo=' 'sha256-10/0FESKC8299B5TCE+dGDo0JdZcRdny7kTczowOIYE=' 'sha256-Ty/n49fce6igi3uzpvhOUJdx4yzxI1t+NO685DuQBZY=' 'sha256-/L8w2vQdO1VTv1L4yps6FmsGFS+dybW+xAPYq1soAYA=' giscus.app www.googletagmanager.com/gtag/js t scripts.simpleanalyticscdn.com;
         style-src 'self' 'sha256-jUf+GtHxjTTTtqEHmSnVBpcHE67W4pMA+IZfBvqzwYo=';
         font-src 'self';
         form-action 'self';

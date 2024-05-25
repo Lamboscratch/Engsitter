@@ -96,9 +96,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                     </Theme>
                 </ChangeColorProvider>
                 <SpeedInsights />
-                <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+                <script async defer data-hostname="www.engsitter.com" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
                 <noscript>
-                    <img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerPolicy="no-referrer-when-downgrade" />
+                    <img src="https://queue.simpleanalyticscdn.com/noscript.gif?hostname=www.engsitter.com" alt="" referrerPolicy="no-referrer-when-downgrade" />
                 </noscript>
             </body>
         </html>
