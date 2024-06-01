@@ -1,5 +1,4 @@
 import PostsList from "@/app/components/PostsList";
-import { Flex, Heading } from "@radix-ui/themes";
 import type { Post } from "contentlayer/generated";
 import { CoreContent } from "pliny/utils/contentlayer.js";
 
@@ -9,11 +8,9 @@ export interface PostsType {
 
 export default function Home({ posts }: PostsType) {
     return (
-        <Flex direction="column" align="start" justify="center" gap="6">
-            <Heading className="!text-[2.25rem]" as="h2" weight="bold">
-                Recent Posts
-            </Heading>
+        <div className="flex flex-col items-start justify-center gap-y-7">
+            <h2 className="text-[2.25rem] font-bold leading-none">Recent Posts</h2>
             <PostsList posts={posts} maxDisplay={5} />
-        </Flex>
+        </div>
     );
 }

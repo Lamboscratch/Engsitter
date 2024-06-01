@@ -7,12 +7,9 @@ import siteMetadata from "@/app/data/siteMetadata";
 import "@/app/globals.css";
 import logoDark from "@/public/images/logo_dark.svg";
 import logoLight from "@/public/images/logo_light.svg";
-import { Theme } from "@radix-ui/themes";
-import "@radix-ui/themes/styles.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-import Script from "next/script";
 
 const font = Montserrat({
     weight: ["400", "500", "600", "700"],
@@ -84,17 +81,17 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <html lang="en" suppressHydrationWarning>
             <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
             <meta name="google-site-verification" content="n0DE0RbhBXrtxewBN8UX5vwfD0sGHJL8eYxqQabwFJE" />
-            <body className={"flex flex-col pl-[calc(100vw-100%)] min-h-dvh relative " + font.variable}>
-                <ChangeColorProvider>
-                    <Theme>
+            <body className={`relative min-h-dvh pl-[calc(100vw-100%)] ${font.className}`}>
+                <div className="flex max-w-6xl mx-auto text-textDark dark:text-textLight antialiased">
+                    <ChangeColorProvider>
                         <SearchProvider>
                             <AdBlockerDetector />
                             <NavBar />
                             <main>{children}</main>
                             <Footer />
                         </SearchProvider>
-                    </Theme>
-                </ChangeColorProvider>
+                    </ChangeColorProvider>
+                </div>
                 <SpeedInsights />
                 <script async defer data-hostname="www.engsitter.com" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
                 <noscript>

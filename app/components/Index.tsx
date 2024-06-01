@@ -2,7 +2,6 @@ import { PostsType } from "@/app/components/Main";
 import TableOfContent from "@/app/components/TableOfContent";
 import calculateHeadersUrl from "@/app/utilities/calculateHeadersUrl";
 import extractCoursePosts from "@/app/utilities/extractCoursePosts";
-import { Flex, Heading } from "@radix-ui/themes";
 
 interface Props {
     posts: PostsType["posts"];
@@ -35,15 +34,13 @@ export default function Index({ posts, course, id }: Props) {
     }));
 
     return (
-        <Flex className="sticky top-[5.4rem] pl-10 self-start initial:mb-5 sm:mb-6 initial:mt-0 sm:mt-6 initial:!hidden md:!flex" direction="column" gap={{ initial: "6", sm: "3" }}>
-            <Heading className="!text-3xl" as="h2">
-                {"Table Of Contents"}
-            </Heading>
-            <Flex className="border-l-2 border-solid border-orangeSite text-xl font-medium pt-2 mt-2" direction="column">
+        <div className="initial:!hidden md:!flex flex-col initial:gap-y-6 sm:gap-y-3 sticky top-[5.4rem] pl-10 self-start initial:mb-5 sm:mb-6 initial:mt-0 sm:mt-6">
+            <h2 className="text-3xl font-bold">{"Table Of Contents"}</h2>
+            <div className="flex flex-col border-l-2 border-solid border-orangeSite text-xl font-medium pt-2 mt-2">
                 {finalHeaders.map((header, index) => (
                     <TableOfContent key={header.url} header={header} index={index} resolvedHeaders={finalHeaders} />
                 ))}
-            </Flex>
-        </Flex>
+            </div>
+        </div>
     );
 }

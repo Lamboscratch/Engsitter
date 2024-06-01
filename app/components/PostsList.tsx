@@ -1,8 +1,8 @@
 import ReleaseDate from "@/app/components/ReleaseDate";
 import type { Post } from "contentlayer/generated";
+import Image from "next/image";
 import Link from "next/link";
 import { CoreContent } from "pliny/utils/contentlayer.js";
-import Image from "next/image";
 
 export interface PostsType {
     posts: CoreContent<Post>[];

@@ -1,9 +1,7 @@
-import ContainerApp from "@/app/components/ContainerApp";
 import Pagination from "@/app/components/Pagination";
 import PostsList from "@/app/components/PostsList";
 import PostsNavigator from "@/app/components/PostsNavigator";
 import tagData from "@/public/tag-data.json";
-import { Flex } from "@radix-ui/themes";
 import type { Post } from "contentlayer/generated";
 import { CoreContent } from "pliny/utils/contentlayer.js";
 
@@ -24,14 +22,14 @@ export default function ListLayout({ posts, initialDisplayPosts = [], pagination
     const displayPosts = initialDisplayPosts.length > 0 ? initialDisplayPosts : posts;
 
     return (
-        <ContainerApp style="mb-auto">
+        <div className="mb-auto mx-4">
             <PostsNavigator tagCounts={tagCounts} />
             <div className="flex initial:flex-col sm:flex-row initial:space-x-0 sm:space-x-6">
-                <Flex direction="column">
+                <div className="flex flex-col">
                     <PostsList posts={displayPosts} maxDisplay={5} />
                     {pagination && pagination.totalPages > 1 && <Pagination currentPage={pagination.currentPage} totalPages={pagination.totalPages} />}
-                </Flex>
+                </div>
             </div>
-        </ContainerApp>
+        </div>
     );
 }

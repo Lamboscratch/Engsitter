@@ -1,5 +1,4 @@
 import checkLink from "@/app/utilities/checkLink";
-import { Flex } from "@radix-ui/themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -21,7 +20,7 @@ export default function HamburgerMenu() {
     }
 
     return (
-        <Flex className="initial:flex sm:hidden" direction="row" justify="center" align="center">
+        <div className="initial:flex sm:hidden flex-row items-center justify-center">
             <button className="initial:flex sm:hidden" onClick={clickAction} aria-label="Hamburger menu button">
                 <AiOutlineMenu className={iconClass} />
             </button>
@@ -56,6 +55,6 @@ export default function HamburgerMenu() {
                     </Link>
                 </li>
             </ul>
-        </Flex>
+        </div>
     );
 }

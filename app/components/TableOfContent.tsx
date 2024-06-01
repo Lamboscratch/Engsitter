@@ -1,5 +1,4 @@
 import type { Header } from "@/app/components/Index";
-import { Box, Flex } from "@radix-ui/themes";
 import Link from "next/link";
 
 interface Props {
@@ -18,40 +17,40 @@ export default function TableOfContent({ header, index, resolvedHeaders }: Props
 
     if (header.depth === 2) {
         return (
-            <Flex align="center">
-                <Box className={boxClassOne} />
-                <Flex className="ml-2">
+            <div className="flex items-center">
+                <div className={boxClassOne} />
+                <div className="flex ml-2">
                     <Link className={linkClass} href={`${header.url}`} aria-label={`Go to ${header.value} section`}>
                         {header.value}
                     </Link>
-                </Flex>
-            </Flex>
+                </div>
+            </div>
         );
     } else if (header.depth === 3 && resolvedHeaders[index + 1].depth === 3) {
         return (
-            <Flex align="center" className={containerClass}>
-                <Box className={boxClassOne} />
-                <Flex className="ml-2">
+            <div className={`flex items-center ${containerClass}`}>
+                <div className={boxClassOne} />
+                <div className="flex ml-2">
                     <Link className={linkClass} href={`${header.url}`} aria-label={`Go to ${header.value} section`}>
                         {header.value}
                     </Link>
-                </Flex>
-            </Flex>
+                </div>
+            </div>
         );
     } else if (header.depth === 3 && resolvedHeaders[index + 1].depth !== 3) {
         return (
-            <Flex className="ml-9">
-                <Flex direction="column" className="h-auto">
-                    <Box className={boxClassTwo}></Box>
-                    <Box className={boxClassThree}></Box>
-                </Flex>
-                <Box className={boxClassFour}></Box>
-                <Flex className="!ml-2">
+            <div className="flex ml-9">
+                <div className="flex flex-col h-auto">
+                    <div className={boxClassTwo}></div>
+                    <div className={boxClassThree}></div>
+                </div>
+                <div className={boxClassFour}></div>
+                <div className="flex !ml-2">
                     <Link className={linkClass} href={`${header.url}`} aria-label={`Go to ${header.value} section`}>
                         {header.value}
                     </Link>
-                </Flex>
-            </Flex>
+                </div>
+            </div>
         );
     }
 

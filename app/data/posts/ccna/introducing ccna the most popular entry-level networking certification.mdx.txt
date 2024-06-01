@@ -23,81 +23,40 @@ La risposta è semplice: Cisco ha una quota di mercato straordinariamente grande
 [switch][], i [router][] e i [firewall][] di Cisco sono d'appertutto. Conoscere il
 funzionamento di tali dispositivi, le caratteristiche di performance e la sintassi della CLI
 proprietaria garantiscono di sapersi destreggiare con confidenza nella maggior parte delle
-circostanze.
+circostanze. In più, la CCNA è una certificazione globalmente riconosciuta. Molti
+professionisti esordienti si certificano per aumentare le chance di ottenere sin da subito
+un ottimo posto di lavoro.
 
 ## Gli argomenti trattati nella certificazione
 
-Dopo aver presentato i motivi per doversi certificare, passiamo ad una rassegna degli argomenti
+Dopo aver presentato i motivi per doversi certificare, vediamo quali sono gli argomenti
 da dover conoscere per poter entrare a far parte della famiglia Cisco.
 
-### Introduzione al Networking
-
-Questa parte introduttiva riguarda lo studio dello stack TCP/IP paragonandolo al modello
-ISO/OSI. Si introducono, inoltre, i concetti di LAN e di WAN, presentando il funzionamento
-base del routing.
-
-### Ethernet LANs
-
-Dopo una prima infarinatura riguardante le reti locali, si passa allo studio della command-line
-interface per la configurazione degli switch e come effettuarne il management da remoto.
-
-### Capire le VLANs
-
-Le VLAN rappresentano uno strumento per segmentare la rete e gestire i diversi flussi di
-traffico. Particolare enfasi deve essere posta sul VLAN trunking e su STP.
-
-### Addressing e routing in IPv4
-
-Si presentanto i concetti chiave dell'indirizzamento IPv4 e vengono esposti i metodi per
-calcolare l'appartenenza di un indirizzo IP ad una particolare sottorete. Dopo aver consolidato
-questi concetti, si passa allo studio del routing e al relativo troubleshooting.
-
-### Protocolli di routing
-
-Viene fornita una panoramica dei principali protocolli di routing, con particolare enfasi su
-OSPF.
-
-### IPv6
-
-IPv6 rappresenta l'evoluzione di IPv4. Viene esposto come configurare un'appliance Cisco per
-poter operare con IPv6.
-
-### Wireless LANs
-
-Il protocollo 802.11 permette la creazione di una rete locale wireless. Per sua natura, una
-rete del genere soffre di problemi di sicurezza. I dispositivi Cisco permettono di mettere in
-sicurezza una rete siffatta e di consentire la sua gestione.
-
-### Access control lists
-
-Il filtraggio dei pacchetti IP è consentito mediante l'adozione di Access control lists.
-Vengono spiegati i concetti di named e numbered ACLs.
-
-### Sicurezza nei dispositivi di rete
-
-Gestire la sicurezza dei dispositivi di rete risulta fondamentale per mitigare i principali
-attacchi cibernetici. Particolare enfasi viene posta sul DHCP snooping e sull'ARP inspection.
-
-### Aspetti avanzati di IP
-
-Si fornisce una panoramica sui servizi di supporto per la configurazione di un dispositivo
-di rete, tra cui: Syslog, NTP, CDP, LLDP, NAT, QoS, FHRP, SNMP, TFTP e FTP.
-
-### Architetture di rete e automazione
-
-I concetti di LAN, WAN e Cloud architectures consentono di valutare i pro e i contro di un
-approccio di progettazione piuttosto che un altro. Le soluzioni di automazione di rete sono
-sempre più diffuse nel mondo enterprise. Cisco offre una soluzione proprietaria chiamata SDA
-(Software-Defined Network) che svolge proprio questo compito.
+Prima di tutto, impareremo su cosa si basa il networking per come lo usiamo oggi.
+Partiremo dallo studio dello stack TCP/IP e del modello ISO/OSI. Subito dopo, affronteremo
+i concetti di LAN, MAN e WAN. Il focus principale sarà sulle reti locali che sfruttano
+tecnologie wired, ossia Ethernet, e wireless. Estenderemo questo concetto parlando di virtual
+LAN e di protocolli per la gestione dei loop all'interno della rete. Ci sposteremo poi sul
+cuore del networking, parlando di indirizzamento e routing nelle reti. Quest'ultimo si declina
+nello studio dei protocolli che permettono l'instradamento di pacchetti, con particolare
+focus su OSPF. I principali concetti affrontati per IPv4 saranno ripresti ed elaborati per IP
+in versione 6. Introdurremo, poi, il concetto di Access Control Lists e vedremo come possiamo
+filtrare i pacchetti ed evitare che vengano inoltrati da un router. Infine, parleremo di alcuni
+servizi di sicurezza e concluderemo lo studio analizzando le architetture di rete e alcuni
+aspetti di automazione.
 
 ## Come approcciare lo studio del networking
 
 La teoria come sempre non basta. Questo discorso vale ancora di più in questo contesto dato
 che, durante l'esame, si viene chiamati a dare prova delle conoscenze pratiche acquisite
-con lo studio utilizzando i comandi da linea di comando. Per ogni nuovo argomento è necessario
-esercitarsi a fondo, impartendo comandi sui dispositivi di rete per padroneggiare il concetto.
+con lo studio utilizzando i comandi della CLI. Per ogni nuovo argomento è necessario esercitarsi
+a fondo, impartendo comandi sui dispositivi di rete per padroneggiare il concetto. Proprio per
+questo motivo, utilizzeremo [Cisco Packet Tracer][CPT] per poter interconnettere più nodi di rete
+in un ambiente simulato. Questo software permette di esercitarsi sui più comuni dispositivi di
+rete di Cisco ed accedere alla CLI di ognuno di essi per poterli configurare.
 
 [Cisco]: https://www.cisco.com/site/us/en/index.html#tabs-35d568e0ff-item-194f491212-tab
 [switch]: https://www.cisco.com/site/us/en/products/networking/switches/index.html?dtid=osscdc000283#tabs-35d568e0ff-item-194f491212-tab
 [router]: https://www.cisco.com/site/us/en/products/networking/sdwan-routers/index.html#tabs-35d568e0ff-item-194f491212-tab
 [firewall]: https://www.cisco.com/site/us/en/products/security/firewalls/index.html?dtid=osscdc000283#tabs-35d568e0ff-item-194f491212-tab
+[CPT]: https://www.netacad.com/courses/packet-tracer

@@ -1,7 +1,6 @@
 "use client";
 
 import RenderLink from "@/app/components/RenderLink";
-import { Heading } from "@radix-ui/themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -14,11 +13,11 @@ export default function PostsNavigator({ tagCounts }: Props) {
 
     return (
         <div className="flex flex-col items-center justify-center my-16">
-            <Heading className="!text-[2.5rem] pb-1 text-center !leading-10" as="h1" size="8" weight="bold">
+            <h1 className="text-[2.5rem] font-bold pb-1 text-center leading-10">
                 <Link className="hover:underline hover:decoration-solid hover:decoration-orangeSite hover:underline-offset-4" href={"/posts"} aria-label="Go to posts page">
                     {"All Posts"}
                 </Link>
-            </Heading>
+            </h1>
             <div className="initial:hidden sm:block mt-[2px] h-7 w-[2px] bg-orangeSite"></div>
             <ul className="initial:hidden sm:flex flex-row w-full justify-between">
                 <li className="flex flex-col items-center text-lg font-medium">

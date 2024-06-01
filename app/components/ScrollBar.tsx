@@ -1,8 +1,6 @@
 import Script from "next/script";
 
 export default function ScrollBar() {
-    // const nonce = headers().get("x-nonce");
-
     return (
         <div className="sticky top-[4rem] z-10 w-full">
             <div className="w-full h-[2px] bg-whitePrimaryFull dark:bg-blackPrimaryFull">

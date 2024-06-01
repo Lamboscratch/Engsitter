@@ -11,6 +11,8 @@ const config: Config = {
                 blackPrimaryFull: "rgba(17, 17, 19)",
                 grayPrimary: "#979797",
                 lightGrayPrimary: "#d5d5d5",
+                textDark: "rgba(28, 32, 36)",
+                textLight: "rgba(237, 238, 240)",
                 whitePrimary: "rgba(255, 255, 255, 0.91)",
                 whitePrimaryFull: "rgba(255, 255, 255)",
             },

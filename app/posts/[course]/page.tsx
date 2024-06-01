@@ -1,11 +1,9 @@
-import ContainerApp from "@/app/components/ContainerApp";
 import GoToLink from "@/app/components/GoToLink";
 import PostsList from "@/app/components/PostsList";
 import PostsNavigator from "@/app/components/PostsNavigator";
 import { genPageMetadata } from "@/app/seo";
 import coursesNameMap from "@/app/utilities/extractCourseName";
 import tagData from "@/public/tag-data.json";
-import { Flex } from "@radix-ui/themes";
 import { allPosts } from "contentlayer/generated";
 import { Metadata } from "next";
 import { redirect } from "next/navigation";
@@ -51,14 +49,14 @@ export default function Page({ params }: { params: { course: string } }) {
     }
 
     return (
-        <ContainerApp style="mb-auto">
+        <div className="mb-auto mx-4">
             <PostsNavigator tagCounts={tagCounts} />
             <div className="flex initial:flex-col sm:flex-row initial:space-x-0 sm:space-x-6">
-                <Flex direction="column">
+                <div className="flex flex-col">
                     <PostsList posts={filteredPosts} maxDisplay={filteredPosts.length} />
                     <GoToLink name="Scroll To Top" link="#top" type="top"></GoToLink>
-                </Flex>
+                </div>
             </div>
-        </ContainerApp>
+        </div>
     );
 }

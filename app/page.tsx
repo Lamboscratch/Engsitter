@@ -1,4 +1,3 @@
-import ContainerApp from "@/app/components/ContainerApp";
 import GoToLink from "@/app/components/GoToLink";
 import Intro from "@/app/components/Intro";
 import Main from "@/app/components/Main";
@@ -10,10 +9,10 @@ export default function Home() {
     const posts = allCoreContent(sortedPosts);
 
     return (
-        <ContainerApp>
+        <div className="mx-4">
             <Intro />
             <Main posts={posts} />
             <GoToLink name="All Posts" link="/posts" type="posts" />
-        </ContainerApp>
+        </div>
     );
 }

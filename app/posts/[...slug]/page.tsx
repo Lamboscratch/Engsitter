@@ -1,12 +1,10 @@
 import Article from "@/app/components/Article";
-import ContainerApp from "@/app/components/ContainerApp";
 import GoToLink from "@/app/components/GoToLink";
 import Index from "@/app/components/Index";
 import Navigator from "@/app/components/Navigator";
 import ReleaseDate from "@/app/components/ReleaseDate";
 import ScrollBar from "@/app/components/ScrollBar";
 import siteMetadata from "@/app/data/siteMetadata";
-import { Flex } from "@radix-ui/themes";
 import type { Post } from "contentlayer/generated";
 import { allPosts } from "contentlayer/generated";
 import { Metadata } from "next";
@@ -73,18 +71,18 @@ export default function Page({ params }: { params: { slug: string[] } }) {
     const post = allPosts.find((p: any) => p.slug === slug) as Post;
 
     return (
-        <ContainerApp>
+        <div className="mx-4">
             <ScrollBar />
-            <Flex direction="column">
+            <div className="flex flex-col">
                 <Navigator title={post.title} />
                 <h1 className="text-5xl text-center font-bold mt-5 mb-3">{post.title}</h1>
                 <ReleaseDate style="pb-5 border-solid border-gray-200 border-b dark:border-zinc-700" date={post.date} />
-            </Flex>
-            <Flex className="initial:!block sm:!flex w-full" justify="between">
+            </div>
+            <div className="initial:!block sm:!flex justify-between w-full">
                 <Article article={post.body.raw} />
                 <Index posts={sortedCoreContents} course={post.slug.split("/")[1]} id={post.slug} />
-            </Flex>
+            </div>
             <GoToLink name="Scroll To Top" link="#top" type="top"></GoToLink>
-        </ContainerApp>
+        </div>
     );
 }

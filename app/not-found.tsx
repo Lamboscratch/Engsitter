@@ -1,6 +1,4 @@
-import ContainerApp from "@/app/components/ContainerApp";
 import { genPageMetadata } from "@/app/seo";
-import { Flex, Heading, Text } from "@radix-ui/themes";
 import { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -12,19 +10,11 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const NotFoundPage = () => {
     return (
-        <ContainerApp>
-            <Flex className="notFoundHeight" direction="column" align="center" justify="center">
-                <Heading className="!text-6xl" as="h1" size="9">
-                    404
-                </Heading>
-                <Heading className="!text-2xl pt-16" as="h2">
-                    Page not found
-                </Heading>
-                <Text className="!text-lg pt-6 max-w-prose text-center" as="p">
-                    The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
-                </Text>
-            </Flex>
-        </ContainerApp>
+        <div className="notFoundHeight mx-4 flex flex-col items-center justify-center">
+            <h1 className="text-6xl font-bold">404</h1>
+            <h2 className="text-2xl pt-16 font-bold">Page not found</h2>
+            <p className="text-lg pt-6 max-w-prose text-center">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+        </div>
     );
 };
 

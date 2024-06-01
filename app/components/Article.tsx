@@ -5,7 +5,6 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 import gfm from "remark-gfm";
 // import Comments from "./Comments";
-// import { Flex } from "@radix-ui/themes";
 
 interface Props {
     article: string;
