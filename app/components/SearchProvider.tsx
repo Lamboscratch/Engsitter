@@ -54,7 +54,7 @@ export default function SearchProvider({ children }: Props) {
     return (
         <KBarProvider actions={staticActions}>
             <KBarPortal>
-                <KBarPositioner className="bg-gray-300/50 p-4 backdrop-blur backdrop-filter dark:bg-black/50">
+                <KBarPositioner className="bg-gray-300/50 p-4 backdrop-blur backdrop-filter dark:bg-black/50 z-50">
                     <KBarAnimator className="w-full max-w-xl">
                         <div className="overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-blackPrimary">
                             <div className="flex items-center space-x-4 p-4">

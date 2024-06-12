@@ -54,3 +54,103 @@ main {
         font-size: 87.5%;
     }
 }
+
+.gridTemplateAreas {
+    grid-template-areas:
+        "topLeftCorner topLCorner topCenter topRCorner topRightCorner"
+        "firstRowL firstRowLL firstRow firstRowRR firstRowR"
+        "bottomLeftCorner bottomLCorner bottomCenter bottomRCorner bottomRightCorner"
+        "secondRowL secondRowL secondRow secondRowR secondRowR";
+}
+
+.gridTopLeftCorner {
+    grid-area: topLeftCorner;
+}
+
+.gridTopLCorner {
+    grid-area: topLCorner;
+}
+
+.gridTopCenter {
+    grid-area: topCenter;
+}
+
+.gridTopRCorner {
+    grid-area: topRCorner;
+}
+
+.gridTopRightCorner {
+    grid-area: topRightCorner;
+}
+
+.gridFirstRowL {
+    grid-area: firstRowL;
+}
+
+.gridFirstRowLL {
+    grid-area: firstRowLL;
+}
+
+.gridFirstRow {
+    grid-area: firstRow;
+}
+
+.gridFirstRowR {
+    grid-area: firstRowR;
+}
+
+.gridFirstRowRR {
+    grid-area: firstRowRR;
+}
+
+.gridBottomLeftCorner {
+    grid-area: bottomLeftCorner;
+}
+
+.gridBottomLCorner {
+    grid-area: bottomLCorner;
+}
+
+.gridBottomCenter {
+    grid-area: bottomCenter;
+}
+
+.gridBottomRCorner {
+    grid-area: bottomRCorner;
+}
+
+.gridBottomRightCorner {
+    grid-area: bottomRightCorner;
+}
+
+.gridSecondRowL {
+    grid-area: secondRowL;
+}
+
+.gridSecondRow {
+    grid-area: secondRow;
+}
+
+.gridSecondRowR {
+    grid-area: secondRowR;
+}
+
+::-moz-selection {
+    background: rgba(255, 173, 0, 0.67);
+}
+
+::selection {
+    background: rgba(255, 173, 0, 0.67);
+}
+
+@media (prefers-color-scheme: dark) {
+    ::-moz-selection {
+        color: rgba(17, 17, 19);
+        background: rgba(255, 173, 0, 0.67);
+    }
+
+    ::selection {
+        color: rgba(17, 17, 19);
+        background: rgba(255, 173, 0, 0.67);
+    }
+}
