@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: { params: { slug: string[] } 
 }
 
 export const generateStaticParams = async () => {
-    const paths = allPosts.map((p: any) => ({ slug: `${p._raw.sourceFileDir.replace("posts/", "")}/${p.title.toLowerCase().replaceAll(" ", "-")}`.split("/") }));
+    const paths = allPosts.map((p: any) => ({ slug: `${p._raw.sourceFileDir.replace("posts/", "")}/${p.title.toLowerCase().replaceAll(" ", "-").replaceAll(":", "")}`.split("/") }));
 
     return paths;
 };
