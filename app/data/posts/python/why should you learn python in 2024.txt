@@ -1,6 +1,6 @@
 ---
 title: "Why should you learn Python in 2024?"
-date: "2024-05-16"
+date: "2024-08-01"
 tags: ["python"]
 draft: false
 summary: Python can be used for ethical hacking, artificial intelligence, automation, web development and much more. Let's find out why it has become so popular.
@@ -10,3 +10,79 @@ images: ["/images/python/python_card.png"]
 ![Engsitter for Python](/images/python/python_card.png)
 
 ## Cooming soon...
+
+
+---
+title: "Why You Should Learn Python in 2024"
+date: "2024-04-30"
+tags: ["python"]
+draft: false
+summary: Python can be used for ethical hacking, artificial intelligence, automation, web development, and much more. Discover why it has become so popular.
+images: ["/images/python/python_card.png"]
+---
+
+![Engsitter for Python](/images/python/python_card.png)
+
+## Introduction to the Language
+
+Python is a **general-purpose programming language**. Its features make it ideal for many areas of use. Firstly,
+it is **cross-platform**. We can run Python scripts on the most popular operating systems, such as Windows, MacOS,
+and various Linux distributions. Secondly, it has a **rich standard library**. Many of the operations a programmer
+performs daily are already natively provided by the language.
+
+One of the strengths of this language is **its simplicity**. It takes just a few days to get familiar with the
+language and create the first scripts to run. Although the language is **object-oriented**, its syntax is simpler
+than more traditional languages like Java or C++. Moreover, Python provides a **high level of abstraction**, making
+it suitable for newcomers to the programming world.
+
+The downside is that Python, being an **interpreted language**, offers lower performance compared to compiled
+languages. Fortunately, for applications in networking and cybersecurity, this does not pose a hurdle. With this
+in mind, let's look at the aspects of the language we will focus on and how they can help enhance your technical
+skills.
+
+## The Aspects of Python We Will Focus On
+
+We will start studying Python with a more in-depth introduction, then move on to getting familiar with the
+**native interpreter**, which will allow us to issue commands from the terminal easily and quickly. Right after
+that, we will dive into the **language syntax** and study how Python supports object-oriented programming. After
+consolidating these concepts, we will see what **type annotations** are in Python, how it handles **exceptions**,
+and the difference between **modules and packages**. We will take a look at the main modules that characterize
+Python's **standard library**, analyze **string handling**, the definition of **regular expressions**, **numerical
+and file operations**. We will then study more advanced concepts such as **concurrency management** (threads and
+processes) and understand how to **test, debug, and optimize code written in Python**. An important part of the
+content will focus on Python applications in **networking and web programming**. Finally, we will understand how
+to **extend the language's functionality** and apply Python to ethical hacking, studying and writing **scripts
+for penetration testing operations**.
+
+## The Strength of Python is Its Versatility
+
+Python is widespread. As reported by [TIOBE][], it is **the most popular programming language at the moment**.
+But what makes it so special? I believe one of the best answers to this question is that Python is suitable for
+any context. With Python, you can create **automation scripts** very easily to make daily or periodic actions
+much simpler. The use cases don't stop there. Over the years, **web programming frameworks** have become very
+popular; among these, [Flask][] and [Django][] are definitely worth mentioning. Not to mention the surge it has
+had with the explosion of AI. Among the most famous libraries for **machine learning**, we certainly find
+[TensorFlow][], [Keras][], [PyTorch][], and [Scikit-Learn][]. Last but not least, Python's use for **ethical
+hacking** cannot be overlooked. We have proof of this by conducting a [search on GitHub][GH_H] with the
+keyword _hacking_.
+
+![GitHub search for the keyword "hacking"](/images/python/why-should-you-learn-python-in-2024/Github-search-hacking.png)
+
+As you can see in the screenshot, the search returns about 140k repositories. [Filtering the results][GH_H_P]
+for the Python language, we immediately realize that, of the original 140k repositories, **20.6k of these pertain
+to Python**.
+
+![GitHub search for the keyword "hacking" with Python language filter](/images/python/why-should-you-learn-python-in-2024/Github-search-hacking-python.png)
+
+I think it's clear by now that studying Python in 2024 can open many doors and job opportunities. Stay tuned
+because a lot of content is coming soon. See you soon!
+
+[Django]: https://www.djangoproject.com/
+[Flask]: https://flask.palletsprojects.com/en/3.0.x/
+[GH_H]: https://github.com/search?q=hacking&type=repositories
+[GH_H_P]: https://github.com/search?q=hacking+language%3APython&type=repositories&l=Python
+[Keras]: https://keras.io/
+[PyTorch]: https://pytorch.org/
+[Scikit-Learn]: https://scikit-learn.org/stable/
+[TensorFlow]: https://www.tensorflow.org/
+[TIOBE]: https://www.tiobe.com/tiobe-index/

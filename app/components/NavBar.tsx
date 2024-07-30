@@ -15,7 +15,7 @@ export default function NavBar() {
 
     return (
         <nav className={`sticky top-0 z-20 backdrop-blur-sm bg-whitePrimary dark:bg-blackPrimary ${currentPath.startsWith("/resources") ? "mb-auto" : "mb-0"}`}>
-            <div className="flex py-4 mx-4 min-h-16 border-solid border-gray-200 border-b dark:border-zinc-700">
+            <div className="flex py-4 mx-4 min-h-16 border-solid  border-gray-200 border-b dark:border-zinc-700">
                 <Link className="flex items-center mr-auto" href="/" aria-label="Go to home page">
                     <ImageTheme style="w-6 h-6" />
                     <p className="font-semibold text-2xl ml-4 initial:ml-3.5 leading-6">Engsitter</p>

@@ -1,25 +1,26 @@
-import giscusConfigs from "@/app/configs/giscus.config";
+"use client";
+
 import Giscus from "@giscus/react";
 import { useTheme } from "next-themes";
 
 export default function Comments() {
     const { resolvedTheme } = useTheme();
 
-    /* TODO: change theme color (see DarkModeButton.tsx) */
-
     return (
-        <div className="mx-auto max-w-prose py-6">
+        <div className="pt-6 mt-6 border-solid border-gray-200 border-t dark:border-zinc-700">
             <Giscus
-                repo={giscusConfigs.repo} // to be filled
-                repoId={giscusConfigs.repoId} // to be filled
-                category={giscusConfigs.category} // to be filled
-                categoryId={giscusConfigs.categoryId} // to be filled
-                mapping="pathname" // to be filled
-                reactionsEnabled="1" // to be filled
-                emitMetadata="0" // to be filled
-                inputPosition="top" // to be filled
-                theme={resolvedTheme === "dark" ? "transparent_dark" : "light"} // to be filled
-                loading="lazy" // to be filled
+                repo="lamboscratch/Engsitter"
+                repoId="R_kgDOMKN1zQ"
+                category="Announcements"
+                categoryId="DIC_kwDOMKN1zc4CgIIn"
+                mapping="pathname"
+                strict="0"
+                reactionsEnabled="1"
+                emitMetadata="0"
+                inputPosition="top"
+                theme={resolvedTheme === "light" ? "light" : "dark_dimmed"}
+                lang="en"
+                loading="eager"
             />
         </div>
     );

@@ -1,6 +1,6 @@
 ---
 title: "A great way to start your career in ethical hacking: the CEH certification"
-date: "2024-05-14"
+date: "2024-07-31"
 tags: ["ceh"]
 draft: false
 summary: Let's discover the advantages of getting certified with CEH to prove your ethical hacking skills and how it differs from other certifications.
@@ -10,3 +10,56 @@ images: ["/images/ceh/ceh_card.png"]
 ![Engsitter for CEH](/images/ceh/ceh_card.png)
 
 ## Perché certificarsi in ambito cybersecurity?
+
+
+
+---
+title: "A Great Way to Start Your Career in Ethical Hacking: The CEH Certification"
+date: "2024-05-14"
+tags: ["ceh"]
+draft: false
+summary: Discover the advantages of getting CEH certified to validate your ethical hacking skills and how it differs from other certifications.
+images: ["/images/ceh/ceh_card.png"]
+---
+
+![Engsitter for CEH](/images/ceh/ceh_card.png)
+
+## Why Choose the CEH?
+
+The main reason I chose to start discussing the [CEH][] is undoubtedly the **completeness of the certification** in the
+field of ethical hacking, compared to alternatives. It covers all the aspects of ethical hacking that an intermediate
+individual should know. Additionally, the EC-Council - the body that issues this certification - is **accredited by the
+American National Standards Institute** ([ANSI][]). This makes the certification globally recognized and ideal for aiming
+for significant positions in this field.
+
+## What the Certification Covers
+
+To obtain the certification, you need to start with a **solid foundation of networking knowledge**. Without this, it
+would be impossible to delve into ethical hacking topics since almost all the attacks presented are carried out over the
+network. The first real concept we will address concerns the **basic notions of security**, which include a series of
+concepts to understand what it means to design a security architecture. Then, we will talk about the three fundamental
+steps to gather as much information as possible about the target system of an attack. These are: **footprinting, scanning,
+and enumeration**. Next, we will cover classic attack techniques, focusing on **post-exploitation** practices. After
+consolidating this knowledge, we will introduce the **types of malware** and their analysis and creation. In every ethical
+hacker's arsenal, **network sniffing skills** are indispensable. That's why we will study the main tools that allow such
+operations. At this point, we will talk about how most attacks are executed today, that is, by exploiting **social
+engineering** techniques. To close the loop on the main attack techniques, we will also cover **wireless security**,
+studying how to hack communications that travel over Wi-Fi and Bluetooth. Finally, we will thoroughly study the main
+**encryption protocols** and take a look at the most popular buzzwords today, namely **Cloud Computing and the Internet
+of Things**.
+
+## How to Best Prepare for the Certification
+
+For almost all the topics we will cover, it is important to do **practical exercises** to acquire the skills necessary
+to pass the certification. We will make extensive use of tools and operating systems designed to facilitate the work of
+those in this field. We will extensively use **[Kali Linux][Kali]**, an open-source distribution of the famous Linux that
+gathers a series of **tools to support penetration testing activities**. Additionally, in the [/resources][res] section,
+you will be able to consult and download material that I will make available to consolidate the knowledge gained during
+the study.
+
+In the next post, we will talk about an introduction to ethical hacking. I wish you a pleasant stay on engsitter.com!
+
+[CEH]: https://www.eccouncil.org/train-certify/certified-ethical-hacker-ceh/
+[ANSI]: https://share.ansi.org/wc/shared%20documents/workcred-reports/understanding-certifications-study/certification-overviews/ec-council-certified-ethical-hacker.pdf
+[Kali]: https://www.kali.org/
+[res]: https://www.engsitter.com/resources

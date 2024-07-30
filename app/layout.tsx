@@ -81,7 +81,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <html lang="en" suppressHydrationWarning>
             <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
             <meta name="google-site-verification" content="n0DE0RbhBXrtxewBN8UX5vwfD0sGHJL8eYxqQabwFJE" />
-            <body className={`relative min-h-dvh pl-[calc(100vw-100%)] ${font.className}`}>
+            <body className={`relative min-h-dvh pl-[calc(100vw-100%)] bg-whitePrimary dark:bg-blackPrimary ${font.className}`}>
                 <div className="flex max-w-6xl mx-auto text-textDark dark:text-textLight antialiased">
                     <ChangeColorProvider>
                         <SearchProvider>

@@ -1,10 +1,10 @@
+import Comments from "@/app/components/Comments";
 import Copy from "@/app/components/Copy";
 import Highlight from "@/app/components/Highlight";
 import calculateHeadersUrl from "@/app/utilities/calculateHeadersUrl";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import gfm from "remark-gfm";
-// import Comments from "./Comments";
 
 interface Props {
     article: string;
@@ -36,7 +36,7 @@ export default function Article({ article }: Props) {
                             const { children, node, ...rest } = props;
                             const headerName = calculateHeadersUrl(children?.toString()!);
                             return (
-                                <h2 id={headerName} className="text-3xl font-bold mt-6 mb-4" {...rest}>
+                                <h2 id={headerName} className="text-3xl font-bold mt-7 mb-4" {...rest}>
                                     <Link href={`#${headerName}`} aria-label={`Link to ${headerName}`}>
                                         {children}
                                     </Link>
@@ -47,7 +47,7 @@ export default function Article({ article }: Props) {
                             const { children, node, ...rest } = props;
                             const headerName = calculateHeadersUrl(children?.toString()!);
                             return (
-                                <h3 id={headerName} className="text-2xl font-bold mt-7 mb-4" {...rest}>
+                                <h3 id={headerName} className="text-2xl font-bold mt-5 mb-4" {...rest}>
                                     <Link href={`#${headerName}`} aria-label={`Link to ${headerName}`}>
                                         {children}
                                     </Link>
@@ -87,7 +87,7 @@ export default function Article({ article }: Props) {
                     {article}
                 </Markdown>
             </article>
-            {/* <Comments /> */}
+            <Comments />
         </div>
     );
 }

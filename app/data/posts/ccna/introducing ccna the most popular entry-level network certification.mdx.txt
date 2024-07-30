@@ -1,29 +1,29 @@
 ---
 title: "Presentazione di CCNA: la più popolare certificazione di rete entry-level"
-date: "2024-05-13"
+date: "2024-07-30"
 tags: ["ccna"]
 draft: false
 summary: La CCNA è la certificazione di networking entry-level più richiesta sul mercato. Scopriamo le comptenze valutate per poter superare l'esame e quali sono gli argomenti trattati.
 images: ["/images/ccna/cisco_card.png"]
 ---
 
-![Engsitter logo](/images/ccna/cisco_card.png)
+![Engsitter for CCNA](/images/ccna/cisco_card.png)
 
 ## Cos'è la CCNA?
 
-La CCNA 200-301 è la certificazione di networking entry-level di [Cisco][]. L'acronimo sta per
+La CCNA 200-301 è la **certificazione di networking entry-level di [Cisco][]**. L'acronimo sta per
 Cisco Certified Network Associate. Costituisce la base per tutte le altre certificazioni
-offerte da Cisco. Le skills che vengono testate all'atto dell'esame riguardano la capacità di
-analizzare e predirre il funzionamento di una rete e l'abilità di configurare i dispositivi
-di Cisco per mettere correttamente in comunicazione più nodi di rete.
+offerte da Cisco. Le skills che vengono testate all'atto dell'esame riguardano la **capacità di
+analizzare e predirre il funzionamento di una rete** e **l'abilità di configurare i dispositivi
+di Cisco** per mettere correttamente in comunicazione più nodi di rete.
 
 ## Perché la CCNA è così popolare?
 
-La risposta è semplice: Cisco ha una quota di mercato straordinariamente grande. Gli
+La risposta è semplice: **Cisco ha una quota di mercato straordinariamente grande**. Gli
 [switch][], i [router][] e i [firewall][] di Cisco sono d'appertutto. Conoscere il
 funzionamento di tali dispositivi, le caratteristiche di performance e la sintassi della CLI
 proprietaria garantiscono di sapersi destreggiare con confidenza nella maggior parte delle
-circostanze. In più, la CCNA è una certificazione globalmente riconosciuta. Molti
+circostanze. In più, **la CCNA è una certificazione globalmente riconosciuta**. Molti
 professionisti esordienti si certificano per aumentare le chance di ottenere sin da subito
 un ottimo posto di lavoro.
 
@@ -33,17 +33,17 @@ Dopo aver presentato i motivi per doversi certificare, vediamo quali sono gli ar
 da dover conoscere per poter entrare a far parte della famiglia Cisco.
 
 Prima di tutto, impareremo su cosa si basa il networking per come lo usiamo oggi.
-Partiremo dallo studio dello stack TCP/IP e del modello ISO/OSI. Subito dopo, affronteremo
-i concetti di LAN, MAN e WAN. Il focus principale sarà sulle reti locali che sfruttano
-tecnologie wired, ossia Ethernet, e wireless. Estenderemo questo concetto parlando di virtual
-LAN e di protocolli per la gestione dei loop all'interno della rete. Ci sposteremo poi sul
-cuore del networking, parlando di indirizzamento e routing nelle reti. Quest'ultimo si declina
+Partiremo dallo studio dello **stack TCP/IP e del modello ISO/OSI**. Subito dopo, affronteremo
+i concetti di **LAN, MAN e WAN**. Il focus principale sarà sulle reti locali che sfruttano
+tecnologie wired, ossia **Ethernet**, e wireless. Estenderemo questo concetto parlando di **virtual
+LAN** e di protocolli per la gestione dei loop all'interno della rete. Ci sposteremo poi sul
+cuore del networking, parlando di **indirizzamento e routing nelle reti**. Quest'ultimo si declina
 nello studio dei protocolli che permettono l'instradamento di pacchetti, con particolare
-focus su OSPF. I principali concetti affrontati per IPv4 saranno ripresti ed elaborati per IP
-in versione 6. Introdurremo, poi, il concetto di Access Control Lists e vedremo come possiamo
+focus su **OSPF**. I principali concetti affrontati per IPv4 saranno ripresti ed elaborati per **IP
+in versione 6**. Introdurremo, poi, il concetto di **Access Control Lists** e vedremo come possiamo
 filtrare i pacchetti ed evitare che vengano inoltrati da un router. Infine, parleremo di alcuni
-servizi di sicurezza e concluderemo lo studio analizzando le architetture di rete e alcuni
-aspetti di automazione.
+**servizi di sicurezza** e concluderemo lo studio analizzando le **architetture di rete e alcuni
+aspetti di automazione**.
 
 ## Come approcciare lo studio del networking
 
@@ -51,9 +51,12 @@ La teoria come sempre non basta. Questo discorso vale ancora di più in questo c
 che, durante l'esame, si viene chiamati a dare prova delle conoscenze pratiche acquisite
 con lo studio utilizzando i comandi della CLI. Per ogni nuovo argomento è necessario esercitarsi
 a fondo, impartendo comandi sui dispositivi di rete per padroneggiare il concetto. Proprio per
-questo motivo, utilizzeremo [Cisco Packet Tracer][CPT] per poter interconnettere più nodi di rete
+questo motivo, utilizzeremo **[Cisco Packet Tracer][CPT]** per poter interconnettere più nodi di rete
 in un ambiente simulato. Questo software permette di esercitarsi sui più comuni dispositivi di
 rete di Cisco ed accedere alla CLI di ognuno di essi per poterli configurare.
+
+Non perdiamo altro tempo e immergiamoci nello studio del networking, partendo da una introduzione
+delle reti di computer.
 
 [Cisco]: https://www.cisco.com/site/us/en/index.html#tabs-35d568e0ff-item-194f491212-tab
 [switch]: https://www.cisco.com/site/us/en/products/networking/switches/index.html?dtid=osscdc000283#tabs-35d568e0ff-item-194f491212-tab

@@ -3,7 +3,8 @@ title: "Benvenuti su engsitter.com"
 date: "2024-05-01"
 tags: ["welcome"]
 draft: false
-summary: Il processo decisionale che ha portato alla nascita di Engistter, qual è il principale obiettivo e come nagivare in maniera confortevole nel sito. 
+summary: Il processo decisionale che ha portato alla nascita di Engistter, qual è il principale obiettivo e come nagivare in maniera confortevole nel sito.
+images: ["/images/card_light.png"]
 ---
 
 ![Engsitter logo](/images/card_light.png)
