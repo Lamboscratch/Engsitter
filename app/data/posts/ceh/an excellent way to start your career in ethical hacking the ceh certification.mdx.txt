@@ -12,7 +12,7 @@ images: ["/images/ceh/ceh_card.png"]
 ## Perchè proprio la CEH?
 
 Il motivo principale per il quale ho scelto di iniziare a trattare la [CEH][] è sicuramente
-la **completezza della certificazione** in ambito erthical hacking, rispetto alle alternative.
+la **completezza della certificazione** in ambito ethical hacking, rispetto alle alternative.
 Essa copre tutti gli aspetti di ethical hacking che un individuo intermedio dovrebbe conoscere.
 In più, l'EC-Counsile - l'ente che emette tale certificazione - è **accreditato dall'American
 National Standards Institute** ([ANSI][]). Ciò rende questa certificazione riconosiuta a livello
@@ -45,8 +45,8 @@ al giorno d'oggi, ossia **Cloud Computing e Internet of Things**.
 Per la quasi totalità degli argomenti che tratteremo è importante fare **esercitazioni
 pratiche** per acquisire le skills necessarie al superamento della certificazione.
 Faremo ampiamente uso di tool e sistemi operativi nati a posta per facilitare il
-lavoro di chi opera in questo settore. Utilizzeremo ampiamente **[Kali Linux][Kali]**, una
-distribuzione open source del celeberrimo Linux che raccoglie una serie di **tool a supporto
+lavoro di chi opera in questo settore. Per questo motivo, utilizzeremo **[Kali Linux][Kali]**,
+una distribuzione open source del celeberrimo Linux che raccoglie una serie di **tool a supporto
 delle attività di penetration testing**. In aggiunta, nella sezione [/resources][res] sarà
 possibile consultare e scaricare del materiale che metterò a disposizione per consolidare
 le conoscenze apprese nel corso dello studio.
