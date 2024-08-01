@@ -48,7 +48,7 @@ Ma cosa lo rende così speciale? Credo che una delle risposte migliori a questa 
 adatto ad ogni tipo di contesto. Con Python è possibile creare **script di automazione** con grande facilità,
 per rendere le azioni quotidiane o periodiche molto più semplici. I casi d'uso non si fermano qui. Nel corso
 degli anni, i **framework di programmazione web** sono diventati molto diffusi, tra questi vanno sicuramente
-citati [Flask][] e [Django][]. Per non parlare poi dell'impennata che ha avuto con l'esplosione dell'AI.
+citati [Flask][] e [Django][]. Per non parlare poi dell'impennata che ha avuto con l'esplosione dell'AI...
 Tra le librerie più famose per il **machine learning** troviamo sicuramente [TensorFlow][], [Keras][], [PyTorch][]
 e [Scikit-Learn][]. Per ultimo ma non per importanta, non è possibile non citare **l'utilizzo di Python per
 l'ethical hacking**. Ne abbiamo riprova effettuando un [ricerca su Github][GH_H] con la keyword _hacking_.
