@@ -1,6 +1,7 @@
 import AdBlockerDetector from "@/app/components/AdBlockerDetector";
 import { ChangeColorProvider } from "@/app/components/ChangeColorProvider";
 import Footer from "@/app/components/Footer";
+import IncludeVideo from "@/app/components/IncludeVideo";
 import NavBar from "@/app/components/NavBar";
 import SearchProvider from "@/app/components/SearchProvider";
 import siteMetadata from "@/app/data/siteMetadata";
@@ -93,6 +94,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                     </ChangeColorProvider>
                 </div>
                 <SpeedInsights />
+                <IncludeVideo />
                 <script async defer data-hostname="www.engsitter.com" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
                 <noscript>
                     <img src="https://queue.simpleanalyticscdn.com/noscript.gif?hostname=www.engsitter.com" alt="" referrerPolicy="no-referrer-when-downgrade" />
