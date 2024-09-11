@@ -5,13 +5,10 @@ export default function IncludeVideo() {
         <Script id="video-replace">{`
             let imgs = document.getElementsByTagName ("img");
             for (let i = 0; i < imgs.length; i++) {
-                console.log (imgs [i]);
-                console.log (imgs [i].alt);
                 if (imgs [i].alt.startsWith ("Video - ")) {
                     let src = imgs [i].src;
                     let alternate = imgs [i].alt.split ("Video - ") [1];
                     let type = src.split (".") [1];
-                    console.log (src, alternate, type);
 
                     let video = document.createElement ("video");
                     video.controls = true;

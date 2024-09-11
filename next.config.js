@@ -54,7 +54,7 @@ module.exports = () => {
     const plugins = [withContentlayer, withBundleAnalyzer];
     return plugins.reduce((acc, next) => next(acc), {
         compiler: {
-            removeConsole: false,
+            removeConsole: true,
         },
         reactStrictMode: true,
         poweredByHeader: false,
